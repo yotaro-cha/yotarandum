@@ -1,0 +1,98 @@
+@charset "UTF-8";
+//変数用scss
+
+//切替
+$designW:1920;
+$designBP:375;
+$designCont: 1372;
+$browsCont: 1090;
+$bpL: $browsCont + 120;
+
+
+//単位
+$px:100px;
+	$px1:1px;
+$per:100%;
+	$per1:1%;
+$vw:100vw;
+	$vw1:1vw;
+$em:100em;
+	$em1:1em;
+$rem:100rem;
+	$rem1:1rem;
+
+//色
+$color1:#fff;
+
+
+//function
+@function conv($suuji){//PCdefault用
+	@return (($suuji / $designCont) * $browsCont) * 1px;
+}
+@function vwL($suuji){//PC可変用
+	@return ((($suuji / $designCont) * $browsCont) / $bpL) * 100vw;
+}
+
+
+@function px($suuji){
+	@return $suuji * 1px;
+}
+@function px100($suuji){
+	@return $suuji * 100px;
+}
+@function vw1($suuji){
+	@return ($suuji / $designBP) * 1vw;
+}
+@function vw($suuji){
+	@return ($suuji / $designBP) * 100vw;
+}
+@function per1($suuji){
+	@return percentage($suuji / $bpXL);
+}
+@function em($suuji){
+	@return ($suuji) * 1em;
+}
+
+
+//mixin
+@mixin hvr($op:0.7){
+	transition: 0.3s;
+	&:hover{opacity: $op;}
+}
+
+
+@mixin anti{-webkit-font-smoothing: antialiased;}
+@mixin yugo{font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;}
+@mixin yugoM{font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;}
+
+
+@mixin arrow($bdc:#000, $bdw:3px){
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.5em;
+		border-style: solid;
+		border-width: $bdw $bdw 0 0;
+		border-color: $bdc $bdc transparent transparent;
+		box-sizing: border-box;
+		transform: rotate(45deg);
+	}
+}
+
+@mixin arrowT($bdc:#000, $bdw:3px){
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.5em;
+		border-style: solid;
+		border-width: $bdw $bdw 0 0;
+		border-color: $bdc $bdc transparent transparent;
+		box-sizing: border-box;
+		transform: rotate(-45deg);
+	}
+}
+
