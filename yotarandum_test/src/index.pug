@@ -1,0 +1,348 @@
+doctype html
+html(lang="ja")
+	include include/_head.pug
+
+body
+	include include/_header.pug
+
+
+	main.l-main
+		article.mainZone
+			section.mainTxt
+				h2
+					picture
+						source(srcset="assets/images/sp-header_img.png" media="(max-width:767px)")
+						img(src="assets/images/header_img.png" alt="るるぶの観光データを使った法人向けソリューション")
+			section.catch
+				p ガイドブック「るるぶ」に掲載されている観光コンテンツを使って
+					br.pc
+					| 観光情報でお悩みの企業様の課題を解決します。
+
+
+		article.pageNavZone
+			.u-inner
+				nav
+					a.clkScrl.library(href="#scrlLibrary")
+						dl
+							dt 観光素材の
+								br
+								| ストックサービス
+							dd
+								img(src="assets/images/button_library.png" alt="")
+					a.clkScrl.data(href="#scrlData")
+						dl
+							dt 安心安全な
+								br
+								| デジタル観光データベース
+							dd
+								img(src="assets/images/button_data.png" alt="")
+
+
+		a#scrlLibrary(name="scrlLibrary")
+		article.detailZone.library
+			h2
+				.u-inner
+					picture
+						source(srcset="assets/images/sp-cate_library.png" media="(max-width:767px)")
+						img(src="assets/images/cate_library.png" alt="")
+
+			section.about
+				.u-inner
+					h3
+						img(src="assets/images/library_h2-1.png" alt="")
+					p.lead 「るるぶ」などのガイドブックやWEB制作で日々蓄積している日本国内の観光情報コンテンツを簡単に検索して、自由にダウンロードできるWEBサービスです。
+					ol
+						li
+							.img
+								img(src="assets/images/library_point-1.png" alt="")
+							p.txt
+								| 登録物件数15万件、画像点数25万点。日本全国の観光スポットの画像や施設情報、「るるぶ」で紹介した際の特集記事原稿などが揃っています。
+						li
+							.img
+								img(src="assets/images/library_point-2.png" alt="")
+							p.txt
+								| 「るるぶ」のほか、女性向けの書籍シリーズ「manimani」やシニア向けのMOOK「大人の日帰り旅」など、幅広い世代に向けたコンテンツを取得できます。
+						li
+							.img
+								img(src="assets/images/library_point-3.png" alt="")
+							p.txt
+								| ダウンロードしたテキストは改変して利用可。画像もトリミングして利用ができるので、用途にあわせて素材を改変してご使用が可能です。
+
+			section.scene
+				.u-inner
+					h3
+						img(src="assets/images/library_h2-2.png" alt="")
+					ul
+						li
+							.img
+								img(src="assets/images/library_scene-1.png" alt="")
+							p.txt
+								| 取材にコストをかけられないが、WEBメディアのおでかけ記事を増やしたい方に
+						li
+							.img
+								img(src="assets/images/library_scene-2.png" alt="")
+							p.txt
+								| パンフレットや販促冊子を制作するのに観光素材を使いたい方に
+
+			section.info
+				.u-inner
+					h3
+						img(src="assets/images/library_h2-3.png" alt="")
+					table
+						thead
+							tr
+								th コンテンツ
+								th 件数
+								th 概要
+						tbody
+							tr
+								th 収録媒体
+								td 300冊以上
+								td 「るるぶ情報版」ほか、20-30代女性向け書籍ガイド「manimani」シリーズや、大人世代に向けた「大人の日帰り旅」シリーズなどを過去3年分収録、随時更新中
+							tr
+								th 画像
+								td 250,000点
+								td 各スポットの画像など（サイズは画像により異なる）年間約10万点ペースで追加予定
+							tr
+								th テキスト
+								td 150,000件
+								td 各スポットの紹介文や電話番号・緯度経度データなど
+									br
+									| 図書掲載時のスポット紹介テキストもあり
+					p.note ※2018年8月現在の件数です。データ件数はご提供時期により異なる場合がございます。
+
+			section.topics
+				.u-inner
+					h3
+						img(src="assets/images/library_h2-4.png" alt="")
+					.topicsList
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p testtesttesttesttesttesttesttesttesttesttesttesttesttest
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="http://placehold.jp/500x150.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="http://placehold.jp/150x500.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="http://placehold.jp/100x50.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="http://placehold.jp/50x1000.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+
+			section.btnWrap
+				.u-inner
+					a(href="https://rurubu.j-jti.com/library/")
+						picture
+							source(srcset="assets/images/sp-library_link.png" media="(max-width:767px)")
+							img(src="assets/images/library_link.png" alt="")
+
+
+		a#scrlData(name="scrlData")
+		article.detailZone.data
+			h2
+				.u-inner
+					picture
+						source(srcset="assets/images/sp-cate_data.png" media="(max-width:767px)")
+						img(src="assets/images/cate_data.png" alt="")
+
+			section.about
+				.u-inner
+					h3
+						img(src="assets/images/data_h2-1.png" alt="")
+					p.lead 当社の発行図書に掲載された情報や独自に取材して得た情報をデジタル用にデータベース化したもので、4万件を超える観光情報を保持しています。
+					ol
+						li
+							.img
+								img(src="assets/images/data_point-1.png" alt="")
+							p.txt
+								| 年に一度、取材とは別に全ての物件に対して掲載の許諾をとっているため、信頼度の高いデータを安心してご使用いただくことができます。
+						li
+							.img
+								img(src="assets/images/data_point-2.png" alt="")
+							p.txt
+								| 国内観光データだけでなく、海外・宿泊施設・温泉地・イベント・語学音声データなど、様々なデジタルデータをご提供することができます。
+						li
+							.img
+								img(src="assets/images/data_point-3.png" alt="")
+							p.txt
+								| お客様のご要望に応じたデータ納品に対応いたします。また、観光や温泉地、イベントデータはAPIでの配信にも対応しています。
+
+			section.scene
+				.u-inner
+					h3
+						img(src="assets/images/data_h2-2.png" alt="")
+					ul
+						li
+							.img
+								img(src="assets/images/data_scene-1.png" alt="")
+							p.txt
+								| おすすめの観光地、周辺の観光地を紹介するWEBサイトやアプリを制作したい方に
+						li
+							.img
+								img(src="assets/images/data_scene-2.png" alt="")
+							p.txt
+								| 国内観光データの一部は多言語にも対応しており、訪日外国人に向けた観光案内アプリを作りたい方に
+
+			section.info
+				.u-inner
+					h3
+						img(src="assets/images/data_h2-3.png" alt="")
+					table
+						thead
+							tr
+								th コンテンツ
+								th API対応
+								th 件数
+								th 概要
+						tbody
+							tr
+								th 観光#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.circle
+								td 45,000件
+								td 厳選した定番観光スポット情報
+							tr
+								th 宿泊#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.border
+								td 14,000件
+								td 全国の宿泊スポット情報 
+							tr
+								th 日帰り温泉#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.border
+								td 1,700件
+								td 観光の中の日帰り温泉に追加する項目情報 
+							tr
+								th 温泉地#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.circle
+								td 1,700件
+								td 全国の温泉地紹介。宿との結合テーブルも
+							tr
+								th エリア#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.circle
+								td 4,200
+								td 観光視点で全国をエリア分けしたオリジナルエリア区分
+							tr
+								th イベント#[span.pc DB]
+								td
+									span.spTxt API対応
+									div.circle
+								td 4,500件
+								td 全国のお祭りやイベント情報
+							tr
+								th 季節特集
+								td
+									span.spTxt API対応
+									div.circle
+								td
+									div.border
+								td 桜の開花情報、紅葉情報など四季折々の季節特集。
+							tr
+								th 語学音声データ
+								td
+									span.spTxt API対応
+									div.border
+								td 16カ国語
+								td 旅行先で使えるフレーズを、テキストとネイティブ発音の音声で収録
+					p.note ※2018年8月現在の件数です。データ件数はご提供時期により異なる場合がございます。
+
+			section.topics
+				.u-inner
+					h3
+						img(src="assets/images/data_h2-4.png" alt="")
+					.topicsList
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+						a(href="#")
+							dl
+								dt
+									span
+										img(src="assets/images/topics.png" alt="")
+								dd
+									p カーナビゲーションシステム上での目的地として観光情報を提供
+									small 企業例：Panasonic様
+
+
+		article.btnInq
+			.u-inner
+				a(href="rurubudata@rurubu.ne.jp")
+					span 資料請求や詳細の
+						br
+						| お問い合わせはこちら
+
+
+	include include/_footer.pug

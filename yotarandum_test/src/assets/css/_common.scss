@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import "mq";
+@import "var";
+
+/*--------------------------------------
+ 要素
+---------------------------------------*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+textarea{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	background: none;
+	border: none;
+}
+
+
+/*--------------------------------------
+ パーツ
+---------------------------------------*/
+.u-{
+	/* インナー */
+	$innerW: $browsCont;
+	&inner{
+		max-width: px($innerW);
+		margin-left: auto;
+		margin-right: auto;
+		@include mq(l){
+			padding-left: vwL(60);
+			padding-right: vwL(60);
+		}
+		@include mq{
+			padding-left: vw(20);
+			padding-right: vw(20);
+		}
+	}
+
+}
+
+
