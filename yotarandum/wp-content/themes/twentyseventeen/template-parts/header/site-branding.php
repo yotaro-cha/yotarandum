@@ -15,7 +15,7 @@
 		<?php the_custom_logo(); ?>
 
 		<div class="site-branding-text">
-			<h1 class="site-title" style="text-align: center;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/uploads/2018/10/logo.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></a></h1>
+			<h1 class="site-title" style="text-align: center;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></a></h1>
 		<?php if ( 1==2 ) : ?>
 			<?php if ( is_front_page() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
