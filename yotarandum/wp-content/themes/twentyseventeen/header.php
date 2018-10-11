@@ -20,9 +20,17 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<link rel='stylesheet' id='mystyle'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/assets/css/mystyle.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://yotarandum.net/wp-content/themes/twentyseventeen/assets/js/myscript.js'></script>
 </head>
 
 <body <?php body_class(); ?>>
+<div class="hdColor">
+	<span class="blk"></span>
+	<span class="grn"></span>
+	<span class="brwn"></span>
+</div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
 

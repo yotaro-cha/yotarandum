@@ -43,6 +43,13 @@ textarea {
 	font-weight: 400;
 	line-height: 1.66;
 }
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "リュウミン B-KL";
+}
 
 h1,
 h2,

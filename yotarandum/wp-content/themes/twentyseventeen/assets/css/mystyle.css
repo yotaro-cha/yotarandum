@@ -1,0 +1,48 @@
+/*
+Theme Name: Twenty Seventeen
+Description: mystyle
+*/
+.site-header {
+  background-color: transparent; }
+
+.custom-header {
+  text-align: center; }
+  .custom-header .site-description {
+    color: #c5c56a; }
+
+.hdColor span {
+  display: block; }
+.hdColor .blk {
+  background-color: #000;
+  height: 20px; }
+.hdColor .grn {
+  height: 10px;
+  background-color: #c5c56a; }
+.hdColor .brwn {
+  height: 5px;
+  background-color: #583822; }
+
+.widget-area .widget-title {
+  border-bottom: 3px solid #69821b;
+  padding-bottom: 10px;
+  font-size: 0; }
+  .widget-area .widget-title span {
+    display: block;
+    background-size: contain !important;
+    padding-top: 10%; }
+.widget-area .widget > .typesquare_tags > li:first-child {
+  border-top: none; }
+.widget-area #custom_html-2 .widget-title {
+  display: none; }
+.widget-area #categories-2 .widget-title span {
+  background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_category_s.png) 0 0 no-repeat; }
+.widget-area #tag_cloud-2 .widget-title {
+  margin-bottom: 11px; }
+  .widget-area #tag_cloud-2 .widget-title span {
+    background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_tag_s.png) 0 0 no-repeat; }
+.widget-area #recent-posts-2 .widget-title span {
+  background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_news_s.png) 0 0 no-repeat; }
+.widget-area #recent-comments-2 .widget-title span {
+  background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_comment_s.png) 0 0 no-repeat; }
+.widget-area #archives-2 .widget-title span {
+  background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_archive_s.png) 0 0 no-repeat; }

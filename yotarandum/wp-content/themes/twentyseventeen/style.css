@@ -839,6 +839,13 @@ html[lang="ja"] select,
 html[lang="ja"] textarea {
 	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
 }
+html[lang="ja"] body,
+html[lang="ja"] button,
+html[lang="ja"] input,
+html[lang="ja"] select,
+html[lang="ja"] textarea {
+	font-family: "リュウミン B-KL";
+}
 
 html[lang="ja"] h1,
 html[lang="ja"] h2,
