@@ -8,6 +8,17 @@
 /*--------------------------------------
  レイアウト
 ---------------------------------------*/
+.wrap{
+	max-width:1260px;
+	padding-left: 30px;
+	padding-right: 30px;
+	@include mq{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+//ヘッダー
 .l-header{
 }
 .site-header{
@@ -20,8 +31,13 @@
 		margin: auto;
 	}
 	.site-description{
+		padding-top: 10px;
 		color: #c5c56a;
 		font-size: 24px;
+		@include mq{
+			padding-top: vw(10);
+			font-size: 2.0rem;
+		}
 	}
 }
 
@@ -30,54 +46,50 @@
 		display: block;
 	}
 	.blk{
-		background-color: #000;
+		background-color: $black1;
 		height: 20px;
 	}
 	.grn{
 		height: 10px;
-		background-color: #c5c56a;
+		background-color: $maccha1;
 	}
 	.brwn{
 		height: 5px;
-		background-color: #583822;
+		background-color: $brown1;
 	}
 }
 
 
 
-.l-pankz{
-}
-/* 編集 */
-#content{
-	> .wrap{
-		display: flex;
-		justify-content: space-between;
+
+//コンテンツ
+.l-contRow2{
+	display: flex;
+	justify-content: space-between;
+	@include mq{
+		display: block;
+	}
+	#primary{
+		width: 100%;
+		margin-right: 50px;
 		@include mq{
-			display: block;
+			margin: 0 0 50px;
+		}
+	}
+	#secondary{
+		flex-shrink: 0;
+		width: 300px;
+		padding: 0;
+		@include mq{
+			width: auto;
 		}
 	}
 }
-.page-header{display: none;}
-.has-sidebar:not(.error404) #primary{
-	width: 100%;
-	margin-right: 50px;
-	float: none;
-	@include mq{
-		margin: 0 0 50px;
-	}
-}	
-.has-sidebar #secondary{
-	flex-shrink: 0;
-	width: 300px;
-	float: none;
-	@include mq{
-		width: auto;
-	}
-}
-/* /編集 */
+
+//サイドバー
 .widget-area{
 	.widget-title{
-		border-bottom: 3px solid #69821b;
+		border-bottom: 3px solid $koke1;
 		padding-bottom: 10px;
 		font-size: 0;
 		span{
@@ -138,17 +150,65 @@
 	}
 }
 
+#aboutMe{
+	background-color:#efefef;
+	padding:10px;
+	text-align:center;
+	.myImg{
+		width:80%;
+		margin:0 auto 10px;
+		a{
+			display: block;
+			box-shadow: none;
+			overflow: hidden;
+			img{
+				box-shadow: none;
+			}
+			&:hover{
+				img{
+					animation-name: rotate;
+					animation-duration: 5s;
+					animation-timing-function: linear;
+					animation-iteration-count: infinite;
+				}
+			}
+		}
+	}
+	.txt{
+		font-size:12px;
+		line-height:1.4;
+		text-align:left;
+		p{
+			margin: 0;
+		}
+	}
+}
 
+//フッター
 .l-footer{
+	.brwn{
+		height: 5px;
+		background-color: $brown1;
+	}
+	.grn{
+		height: 10px;
+		background-color: $maccha1;
+	}
+	.blk{
+		background-color: $black1;
+		padding: 10px;
+		text-align: center;
+		p{
+			color: #fff;
+			font-size: 12px;
+			@include mq{
+				font-size: 10px;
+			}
+		}
+	}
 }
 
-.l-inner{
-	max-width: 1095px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-}
+
 
 .l-toTop{
 	display: flex;

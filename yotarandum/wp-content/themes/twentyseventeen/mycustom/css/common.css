@@ -71,7 +71,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-family: "リュウミン B-KL", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
   font-style: inherit;
   line-height: 1.4; }
   @media screen and (max-width: 767px) {
@@ -741,6 +741,13 @@ blockquote:before {
   opacity: .75;
   color: black; }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
 @keyframes rotation1 {
   0% {
     transform: rotate(0deg) matrix(1, 0, 0, 1, 0, 0); }
@@ -899,6 +906,15 @@ blockquote:before {
 /*--------------------------------------
  レイアウト
 ---------------------------------------*/
+.wrap {
+  max-width: 1260px;
+  padding-left: 30px;
+  padding-right: 30px; }
+  @media screen and (max-width: 767px) {
+    .wrap {
+      padding-left: 10px;
+      padding-right: 10px; } }
+
 .site-header {
   background-color: transparent; }
 
@@ -908,8 +924,13 @@ blockquote:before {
     max-width: 1000px;
     margin: auto; }
   .custom-header .site-description {
+    padding-top: 10px;
     color: #c5c56a;
     font-size: 24px; }
+    @media screen and (max-width: 767px) {
+      .custom-header .site-description {
+        padding-top: 1.5625vw;
+        font-size: 2.0rem; } }
 
 .hdColor span {
   display: block; }
@@ -923,34 +944,26 @@ blockquote:before {
   height: 5px;
   background-color: #583822; }
 
-/* 編集 */
-#content > .wrap {
+.l-contRow2 {
   display: flex;
   justify-content: space-between; }
   @media screen and (max-width: 767px) {
-    #content > .wrap {
+    .l-contRow2 {
       display: block; } }
+  .l-contRow2 #primary {
+    width: 100%;
+    margin-right: 50px; }
+    @media screen and (max-width: 767px) {
+      .l-contRow2 #primary {
+        margin: 0 0 50px; } }
+  .l-contRow2 #secondary {
+    flex-shrink: 0;
+    width: 300px;
+    padding: 0; }
+    @media screen and (max-width: 767px) {
+      .l-contRow2 #secondary {
+        width: auto; } }
 
-.page-header {
-  display: none; }
-
-.has-sidebar:not(.error404) #primary {
-  width: 100%;
-  margin-right: 50px;
-  float: none; }
-  @media screen and (max-width: 767px) {
-    .has-sidebar:not(.error404) #primary {
-      margin: 0 0 50px; } }
-
-.has-sidebar #secondary {
-  flex-shrink: 0;
-  width: 300px;
-  float: none; }
-  @media screen and (max-width: 767px) {
-    .has-sidebar #secondary {
-      width: auto; } }
-
-/* /編集 */
 .widget-area .widget-title {
   border-bottom: 3px solid #69821b;
   padding-bottom: 10px;
@@ -976,12 +989,47 @@ blockquote:before {
 .widget-area #archives-2 .widget-title span {
   background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_archive_s.png) 0 0 no-repeat; }
 
-.l-inner {
-  max-width: 1095px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+#aboutMe {
+  background-color: #efefef;
+  padding: 10px;
+  text-align: center; }
+  #aboutMe .myImg {
+    width: 80%;
+    margin: 0 auto 10px; }
+    #aboutMe .myImg a {
+      display: block;
+      box-shadow: none;
+      overflow: hidden; }
+      #aboutMe .myImg a img {
+        box-shadow: none; }
+      #aboutMe .myImg a:hover img {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; }
+  #aboutMe .txt {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left; }
+    #aboutMe .txt p {
+      margin: 0; }
+
+.l-footer .brwn {
+  height: 5px;
+  background-color: #583822; }
+.l-footer .grn {
+  height: 10px;
+  background-color: #c5c56a; }
+.l-footer .blk {
+  background-color: #000;
+  padding: 10px;
+  text-align: center; }
+  .l-footer .blk p {
+    color: #fff;
+    font-size: 12px; }
+    @media screen and (max-width: 767px) {
+      .l-footer .blk p {
+        font-size: 10px; } }
 
 .l-toTop {
   display: flex;
@@ -1013,15 +1061,6 @@ blockquote:before {
       .l-toTop:before {
         border-width: 4px 4px 0 0; } }
 
-.wrap {
-  max-width: 1260px;
-  padding-left: 30px;
-  padding-right: 30px; }
-  @media screen and (max-width: 767px) {
-    .wrap {
-      padding-left: 15px;
-      padding-right: 15px; } }
-
 .u- {
   /* タイトル */
   /* リンク */
@@ -1035,9 +1074,70 @@ blockquote:before {
   /* 箱 */
   /* ページャー */
   /* ナビ */
-  /* その他 */ }
+  /* その他 */
+  /* ナビ */ }
+  .u-ttl1 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #69821b; }
+    .u-ttl1 img {
+      width: auto;
+      height: 50px; }
+      @media screen and (max-width: 767px) {
+        .u-ttl1 img {
+          height: 40px; } }
   .u-tbl1 table {
     width: 100%; }
+  .u-appsZone {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px; }
+    @media screen and (max-width: 767px) {
+      .u-appsZone {
+        margin-bottom: 10px; } }
+    .u-appsZone > * {
+      display: block;
+      width: 15.2941176471%;
+      margin: 0 5.8823529412% 5.8823529412% 0;
+      position: relative; }
+      .u-appsZone > *:nth-child(5n) {
+        margin-right: 0; }
+      @media screen and (max-width: 767px) {
+        .u-appsZone > * {
+          width: 17.3333333333%;
+          margin: 0 3.3333333333% 3.3333333333% 0; } }
+      .u-appsZone > * img {
+        width: 100%; }
+      .u-appsZone > * p {
+        display: none; }
+    .u-appsZone span {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%); }
+      .u-appsZone span:hover:after {
+        content: "まだ\aありません";
+        white-space: pre; }
+    .u-appsZone a:hover p,
+    .u-appsZone span:hover:after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      @media screen and (max-width: 767px) {
+        .u-appsZone a:hover p,
+        .u-appsZone span:hover:after {
+          font-size: 1.0rem; } }
   .u- .clamp {
     overflow: hidden; }
   .u- .clamp2 {

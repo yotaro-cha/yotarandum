@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 
+@keyframes rotate{
+	0% {transform: rotate(0deg);}
+	50% {transform: rotate(180deg);}
+	100% {transform: rotate(360deg);}
+}
 @keyframes rotation1{
 	0% { 
    transform: rotate(0deg) matrix(1, 0, 0, 1, 0, 0);
@@ -11,7 +16,8 @@
 	100% {  
     transform: rotate(360deg) matrix(1, 0, 0, 1, 0, 0) ;
   }
-}@keyframes rotation2{
+}
+@keyframes rotation2{
 	0% { 
    transform: rotate(0deg) matrix(1, 0, 0, 1, 0, 0);
   }
