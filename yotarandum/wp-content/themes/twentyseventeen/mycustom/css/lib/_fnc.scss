@@ -1,0 +1,31 @@
+@charset "utf-8";
+//=================
+//    function
+//=================
+
+@function px($suuji){
+	@return $suuji * 1px;
+}
+@function vw($suuji){
+	@return ($suuji / 767) * 100vw;
+}
+@function vw1($suuji){
+	@return ($suuji / 767) * 1vw;
+}
+@function per1($suuji){
+	@return percentage($suuji / 100);
+}
+@function em($suuji){
+	@return ($suuji) * 1em;
+}
+@function rem($suuji){
+	@return ($suuji) * 100rem;
+}
+@function rem1($suuji){
+	@return ($suuji) * 1rem;
+}
+
+
+
+
+

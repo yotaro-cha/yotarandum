@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@import "mq";
+@import "var";
+@import "mixin";
+@import "fnc";
+
+/*--------------------------------------
+ レイアウト
+---------------------------------------*/
+.l-header{
+}
+.site-header{
+	background-color: transparent;
+}
+.custom-header{
+	text-align: center;
+	.site-branding-text{
+		max-width: 1000px;
+		margin: auto;
+	}
+	.site-description{
+		color: #c5c56a;
+		font-size: 24px;
+	}
+}
+
+.hdColor{
+	span{
+		display: block;
+	}
+	.blk{
+		background-color: #000;
+		height: 20px;
+	}
+	.grn{
+		height: 10px;
+		background-color: #c5c56a;
+	}
+	.brwn{
+		height: 5px;
+		background-color: #583822;
+	}
+}
+
+
+
+.l-pankz{
+}
+/* 編集 */
+#content{
+	> .wrap{
+		display: flex;
+		justify-content: space-between;
+		@include mq{
+			display: block;
+		}
+	}
+}
+.page-header{display: none;}
+.has-sidebar:not(.error404) #primary{
+	width: 100%;
+	margin-right: 50px;
+	float: none;
+	@include mq{
+		margin: 0 0 50px;
+	}
+}	
+.has-sidebar #secondary{
+	flex-shrink: 0;
+	width: 300px;
+	float: none;
+	@include mq{
+		width: auto;
+	}
+}
+/* /編集 */
+.widget-area{
+	.widget-title{
+		border-bottom: 3px solid #69821b;
+		padding-bottom: 10px;
+		font-size: 0;
+		span{
+			display: block;
+			background-size: contain !important;
+			padding-top: 10%;
+		}
+	}
+	.widget{
+		> .typesquare_tags{
+			> li{
+				&:first-child{
+					border-top: none;
+				}
+			}
+		}
+	}
+	#custom_html-2{//自己紹介
+		.widget-title{
+			display: none;
+		}
+	}
+	#categories-2{//分類
+		.widget-title{
+			span{
+				background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_category_s.png) 0 0 no-repeat;
+			}
+		}
+	}
+	#tag_cloud-2{//札
+		.widget-title{
+			margin-bottom: 11px;
+			span{
+				background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_tag_s.png) 0 0 no-repeat;
+			}
+		}
+	}
+	#recent-posts-2{//直近の投稿
+		.widget-title{
+			span{
+				background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_news_s.png) 0 0 no-repeat;
+			}
+		}
+	}
+	#recent-comments-2{//天啓
+		.widget-title{
+			span{
+				background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_comment_s.png) 0 0 no-repeat;
+			}
+		}
+	}
+	#archives-2{//資料群
+		.widget-title{
+			span{
+				background: url(https://yotarandum.net/wp-content/uploads/2018/10/txt_archive_s.png) 0 0 no-repeat;
+			}
+		}
+	}
+}
+
+
+.l-footer{
+}
+
+.l-inner{
+	max-width: 1095px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.l-toTop{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.8);
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	transition: opacity 0.3s;
+	&:before{
+		content: "";
+		display: block;
+		width: 36%;
+		height: 36%;
+		border-top: 5px solid #fff;
+		border-right: 5px solid #fff;
+		transform: translate(1%, 24%) rotate(-45deg);
+	}
+	&:hover{opacity: 0.7;}
+	@include mq{
+		width: 30px;
+		height: 30px;
+		bottom: 5px;
+		right: 5px;
+		&:before{
+			border-width: 4px 4px 0 0;
+		}
+	}
+}

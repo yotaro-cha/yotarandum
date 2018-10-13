@@ -1,0 +1,354 @@
+@charset "UTF-8";
+//クラス用scss
+@import "lib/mq";
+@import "lib/var";
+
+.pc{}
+.sp{display: none !important;}
+
+.c-{
+	/*-- Width --*/
+	&bg{
+		&Wht{background-color: #fff;}
+	}
+
+	&W{
+	/*-- Width --*/
+		&A{width:auto !important;}
+		&0{width: 0 !important;}
+//		@for $iW from 1 through 60{//～300px
+//			&#{$iW * 5}{width: $iW * 5px !important;}
+//		}
+		@for $iW from 1 through 100{
+			&#{$iW}{
+				&P{width: $iW * 1% !important;}
+				&V{width: $iW * 1vw !important;}
+				&E{width: $iW * 0.1em !important;}
+				&R{width: $iW * 0.1rem !important;}
+			}
+		}
+	}
+
+	&M{
+	/*-- Margin --*/
+		&A{margin: auto !important;}
+		&TA{margin-top: auto !important;}
+		&RA{margin-right: auto !important;}
+		&BA{margin-bottom: auto !important;}
+		&LA{margin-left: auto !important;}
+		&0{margin: 0 !important;}
+		@for $iM from 0 through 100{
+			&T#{$iM}{
+				&{margin-top: $iM * 1px !important;}
+				&P{margin-top: $iM * 1% !important;}
+				&V{margin-top: $iM * 1vw !important;}
+				&E{margin-top: $iM * 0.1em !important;}
+				&R{margin-top: $iM * 0.1rem !important;}
+			}
+			&R#{$iM}{
+				&{margin-right: $iM * 1px !important;}
+				&P{margin-right: $iM * 1% !important;}
+				&V{margin-right: $iM * 1vw !important;}
+				&E{margin-right: $iM * 0.1em !important;}
+				&R{margin-right: $iM * 0.1rem !important;}
+			}
+			&B#{$iM}{
+				&{margin-bottom: $iM * 1px !important;}
+				&P{margin-bottom: $iM * 1% !important;}
+				&V{margin-bottom: $iM * 1vw !important;}
+				&E{margin-bottom: $iM * 0.1em !important;}
+				&R{margin-bottom: $iM * 0.1rem !important;}
+			}
+			&L#{$iM}{
+				&{margin-left: $iM * 1px !important;}
+				&P{margin-left: $iM * 1% !important;}
+				&V{margin-left: $iM * 1vw !important;}
+				&E{margin-left: $iM * 0.1em !important;}
+				&R{margin-left: $iM * 0.1rem !important;}
+			}
+		}
+	}
+
+	&P{
+	/*-- Padding --*/
+		&A{padding: auto !important;}
+		&TA{padding-top: auto !important;}
+		&RA{padding-right: auto !important;}
+		&BA{padding-bottom: auto !important;}
+		&LA{padding-left: auto !important;}
+		&0{padding: 0 !important;}
+		@for $iP from 0 through 100{
+			&T#{$iP}{
+				&{padding-top: $iP * 1px !important;}
+				&P{padding-top: $iP * 1% !important;}
+				&V{padding-top: $iP * 1vw !important;}
+				&E{padding-top: $iP * 0.1em !important;}
+				&R{padding-top: $iP * 0.1rem !important;}
+			}
+			&R#{$iP}{
+				&{padding-right: $iP * 1px !important;}
+				&P{padding-right: $iP * 1% !important;}
+				&V{padding-right: $iP * 1vw !important;}
+				&E{padding-right: $iP * 0.1em !important;}
+				&R{padding-right: $iP * 0.1rem !important;}
+			}
+			&B#{$iP}{
+				&{padding-bottom: $iP * 1px !important;}
+				&P{padding-bottom: $iP * 1% !important;}
+				&V{padding-bottom: $iP * 1vw !important;}
+				&E{padding-bottom: $iP * 0.1em !important;}
+				&R{padding-bottom: $iP * 0.1rem !important;}
+			}
+			&L#{$iP}{
+				&{padding-left: $iP * 1px !important;}
+				&P{padding-left: $iP * 1% !important;}
+				&V{padding-left: $iP * 1vw !important;}
+				&E{padding-left: $iP * 0.1em !important;}
+				&R{padding-left: $iP * 0.1rem !important;}
+			}
+		}
+	}
+
+	&fz{
+	/*-- Font --*/
+		@for $iFz from 6 through 50{
+			&#{$iFz}{
+				&{font-size: $iFz * 1px;}
+				&E{font-size: $iFz * 0.1em;}
+				&R{font-size: $iFz * 0.1rem;}
+			}
+		}
+	}
+
+	&fw{
+		&B{font-weight: bold !important;}
+		&N{font-weight: normal !important;}
+	}
+
+	@for $iLh from 8 through 30{
+		&lh#{$iLh}{line-height: $iLh * 0.1 !important;}
+	}
+
+	/*-- Etc --*/
+	&dis{
+		&I{display:inline !important;}
+		&B{display:block !important;}
+		&IB{display:inline-block !important;}
+		&T{display:table !important;}
+		&TC{display:table-cell !important;}
+		&F{display: flex !important;}
+		&N{display:none !important;}
+	}
+
+	&jsCn{
+		&S{justify-content: flex-start!important;}
+		&E{justify-content: flex-end!important;}
+		&C{justify-content: center!important;}
+		&SB{justify-content: space-between !important;}
+		&SA{justify-content: space-around!important;}
+	}
+
+	&ta {
+		&L{text-align: left !important;}
+		&R{text-align: right !important;}
+		&C{text-align: center !important;}
+	}
+	&va {
+		&T{vertical-align: top !important;}
+		&M{vertical-align: middle !important;}
+		&B{vertical-align: bottom !important;}
+		&BL{vertical-align: baseline !important;}
+		&TB{vertical-align: text-bottom !important;}
+	}
+
+	&flt{
+		&L{float: left !important;}
+		&R{float: right!important;}
+		&N{float: none!important;}
+	}
+
+	&pos{
+		&S{position:static !important;}
+		&R{position:relative !important;}
+		&A{position:absolute !important;}
+		&F{position:fixed !important;}
+	}
+
+	&brWord{word-wrap:break-word;}
+	&wsNw{white-space: nowrap;}
+	&wsNr{white-space: normal;}
+
+	&printDown{display:none;}
+	&printBreak{display:none;}
+}//.c- End
+
+@include mq{
+.pc{display: none !important;}
+.c_sp-{
+	&W{
+	/*-- Width --*/
+		&A{width:auto !important;}
+		&0{width: 0 !important;}
+//		@for $iW from 1 through 60{//～300px
+//			&#{$iW * 5}{width: $iW * 5px !important;}
+//		}
+		@for $iW from 1 through 100{
+			&#{$iW}{
+				&P{width: $iW * 1% !important;}
+				&V{width: $iW * 1vw !important;}
+				&E{width: $iW * 0.1em !important;}
+				&R{width: $iW * 0.1rem !important;}
+			}
+		}
+	}
+
+	&M{
+	/*-- Margin --*/
+		&A{margin: auto !important;}
+		&TA{margin-top: auto !important;}
+		&RA{margin-right: auto !important;}
+		&BA{margin-bottom: auto !important;}
+		&LA{margin-left: auto !important;}
+		&0{margin: 0 !important;}
+		@for $iM from 0 through 100{
+			&T#{$iM}{
+				&{margin-top: $iM * 1px !important;}
+				&P{margin-top: $iM * 1% !important;}
+				&V{margin-top: $iM * 1vw !important;}
+				&E{margin-top: $iM * 0.1em !important;}
+				&R{margin-top: $iM * 0.1rem !important;}
+			}
+			&R#{$iM}{
+				&{margin-right: $iM * 1px !important;}
+				&P{margin-right: $iM * 1% !important;}
+				&V{margin-right: $iM * 1vw !important;}
+				&E{margin-right: $iM * 0.1em !important;}
+				&R{margin-right: $iM * 0.1rem !important;}
+			}
+			&B#{$iM}{
+				&{margin-bottom: $iM * 1px !important;}
+				&P{margin-bottom: $iM * 1% !important;}
+				&V{margin-bottom: $iM * 1vw !important;}
+				&E{margin-bottom: $iM * 0.1em !important;}
+				&R{margin-bottom: $iM * 0.1rem !important;}
+			}
+			&L#{$iM}{
+				&{margin-left: $iM * 1px !important;}
+				&P{margin-left: $iM * 1% !important;}
+				&V{margin-left: $iM * 1vw !important;}
+				&E{margin-left: $iM * 0.1em !important;}
+				&R{margin-left: $iM * 0.1rem !important;}
+			}
+		}
+	}
+
+	&P{
+	/*-- Padding --*/
+		&A{padding: auto !important;}
+		&TA{padding-top: auto !important;}
+		&RA{padding-right: auto !important;}
+		&BA{padding-bottom: auto !important;}
+		&LA{padding-left: auto !important;}
+		&0{padding: 0 !important;}
+		@for $iP from 0 through 100{
+			&T#{$iP}{
+				&{padding-top: $iP * 1px !important;}
+				&P{padding-top: $iP * 1% !important;}
+				&V{padding-top: $iP * 1vw !important;}
+				&E{padding-top: $iP * 0.1em !important;}
+				&R{padding-top: $iP * 0.1rem !important;}
+			}
+			&R#{$iP}{
+				&{padding-right: $iP * 1px !important;}
+				&P{padding-right: $iP * 1% !important;}
+				&V{padding-right: $iP * 1vw !important;}
+				&E{padding-right: $iP * 0.1em !important;}
+				&R{padding-right: $iP * 0.1rem !important;}
+			}
+			&B#{$iP}{
+				&{padding-bottom: $iP * 1px !important;}
+				&P{padding-bottom: $iP * 1% !important;}
+				&V{padding-bottom: $iP * 1vw !important;}
+				&E{padding-bottom: $iP * 0.1em !important;}
+				&R{padding-bottom: $iP * 0.1rem !important;}
+			}
+			&L#{$iP}{
+				&{padding-left: $iP * 1px !important;}
+				&P{padding-left: $iP * 1% !important;}
+				&V{padding-left: $iP * 1vw !important;}
+				&E{padding-left: $iP * 0.1em !important;}
+				&R{padding-left: $iP * 0.1rem !important;}
+			}
+		}
+	}
+
+	&fz{
+	/*-- Font --*/
+		@for $iFz from 6 through 50{
+			&#{$iFz}{
+				&{font-size: $iFz * 1px;}
+				&E{font-size: $iFz * 0.1em;}
+				&R{font-size: $iFz * 0.1rem;}
+			}
+		}
+	}
+
+	&fw{
+		&B{font-weight: bold !important;}
+		&N{font-weight: normal !important;}
+	}
+
+	@for $iLh from 8 through 30{
+		&lh#{$iLh}{line-height: $iLh * 0.1 !important;}
+	}
+
+	/*-- Etc --*/
+	&dis{
+		&I{display:inline !important;}
+		&B{display:block !important;}
+		&IB{display:inline-block !important;}
+		&T{display:table !important;}
+		&TC{display:table-cell !important;}
+		&F{display: flex !important;}
+		&N{display:none !important;}
+	}
+
+	&jsCn{
+		&S{justify-content: flex-start!important;}
+		&E{justify-content: flex-end!important;}
+		&C{justify-content: center!important;}
+		&SB{justify-content: space-between !important;}
+		&SA{justify-content: space-around!important;}
+	}
+
+	&ta {
+		&L{text-align: left !important;}
+		&R{text-align: right !important;}
+		&C{text-align: center !important;}
+	}
+	&va {
+		&T{vertical-align: top !important;}
+		&M{vertical-align: middle !important;}
+		&B{vertical-align: bottom !important;}
+		&BL{vertical-align: baseline !important;}
+		&TB{vertical-align: text-bottom !important;}
+	}
+
+	&flt{
+		&L{float: left !important;}
+		&R{float: right!important;}
+		&N{float: none!important;}
+	}
+
+	&pos{
+		&S{position:static !important;}
+		&R{position:relative !important;}
+		&A{position:absolute !important;}
+		&F{position:fixed !important;}
+	}
+
+	&wsNw{white-space: nowrap;}
+	&wsNr{white-space: normal;}
+}
+}//.c_sp- End
+

@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@import "mq";
+@import "var";
+@import "mixin";
+@import "fnc";
+
+.wrap{
+	max-width:1260px;
+	padding-left: 30px;
+	padding-right: 30px;
+	@include mq{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.u-{
+	/* タイトル */
+	&ttl1{
+		@include mq{
+		}
+	}
+
+	/* リンク */
+	&link1{
+	}
+
+	/* ボタン */
+	&btn{
+	}
+
+	/* ラベル */
+	&lbl{
+	}
+
+	/* アイコン */
+	&icn{
+	}
+
+	/* タグ */
+	&tags1{
+	}
+
+	/* テキスト */
+	&txt1{
+	}
+	&lead1{
+		@include pc{
+		}
+	}
+
+	/* リスト */
+	&txtList1{
+	}
+	&thumList1{
+	}
+	&thumTxtList1{
+	}
+	&postList1{
+	}
+	&cateList1{
+	}
+	&tagList1{
+	}
+
+	/* テーブル */
+	&tbl1{
+		table{
+			width: 100%;
+		}
+		tbody{
+		}
+		tr{
+		}
+		th{
+		}
+		td{
+		}
+		.gMap{
+		}
+	}
+
+	/* 箱 */
+	&imgBox1{
+	}
+	&txtBox1{
+	}
+	&imgTxtBox1{
+	}
+
+	/* ページャー */
+	&pager1{
+		@include mq{
+		}
+	}
+
+	/* ナビ */
+	&nav1{
+	}
+
+
+	/* その他 */
+	//jsによる長文の省略
+	.clamp{
+		//heightは個別に指定
+		overflow: hidden;
+	}
+	.clamp2{
+		//max-heightは個別に指定
+		overflow: hidden;
+	}
+
+
+}
+
+
+
+

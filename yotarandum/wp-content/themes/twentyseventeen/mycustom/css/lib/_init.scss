@@ -1,0 +1,162 @@
+@charset "utf-8";
+//=================
+//   initiallize
+//=================
+
+@import "mq";
+@import "var";
+@import "mixin";
+@import "fnc";
+
+*{
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+html {
+//	@include meiryo;
+}
+body {
+	-webkit-text-size-adjust: 100%;
+}
+a {
+	text-decoration: none;
+	&:hover{text-decoration: none;}
+}
+img {
+	vertical-align: top;
+	@include mq{
+		width: 100%;
+		height: auto;
+	}
+}
+
+input {
+	padding: 0;
+	border: none;
+	background: none;
+}
+*:focus,
+*:invalid{
+	outline: none;
+}
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=url],
+input[type=datetime],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=datetime-local],
+input[type=number],
+select,
+textarea {
+	padding: 10px;
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 12px;
+	background-color: #fcfcfc;
+	border: solid 1px #c9c9c9;
+	vertical-align: bottom;
+	box-shadow: none;
+	@include mq{
+		-webkit-appearance: none;
+		padding: 12px 16px;
+	}
+	&::-webkit-input-placeholder {
+		color: $green1;
+	}
+	&:-ms-input-placeholder {
+		color: $green1;
+	}
+	&::-moz-placeholder {
+		color: $green1;
+	}
+	&:focus {
+		background-color: #fcfcfc;
+	}
+}
+
+input::-ms-clear {
+    visibility:hidden
+}
+
+
+input[type=radio],
+input[type=checkbox] {
+    margin: 0;
+    vertical-align: -1px;
+}
+
+input[type=number]{
+	appearance: none;
+	 -moz-appearance:textfield;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}
+
+select::-ms-expand{
+	display: none;
+}
+select:-moz-focusring{
+	color: transparent !important;
+	text-shadow: 0 0 0 #000;
+}
+*::-moz-focus-inner{
+	border: 0;
+	outline: 0;
+	-moz-outline-style: none;
+}
+
+input[type="button"],
+input[type="submit"] ,
+button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+textarea {
+    resize: none;
+    vertical-align: bottom;
+}
+
+button{
+	background: none;
+	width: 100%;
+	border: none;
+}
+
+
+sup {vertical-align: super;}
+sub {vertical-align: sub;}
+
+blockquote{
+	background-color: #EEEFFF;
+	padding: 1em 1em 1em 3em;
+	position: relative;
+	border-left: 3px solid #666;
+}
+blockquote:before{
+	content: "“";
+	font-size: 600%;
+	line-height: 1em;
+	color: #999;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+::selection {
+	background: #d4dcd6; /* Safari */
+}
+::-moz-selection {
+	background: #d4dcd6; /* Firefox */
+}
