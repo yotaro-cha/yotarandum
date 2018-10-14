@@ -12,6 +12,10 @@
 	max-width:1260px;
 	padding-left: 30px;
 	padding-right: 30px;
+	@include mqL{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	@include mq{
 		padding-left: 10px;
 		padding-right: 10px;
@@ -40,7 +44,6 @@
 		}
 	}
 }
-
 .hdColor{
 	span{
 		display: block;
@@ -58,11 +61,19 @@
 		background-color: $brown1;
 	}
 }
-
+.entry-header{
+	padding-bottom: 0 !important;
+}
 
 
 
 //コンテンツ
+#content{
+	padding-bottom: 100px !important;
+	@include mq{
+		padding-bottom: 50px !important;
+	}
+}
 .l-contRow2{
 	display: flex;
 	justify-content: space-between;
@@ -70,18 +81,32 @@
 		display: block;
 	}
 	#primary{
-		width: 100%;
+		width: 100% !important;
 		margin-right: 50px;
+		float: none !important;
+		@include mqL{
+			margin-right: 30px !important;
+		}
+		@include mqM{
+			margin-right: 20px !important;
+		}
 		@include mq{
 			margin: 0 0 50px;
 		}
 	}
 	#secondary{
 		flex-shrink: 0;
-		width: 300px;
+		width: 300px !important;
 		padding: 0;
+		float: none !important;
+		@include mqL{
+			width: 250px !important;
+		}
+		@include mqM{
+			width: 230px !important;
+		}
 		@include mq{
-			width: auto;
+			width: auto !important;
 		}
 	}
 }

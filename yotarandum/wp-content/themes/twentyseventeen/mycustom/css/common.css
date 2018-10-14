@@ -910,6 +910,10 @@ blockquote:before {
   max-width: 1260px;
   padding-left: 30px;
   padding-right: 30px; }
+  @media screen and (max-width: 1024px) {
+    .wrap {
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media screen and (max-width: 767px) {
     .wrap {
       padding-left: 10px;
@@ -944,6 +948,15 @@ blockquote:before {
   height: 5px;
   background-color: #583822; }
 
+.entry-header {
+  padding-bottom: 0 !important; }
+
+#content {
+  padding-bottom: 100px !important; }
+  @media screen and (max-width: 767px) {
+    #content {
+      padding-bottom: 50px !important; } }
+
 .l-contRow2 {
   display: flex;
   justify-content: space-between; }
@@ -951,18 +964,32 @@ blockquote:before {
     .l-contRow2 {
       display: block; } }
   .l-contRow2 #primary {
-    width: 100%;
-    margin-right: 50px; }
+    width: 100% !important;
+    margin-right: 50px;
+    float: none !important; }
+    @media screen and (max-width: 1024px) {
+      .l-contRow2 #primary {
+        margin-right: 30px !important; } }
+    @media screen and (max-width: 900px) {
+      .l-contRow2 #primary {
+        margin-right: 20px !important; } }
     @media screen and (max-width: 767px) {
       .l-contRow2 #primary {
         margin: 0 0 50px; } }
   .l-contRow2 #secondary {
     flex-shrink: 0;
-    width: 300px;
-    padding: 0; }
+    width: 300px !important;
+    padding: 0;
+    float: none !important; }
+    @media screen and (max-width: 1024px) {
+      .l-contRow2 #secondary {
+        width: 250px !important; } }
+    @media screen and (max-width: 900px) {
+      .l-contRow2 #secondary {
+        width: 230px !important; } }
     @media screen and (max-width: 767px) {
       .l-contRow2 #secondary {
-        width: auto; } }
+        width: auto !important; } }
 
 .widget-area .widget-title {
   border-bottom: 3px solid #69821b;
@@ -1086,6 +1113,32 @@ blockquote:before {
       @media screen and (max-width: 767px) {
         .u-ttl1 img {
           height: 40px; } }
+  .u-ttl2 {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 32px;
+    line-height: 1.4; }
+    @media screen and (max-width: 1024px) {
+      .u-ttl2 {
+        font-size: 26px; } }
+    @media screen and (max-width: 900px) {
+      .u-ttl2 {
+        font-size: 24px;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 767px) {
+      .u-ttl2 {
+        font-size: 20px; } }
+    .u-ttl2:after {
+      content: "";
+      display: block;
+      background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0) 45%, #69821b 45%, #69821b 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 95%, #69821b 95%, #69821b);
+      background-size: 8px 8px;
+      height: 15px;
+      margin-top: 25px; }
+      @media screen and (max-width: 767px) {
+        .u-ttl2:after {
+          height: 10px;
+          margin-top: 15px; } }
   .u-tbl1 table {
     width: 100%; }
   .u-appsZone {
@@ -1099,6 +1152,7 @@ blockquote:before {
       display: block;
       width: 15.2941176471%;
       margin: 0 5.8823529412% 5.8823529412% 0;
+      border-radius: 20%;
       position: relative; }
       .u-appsZone > *:nth-child(5n) {
         margin-right: 0; }
@@ -1130,6 +1184,7 @@ blockquote:before {
       color: #fff;
       font-size: 12px;
       text-align: center;
+      border-radius: 20%;
       box-sizing: border-box;
       position: absolute;
       top: 0;
@@ -1142,6 +1197,17 @@ blockquote:before {
     overflow: hidden; }
   .u- .clamp2 {
     overflow: hidden; }
+
+.newPosts > ul > li + li {
+  margin-top: 100px; }
+.newPosts > ul > li a {
+  transition: opacity 0.3s; }
+  .newPosts > ul > li a:hover {
+    opacity: 0.7;
+    text-decoration: none; }
+
+.postMainImg {
+  margin-bottom: 25px; }
 
 /*--------------------------------------
   トップページ

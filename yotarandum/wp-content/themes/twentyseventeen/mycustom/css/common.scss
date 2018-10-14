@@ -13,8 +13,9 @@
 @import "lib/animate";
 
 //メイン製作部
-@import "lib/layout";
-@import "lib/utility";
+@import "lib/layout";//ヘッダーやサイドバーなど
+@import "lib/utility";//ページ内に頻繁に出てくる
+@import "lib/parts";//あんまり出てこない
 
 
 //ページ毎

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import "mq";
+@import "var";
+@import "mixin";
+@import "fnc";
+
+.newPosts{//記事一覧
+	> ul{
+		> li{
+			+ li{
+				margin-top: 100px;
+			}
+			a{
+				@include hvr;
+			}
+		}
+	}
+}
+.postMainImg{//投稿のメイン画像
+	margin-bottom: 25px;
+}
+
+
+
+

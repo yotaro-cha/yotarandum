@@ -58,10 +58,10 @@
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_css.png" alt="">
 			<p>css</p>
 		</a>
-		<span href="">
+		<a href="/?category_name=js">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_js.png" alt="">
 			<p>javascript</p>
-		</span>
+		</a>
 		<span href="">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_php.png" alt="">
 			<p>php</p>
@@ -132,7 +132,13 @@
 				setup_postdata( $post ); // 記事データの取得
 			?>
 			<li>
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>">
+					<h3 class="u-ttl2"><?php the_title(); ?></h3>
+					<?php $image = get_field('post_main'); if( !empty($image) ): ?>
+						<div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+					<?php endif; ?>
+					<div class="excerpt"><?php the_excerpt(); ?></div>
+				</a>
 			</li>
 			<?php
 				endforeach; // ループの終了
