@@ -20,8 +20,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<link rel='stylesheet' id='mystyle'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/plugin/prism.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mystyle'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/common.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mystyle'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/class.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/js/prism.js'></script>
 <script type='text/javascript' src='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/js/common.js'></script>
 </head>
 

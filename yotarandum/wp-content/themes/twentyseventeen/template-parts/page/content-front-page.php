@@ -66,10 +66,10 @@
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_php.png" alt="">
 			<p>php</p>
 		</span>
-		<span href="">
+		<a href="/?category_name=wp">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_wp.png" alt="">
 			<p>wordpress</p>
-		</span>
+		</a>
 		<span href="">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_git.png" alt="">
 			<p>gitや<br>sourcetree</p>
@@ -113,6 +113,18 @@
 		<span href="">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_game.png" alt="">
 			<p>ミニゲーム</p>
+		</span>
+		<a href="/?tag=summary">
+			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_summary.png" alt="">
+			<p>一覧のメモ</p>
+		</a>
+		<span href="">
+			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_parts.png" alt="">
+			<p>コピペ用<br>コード集</p>
+		</span>
+		<span href="">
+			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_all_articles.png" alt="">
+			<p>全記事一覧</p>
 		</span>
 		<a href="/?page_id=49">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_about.png" alt="">
