@@ -54,6 +54,7 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
+		<div id="mySinglePost">
 		<?php
 		/* translators: %s: Name of current post */
 		the_content(
@@ -72,6 +73,7 @@
 			)
 		);
 		?>
+		</div><!-- #mySinglePost -->
 	</div><!-- .entry-content -->
 
 	<?php

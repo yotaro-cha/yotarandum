@@ -50,10 +50,10 @@
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_design.png" alt="">
 			<p>色、フォントや<br>レイアウトなど</p>
 		</span>
-		<span href="">
+		<a href="/?category_name=html">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_html.png" alt="">
 			<p>html</p>
-		</span>
+		</a>
 		<a href="/?category_name=css">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_css.png" alt="">
 			<p>css</p>
@@ -118,10 +118,10 @@
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_summary.png" alt="">
 			<p>一覧のメモ</p>
 		</a>
-		<span href="">
+		<a href="/?tag=parts">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_parts.png" alt="">
 			<p>コピペ用<br>コード集</p>
-		</span>
+		</a>
 		<span href="">
 			<img src="https://yotarandum.net/wp-content/uploads/2018/10/icn_all_articles.png" alt="">
 			<p>全記事一覧</p>

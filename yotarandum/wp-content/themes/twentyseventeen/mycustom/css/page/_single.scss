@@ -10,5 +10,64 @@ body.single{
 	@include mq{
 	}
 }
-
+#mySinglePost{
+	section{
+		+ section{
+			margin-top: 100px;
+		}
+	}
+	h2{
+		background-color: $maccha1;
+		margin: 2em 0;
+		padding: 1em 0.8em;
+		color: $brown1;
+		font-size: 28px;
+		position: relative;
+		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) inset;
+		&:before,
+		&:after{
+			content: "";
+			display: block;
+			border-top: 1px dashed #fff;
+			width: 100%;
+			position: absolute;
+			left: 0;
+		}
+		&:before{
+			top: 10px;
+		}
+		&:after{
+			bottom: 10px;
+		}
+	}
+	h3{
+		background-size: 8px 8px;
+		margin: 2em 0 1em;
+		padding: 0 1em 0.3em 0.5em;
+		font-size: 24px;
+		border-bottom: 5px solid $maccha1;
+		border-radius: 0 0 30px 10px;
+		position: relative;
+	}
+	h4{
+		margin: 1.5em 0 1em;
+		padding-left: 0.3em;
+		padding-bottom: 0.2em;
+		font-size: 22px;
+		border-bottom: 3px dashed $maccha1;
+	}
+	h5{
+		margin: 1.2em 0 1em;
+		padding-left: 0.5em;
+		padding-bottom: 0.2em;
+		font-size: 20px;
+		border-bottom: 1px solid $maccha1;
+	}
+	h6{
+		margin: 1em 0;
+		padding-left: 0.5em;
+		font-size: 18px;
+		border-left: 5px solid $maccha1;
+	}
+}
 

@@ -113,8 +113,11 @@
 
 //サイドバー
 .widget-area{
+	@include mq{
+		font-size: 14px;
+	}
 	.widget-title{
-		border-bottom: 3px solid $koke1;
+		border-bottom: 3px solid $maccha1;
 		padding-bottom: 10px;
 		font-size: 0;
 		span{
