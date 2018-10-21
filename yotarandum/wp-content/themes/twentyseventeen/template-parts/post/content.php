@@ -18,6 +18,13 @@
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 	endif;
 	?>
+
+	<?php
+	if ( is_single() ) {
+		twentyseventeen_entry_footer();
+	}
+	?>
+
 	<header class="entry-header">
 		<?php
 		if ( 'post' === get_post_type() ) {
@@ -76,10 +83,5 @@
 		</div><!-- #mySinglePost -->
 	</div><!-- .entry-content -->
 
-	<?php
-	if ( is_single() ) {
-		twentyseventeen_entry_footer();
-	}
-	?>
 
 </article><!-- #post-## -->

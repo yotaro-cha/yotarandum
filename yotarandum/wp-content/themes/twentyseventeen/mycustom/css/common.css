@@ -1218,52 +1218,222 @@ blockquote:before {
 /*--------------------------------------
   個別投稿
 ---------------------------------------*/
-#mySinglePost section + section {
-  margin-top: 100px; }
-#mySinglePost h2 {
-  background-color: #c5c56a;
-  margin: 2em 0;
-  padding: 1em 0.8em;
-  color: #583822;
-  font-size: 28px;
-  position: relative;
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
-  #mySinglePost h2:before, #mySinglePost h2:after {
-    content: "";
-    display: block;
-    border-top: 1px dashed #fff;
-    width: 100%;
-    position: absolute;
-    left: 0; }
-  #mySinglePost h2:before {
-    top: 10px; }
-  #mySinglePost h2:after {
-    bottom: 10px; }
-#mySinglePost h3 {
-  background-size: 8px 8px;
-  margin: 2em 0 1em;
-  padding: 0 1em 0.3em 0.5em;
-  font-size: 24px;
-  border-bottom: 5px solid #c5c56a;
-  border-radius: 0 0 30px 10px;
-  position: relative; }
-#mySinglePost h4 {
-  margin: 1.5em 0 1em;
-  padding-left: 0.3em;
-  padding-bottom: 0.2em;
-  font-size: 22px;
-  border-bottom: 3px dashed #c5c56a; }
-#mySinglePost h5 {
-  margin: 1.2em 0 1em;
-  padding-left: 0.5em;
-  padding-bottom: 0.2em;
-  font-size: 20px;
-  border-bottom: 1px solid #c5c56a; }
-#mySinglePost h6 {
-  margin: 1em 0;
-  padding-left: 0.5em;
-  font-size: 18px;
-  border-left: 5px solid #c5c56a; }
+body.single .entry-footer {
+  margin: 0 0 2em;
+  padding: 1em;
+  color: #c5c56a; }
+  body.single .entry-footer .cat-links, body.single .entry-footer .tags-links {
+    display: inline-block;
+    font-size: 12px; }
+    body.single .entry-footer .cat-links a, body.single .entry-footer .tags-links a {
+      color: inherit; }
+  body.single .entry-footer .cat-links {
+    margin-right: 2em; }
+body.single .edit-link {
+  display: none; }
+
+#mySinglePost {
+  font-size: 18px; }
+  @media screen and (max-width: 767px) {
+    #mySinglePost {
+      font-size: 16px; } }
+  #mySinglePost section + section {
+    margin-top: 100px; }
+  #mySinglePost h2 {
+    background-color: #c5c56a;
+    margin: 2em 0 1em;
+    padding: 1em 0.8em;
+    color: #583822;
+    font-size: 32px;
+    position: relative;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
+    @media screen and (max-width: 767px) {
+      #mySinglePost h2 {
+        font-size: 26px;
+        padding: 0.8em 0.5em; } }
+    #mySinglePost h2:before, #mySinglePost h2:after {
+      content: "";
+      display: block;
+      border-top: 1px dashed #fff;
+      width: 100%;
+      position: absolute;
+      left: 0; }
+    #mySinglePost h2:before {
+      top: 10px; }
+    #mySinglePost h2:after {
+      bottom: 10px; }
+  #mySinglePost h3 {
+    background-size: 8px 8px;
+    margin: 1.5em 0 1em;
+    padding: 0 0.3em 0.3em;
+    color: #583822;
+    font-size: 28px;
+    border-bottom: 5px solid #c5c56a;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      #mySinglePost h3 {
+        font-size: 24px; } }
+  #mySinglePost h4 {
+    margin: 1.5em 0 1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.2em;
+    color: #583822;
+    font-size: 25px;
+    border-bottom: 3px dashed #c5c56a; }
+    @media screen and (max-width: 767px) {
+      #mySinglePost h4 {
+        font-size: 22px; } }
+  #mySinglePost h5 {
+    margin: 1.2em 0 1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.2em;
+    color: #583822;
+    font-size: 22px;
+    border-bottom: 1px solid #c5c56a; }
+    @media screen and (max-width: 767px) {
+      #mySinglePost h5 {
+        font-size: 20px; } }
+  #mySinglePost h6 {
+    margin: 1em 0;
+    padding-left: 0.5em;
+    color: #583822;
+    font-size: 20px;
+    border-left: 5px solid #c5c56a; }
+    @media screen and (max-width: 767px) {
+      #mySinglePost h6 {
+        font-size: 18px; } }
+  #mySinglePost p {
+    margin-bottom: 0.5em; }
+  #mySinglePost strong {
+    font-weight: bold; }
+  #mySinglePost em {
+    font-style: italic; }
+  #mySinglePost ul {
+    margin-bottom: 1em; }
+    #mySinglePost ul > li {
+      margin-bottom: 0.5em;
+      padding-left: 1em;
+      position: relative; }
+      #mySinglePost ul > li:before {
+        content: "";
+        display: block;
+        background-color: #c5c56a;
+        width: 0.6em;
+        height: 0.6em;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.4em;
+        left: 0; }
+    #mySinglePost ul ul {
+      margin-left: 1em; }
+      #mySinglePost ul ul > li:before {
+        content: "";
+        display: block;
+        background-color: #fff;
+        width: 0.6em;
+        height: 0.6em;
+        border: 0.2em solid #c5c56a;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.4em;
+        left: 0; }
+      #mySinglePost ul ul ul > li:before {
+        content: "";
+        display: block;
+        width: 0.2em;
+        height: 0.2em;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.6em;
+        left: 0; }
+  #mySinglePost ol {
+    margin-bottom: 1em; }
+    #mySinglePost ol > li {
+      counter-increment: num1;
+      margin-bottom: 0.5em;
+      padding-left: 1.6em;
+      position: relative; }
+      #mySinglePost ol > li:before {
+        content: counter(num1) ". ";
+        color: #c5c56a;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    #mySinglePost ol ol {
+      margin-left: 1.6em; }
+      #mySinglePost ol ol > li {
+        counter-increment: num2; }
+        #mySinglePost ol ol > li:before {
+          content: counter(num2);
+          color: #000;
+          width: 1.5em;
+          height: 1.4em;
+          padding-top: 0.1em;
+          font-size: 0.8em;
+          font-weight: bold;
+          text-align: center;
+          border: 2px solid #69821b;
+          border-radius: 50%; }
+      #mySinglePost ol ol ol > li {
+        counter-increment: num3; }
+        #mySinglePost ol ol ol > li:before {
+          content: counter(num3) "-";
+          color: #583822;
+          font-size: 1em;
+          font-weight: bold;
+          border: none;
+          border-radius: 0;
+          top: 0.1em; }
+  #mySinglePost dl {
+    margin-bottom: 1em; }
+    #mySinglePost dl > dt {
+      font-size: 1.1em;
+      font-weight: bold; }
+    #mySinglePost dl > dd {
+      margin-top: 0.3em;
+      margin-left: 0.5em;
+      padding-left: 0.5em;
+      border-left: 2px solid #c5c56a;
+      position: relative; }
+  #mySinglePost table {
+    width: auto;
+    margin-bottom: 1em; }
+    #mySinglePost table tr {
+      border-bottom: none; }
+    #mySinglePost table th,
+    #mySinglePost table td {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em; }
+    #mySinglePost table th {
+      padding-right: 0.8em;
+      padding-left: 0.8em;
+      font-weight: bold;
+      text-align: center; }
+    #mySinglePost table td {
+      padding-right: 0.8em; }
+    #mySinglePost table thead {
+      background-color: #c5c56a;
+      color: #fff; }
+      #mySinglePost table thead tr + tr {
+        border-top: 1px solid #583822; }
+      #mySinglePost table thead th,
+      #mySinglePost table thead td {
+        padding-top: 0.3em;
+        padding-bottom: 0.3em; }
+      #mySinglePost table thead th {
+        border-bottom: none; }
+    #mySinglePost table tbody tr + tr {
+      border-top: 1px solid #c5c56a; }
+    #mySinglePost table tbody th {
+      color: #c5c56a; }
+    #mySinglePost table tfoot {
+      background-color: #583822;
+      color: #fff; }
+      #mySinglePost table tfoot tr + tr {
+        border-top: 1px solid #c5c56a; }
 
 /*--------------------------------------
   固定ページ

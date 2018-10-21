@@ -9,8 +9,34 @@
 body.single{
 	@include mq{
 	}
+	.entry-footer{
+		margin: 0 0 2em;
+		padding: 1em;
+		color: $maccha1;
+		.cat-links, .tags-links{
+			display: inline-block;
+			font-size: 12px;
+			a{
+				color: inherit;
+			}
+		}
+		.cat-links{
+			margin-right: 2em;
+		}
+		.tags-links{
+		}
+		
+	}
+	.edit-link{
+		display: none;
+	}
 }
 #mySinglePost{
+	font-size: 18px;
+	@include mq{
+		font-size: 16px;
+	}
+	//基本タグ
 	section{
 		+ section{
 			margin-top: 100px;
@@ -18,12 +44,16 @@ body.single{
 	}
 	h2{
 		background-color: $maccha1;
-		margin: 2em 0;
+		margin: 2em 0 1em;
 		padding: 1em 0.8em;
 		color: $brown1;
-		font-size: 28px;
+		font-size: 32px;
 		position: relative;
 		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) inset;
+		@include mq{
+			font-size: 26px;
+			padding: 0.8em 0.5em;
+		}
 		&:before,
 		&:after{
 			content: "";
@@ -42,32 +72,231 @@ body.single{
 	}
 	h3{
 		background-size: 8px 8px;
-		margin: 2em 0 1em;
-		padding: 0 1em 0.3em 0.5em;
-		font-size: 24px;
+		margin: 1.5em 0 1em;
+		padding: 0 0.3em 0.3em;
+		color: $brown1;
+		font-size: 28px;
 		border-bottom: 5px solid $maccha1;
-		border-radius: 0 0 30px 10px;
 		position: relative;
+		@include mq{
+			font-size: 24px;
+		}
 	}
 	h4{
 		margin: 1.5em 0 1em;
 		padding-left: 0.3em;
 		padding-bottom: 0.2em;
-		font-size: 22px;
+		color: $brown1;
+		font-size: 25px;
 		border-bottom: 3px dashed $maccha1;
+		@include mq{
+			font-size: 22px;
+		}
 	}
 	h5{
 		margin: 1.2em 0 1em;
-		padding-left: 0.5em;
+		padding-left: 0.3em;
 		padding-bottom: 0.2em;
-		font-size: 20px;
+		color: $brown1;
+		font-size: 22px;
 		border-bottom: 1px solid $maccha1;
+		@include mq{
+			font-size: 20px;
+		}
 	}
 	h6{
 		margin: 1em 0;
 		padding-left: 0.5em;
-		font-size: 18px;
+		color: $brown1;
+		font-size: 20px;
 		border-left: 5px solid $maccha1;
+		@include mq{
+			font-size: 18px;
+		}
 	}
+	p{
+		margin-bottom: 0.5em;
+	}
+	strong{
+		font-weight: bold;
+	}
+	em{
+		font-style: italic;
+	}
+	ul{
+		margin-bottom: 1em;
+		> li{
+			margin-bottom: 0.5em;
+			padding-left: 1em;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				background-color: $maccha1;
+				width: 0.6em;
+				height: 0.6em;
+				border-radius: 50%;
+				position: absolute;
+				top: 0.4em;
+				left: 0;
+			}
+		}
+		ul{
+			margin-left: 1em;
+			> li{
+				&:before{
+					content: "";
+					display: block;
+					background-color: #fff;
+					width: 0.6em;
+					height: 0.6em;
+					border: 0.2em solid $maccha1;
+					border-radius: 50%;
+					position: absolute;
+					top: 0.4em;
+					left: 0;
+				}
+			}
+			ul{
+				> li{
+					&:before{
+						content: "";
+						display: block;
+						width: 0.2em;
+						height: 0.2em;
+						border-radius: 50%;
+						position: absolute;
+						top: 0.6em;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+	ol{
+		margin-bottom: 1em;
+		> li{
+			counter-increment: num1;
+			margin-bottom: 0.5em;
+			padding-left: 1.6em;
+			position: relative;
+			&:before{
+				content: counter(num1) ". ";
+				color: $maccha1;
+				font-size: 1.2em;
+				font-weight: bold;
+				line-height: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		ol{
+			margin-left: 1.6em;
+			> li{
+				counter-increment: num2;
+				&:before{
+					content: counter(num2);
+					color: #000;
+					width: 1.5em;
+					height: 1.4em;
+					padding-top: 0.1em;
+					font-size: 0.8em;
+					font-weight: bold;
+					text-align: center;
+					border: 2px solid $koke1;
+					border-radius: 50%;
+				}
+			}
+			ol{
+				> li{
+					counter-increment: num3;
+					&:before{
+						content: counter(num3) "-";
+						color: $brown1;
+						font-size: 1em;
+						font-weight: bold;
+						border: none;
+						border-radius: 0;
+						top: 0.1em;
+					}
+				}
+			}
+		}
+	}
+	dl{
+		margin-bottom: 1em;
+		> dt{
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		> dd{
+			margin-top: 0.3em;
+			margin-left: 0.5em;
+			padding-left: 0.5em;
+			border-left: 2px solid $maccha1;
+			position: relative;
+		}
+	}
+	table{
+		width: auto;
+		margin-bottom: 1em;
+		tr{
+			border-bottom: none;
+		}
+		th,
+		td{
+			padding-top: 0.2em;
+			padding-bottom: 0.2em;
+		}
+		th{
+			padding-right: 0.8em;
+			padding-left: 0.8em;
+			font-weight: bold;
+			text-align: center;
+		}
+		td{
+			padding-right: 0.8em;
+		}
+		thead{
+			background-color: $maccha1;
+			color: #fff;
+			tr{
+				+ tr{
+					border-top: 1px solid $brown1;
+				}
+			}
+			th,
+			td{
+				padding-top: 0.3em;
+				padding-bottom: 0.3em;
+			}
+			th{
+				border-bottom: none;
+			}
+		}
+		tbody{
+			tr{
+				+ tr{
+					border-top: 1px solid $maccha1;
+				}
+			}
+			th{
+				color: $maccha1;
+			}
+		}
+		tfoot{
+			background-color: $brown1;
+			color: #fff;
+			tr{
+				+ tr{
+					border-top: 1px solid $maccha1;
+				}
+			}
+		}
+	}
+	//クラスタグ
+
+
 }
 
