@@ -60,8 +60,10 @@
 		<div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
 	<?php endif; ?>
 
+	<?php the_excerpt(); ?>
+
 	<div class="entry-content">
-		<div id="mySinglePost">
+		<div class="mySinglePost">
 		<?php
 		/* translators: %s: Name of current post */
 		the_content(

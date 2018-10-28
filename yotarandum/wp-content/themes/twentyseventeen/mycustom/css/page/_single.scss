@@ -31,8 +31,9 @@ body.single{
 		display: none;
 	}
 }
-#mySinglePost{
+.mySinglePost{
 	font-size: 18px;
+	line-height: 1.8;
 	@include mq{
 		font-size: 16px;
 	}
@@ -88,7 +89,7 @@ body.single{
 		padding-bottom: 0.2em;
 		color: $brown1;
 		font-size: 25px;
-		border-bottom: 3px dashed $maccha1;
+		border-bottom: 1px solid $maccha1;
 		@include mq{
 			font-size: 22px;
 		}
@@ -99,7 +100,7 @@ body.single{
 		padding-bottom: 0.2em;
 		color: $brown1;
 		font-size: 22px;
-		border-bottom: 1px solid $maccha1;
+		border-bottom: 1px dashed $maccha1;
 		@include mq{
 			font-size: 20px;
 		}
@@ -115,7 +116,7 @@ body.single{
 		}
 	}
 	p{
-		margin-bottom: 0.5em;
+		margin-bottom: 1.5em;
 	}
 	strong{
 		font-weight: bold;
@@ -124,7 +125,7 @@ body.single{
 		font-style: italic;
 	}
 	ul{
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 		> li{
 			margin-bottom: 0.5em;
 			padding-left: 1em;
@@ -174,7 +175,7 @@ body.single{
 		}
 	}
 	ol{
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 		> li{
 			counter-increment: num1;
 			margin-bottom: 0.5em;
@@ -225,7 +226,7 @@ body.single{
 		}
 	}
 	dl{
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 		> dt{
 			font-size: 1.1em;
 			font-weight: bold;
@@ -240,7 +241,7 @@ body.single{
 	}
 	table{
 		width: auto;
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 		tr{
 			border-bottom: none;
 		}

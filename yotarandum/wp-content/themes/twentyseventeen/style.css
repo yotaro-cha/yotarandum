@@ -22,7 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 3.0 Alignments
 4.0 Clearings
 5.0 Typography
-6.0 Forms
+6.0 Formss
 7.0 Formatting
 8.0 Lists
 9.0 Tables
@@ -479,7 +479,7 @@ h5 {
 	font-size: 0.8125rem;
 	font-weight: 800;
 	letter-spacing: 0.15em;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 }
 
 h6 {
@@ -1837,8 +1837,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 .twentyseventeen-panel .entry-header .edit-link {
-	font-size: 14px;
-	font-size: 0.875rem;
 }
 
 /* Front Page - Recent Posts */
@@ -1909,8 +1907,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
 	color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
 	font-weight: 800;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
@@ -4014,8 +4010,6 @@ p > object:only-child {
 	/* Secondary */
 
 	#secondary {
-		font-size: 14px;
-		font-size: 0.875rem;
 		line-height: 1.6;
 	}
 

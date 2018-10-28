@@ -7,7 +7,9 @@
   トップページ
 ---------------------------------------*/
 body.home{
-	
+	.excerpt.typesquare_tags{
+		font-size: 18px;
+	}
 	@include mq{
 	}
 }

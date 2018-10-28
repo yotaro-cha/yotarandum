@@ -10,7 +10,7 @@
 	&ttl1{//カテゴリーなど
 		margin-bottom: 15px;
 		padding-bottom: 10px;
-		border-bottom: 5px solid $koke1;
+		border-bottom: 5px solid $maccha1;
 		@include mq{
 		}
 		img{
@@ -23,7 +23,7 @@
 	}
 	&ttl2{//記事のタイトル
 		margin-bottom: 25px;
-		color: #666;
+		color: $brown1;
 		font-size: 32px;
 		line-height: (36.4/26);
 		@include mqL{

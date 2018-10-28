@@ -60,10 +60,13 @@ input, textarea, select {
 ---------------------------------------------------- */
 html {
   color: #333;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0;
   word-wrap: break-word; }
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 16px; } }
   @media screen and (max-width: 767px) {
     html {
       font-size: 3.125vw; } }
@@ -1109,7 +1112,7 @@ blockquote:before {
   .u-ttl1 {
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 5px solid #69821b; }
+    border-bottom: 5px solid #c5c56a; }
     .u-ttl1 img {
       width: auto;
       height: 50px; }
@@ -1118,7 +1121,7 @@ blockquote:before {
           height: 40px; } }
   .u-ttl2 {
     margin-bottom: 25px;
-    color: #666;
+    color: #583822;
     font-size: 32px;
     line-height: 1.4; }
     @media screen and (max-width: 1024px) {
@@ -1215,6 +1218,9 @@ blockquote:before {
 /*--------------------------------------
   トップページ
 ---------------------------------------*/
+body.home .excerpt.typesquare_tags {
+  font-size: 18px; }
+
 /*--------------------------------------
   個別投稿
 ---------------------------------------*/
@@ -1232,14 +1238,15 @@ body.single .entry-footer {
 body.single .edit-link {
   display: none; }
 
-#mySinglePost {
-  font-size: 18px; }
+.mySinglePost {
+  font-size: 18px;
+  line-height: 1.8; }
   @media screen and (max-width: 767px) {
-    #mySinglePost {
+    .mySinglePost {
       font-size: 16px; } }
-  #mySinglePost section + section {
+  .mySinglePost section + section {
     margin-top: 100px; }
-  #mySinglePost h2 {
+  .mySinglePost h2 {
     background-color: #c5c56a;
     margin: 2em 0 1em;
     padding: 1em 0.8em;
@@ -1248,21 +1255,21 @@ body.single .edit-link {
     position: relative;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
     @media screen and (max-width: 767px) {
-      #mySinglePost h2 {
+      .mySinglePost h2 {
         font-size: 26px;
         padding: 0.8em 0.5em; } }
-    #mySinglePost h2:before, #mySinglePost h2:after {
+    .mySinglePost h2:before, .mySinglePost h2:after {
       content: "";
       display: block;
       border-top: 1px dashed #fff;
       width: 100%;
       position: absolute;
       left: 0; }
-    #mySinglePost h2:before {
+    .mySinglePost h2:before {
       top: 10px; }
-    #mySinglePost h2:after {
+    .mySinglePost h2:after {
       bottom: 10px; }
-  #mySinglePost h3 {
+  .mySinglePost h3 {
     background-size: 8px 8px;
     margin: 1.5em 0 1em;
     padding: 0 0.3em 0.3em;
@@ -1271,50 +1278,50 @@ body.single .edit-link {
     border-bottom: 5px solid #c5c56a;
     position: relative; }
     @media screen and (max-width: 767px) {
-      #mySinglePost h3 {
+      .mySinglePost h3 {
         font-size: 24px; } }
-  #mySinglePost h4 {
+  .mySinglePost h4 {
     margin: 1.5em 0 1em;
     padding-left: 0.3em;
     padding-bottom: 0.2em;
     color: #583822;
     font-size: 25px;
-    border-bottom: 3px dashed #c5c56a; }
+    border-bottom: 1px solid #c5c56a; }
     @media screen and (max-width: 767px) {
-      #mySinglePost h4 {
+      .mySinglePost h4 {
         font-size: 22px; } }
-  #mySinglePost h5 {
+  .mySinglePost h5 {
     margin: 1.2em 0 1em;
     padding-left: 0.3em;
     padding-bottom: 0.2em;
     color: #583822;
     font-size: 22px;
-    border-bottom: 1px solid #c5c56a; }
+    border-bottom: 1px dashed #c5c56a; }
     @media screen and (max-width: 767px) {
-      #mySinglePost h5 {
+      .mySinglePost h5 {
         font-size: 20px; } }
-  #mySinglePost h6 {
+  .mySinglePost h6 {
     margin: 1em 0;
     padding-left: 0.5em;
     color: #583822;
     font-size: 20px;
     border-left: 5px solid #c5c56a; }
     @media screen and (max-width: 767px) {
-      #mySinglePost h6 {
+      .mySinglePost h6 {
         font-size: 18px; } }
-  #mySinglePost p {
-    margin-bottom: 0.5em; }
-  #mySinglePost strong {
+  .mySinglePost p {
+    margin-bottom: 1.5em; }
+  .mySinglePost strong {
     font-weight: bold; }
-  #mySinglePost em {
+  .mySinglePost em {
     font-style: italic; }
-  #mySinglePost ul {
-    margin-bottom: 1em; }
-    #mySinglePost ul > li {
+  .mySinglePost ul {
+    margin-bottom: 1.5em; }
+    .mySinglePost ul > li {
       margin-bottom: 0.5em;
       padding-left: 1em;
       position: relative; }
-      #mySinglePost ul > li:before {
+      .mySinglePost ul > li:before {
         content: "";
         display: block;
         background-color: #c5c56a;
@@ -1324,9 +1331,9 @@ body.single .edit-link {
         position: absolute;
         top: 0.4em;
         left: 0; }
-    #mySinglePost ul ul {
+    .mySinglePost ul ul {
       margin-left: 1em; }
-      #mySinglePost ul ul > li:before {
+      .mySinglePost ul ul > li:before {
         content: "";
         display: block;
         background-color: #fff;
@@ -1337,7 +1344,7 @@ body.single .edit-link {
         position: absolute;
         top: 0.4em;
         left: 0; }
-      #mySinglePost ul ul ul > li:before {
+      .mySinglePost ul ul ul > li:before {
         content: "";
         display: block;
         width: 0.2em;
@@ -1346,14 +1353,14 @@ body.single .edit-link {
         position: absolute;
         top: 0.6em;
         left: 0; }
-  #mySinglePost ol {
-    margin-bottom: 1em; }
-    #mySinglePost ol > li {
+  .mySinglePost ol {
+    margin-bottom: 1.5em; }
+    .mySinglePost ol > li {
       counter-increment: num1;
       margin-bottom: 0.5em;
       padding-left: 1.6em;
       position: relative; }
-      #mySinglePost ol > li:before {
+      .mySinglePost ol > li:before {
         content: counter(num1) ". ";
         color: #c5c56a;
         font-size: 1.2em;
@@ -1362,11 +1369,11 @@ body.single .edit-link {
         position: absolute;
         top: 0;
         left: 0; }
-    #mySinglePost ol ol {
+    .mySinglePost ol ol {
       margin-left: 1.6em; }
-      #mySinglePost ol ol > li {
+      .mySinglePost ol ol > li {
         counter-increment: num2; }
-        #mySinglePost ol ol > li:before {
+        .mySinglePost ol ol > li:before {
           content: counter(num2);
           color: #000;
           width: 1.5em;
@@ -1377,9 +1384,9 @@ body.single .edit-link {
           text-align: center;
           border: 2px solid #69821b;
           border-radius: 50%; }
-      #mySinglePost ol ol ol > li {
+      .mySinglePost ol ol ol > li {
         counter-increment: num3; }
-        #mySinglePost ol ol ol > li:before {
+        .mySinglePost ol ol ol > li:before {
           content: counter(num3) "-";
           color: #583822;
           font-size: 1em;
@@ -1387,52 +1394,52 @@ body.single .edit-link {
           border: none;
           border-radius: 0;
           top: 0.1em; }
-  #mySinglePost dl {
-    margin-bottom: 1em; }
-    #mySinglePost dl > dt {
+  .mySinglePost dl {
+    margin-bottom: 1.5em; }
+    .mySinglePost dl > dt {
       font-size: 1.1em;
       font-weight: bold; }
-    #mySinglePost dl > dd {
+    .mySinglePost dl > dd {
       margin-top: 0.3em;
       margin-left: 0.5em;
       padding-left: 0.5em;
       border-left: 2px solid #c5c56a;
       position: relative; }
-  #mySinglePost table {
+  .mySinglePost table {
     width: auto;
-    margin-bottom: 1em; }
-    #mySinglePost table tr {
+    margin-bottom: 1.5em; }
+    .mySinglePost table tr {
       border-bottom: none; }
-    #mySinglePost table th,
-    #mySinglePost table td {
+    .mySinglePost table th,
+    .mySinglePost table td {
       padding-top: 0.2em;
       padding-bottom: 0.2em; }
-    #mySinglePost table th {
+    .mySinglePost table th {
       padding-right: 0.8em;
       padding-left: 0.8em;
       font-weight: bold;
       text-align: center; }
-    #mySinglePost table td {
+    .mySinglePost table td {
       padding-right: 0.8em; }
-    #mySinglePost table thead {
+    .mySinglePost table thead {
       background-color: #c5c56a;
       color: #fff; }
-      #mySinglePost table thead tr + tr {
+      .mySinglePost table thead tr + tr {
         border-top: 1px solid #583822; }
-      #mySinglePost table thead th,
-      #mySinglePost table thead td {
+      .mySinglePost table thead th,
+      .mySinglePost table thead td {
         padding-top: 0.3em;
         padding-bottom: 0.3em; }
-      #mySinglePost table thead th {
+      .mySinglePost table thead th {
         border-bottom: none; }
-    #mySinglePost table tbody tr + tr {
+    .mySinglePost table tbody tr + tr {
       border-top: 1px solid #c5c56a; }
-    #mySinglePost table tbody th {
+    .mySinglePost table tbody th {
       color: #c5c56a; }
-    #mySinglePost table tfoot {
+    .mySinglePost table tfoot {
       background-color: #583822;
       color: #fff; }
-      #mySinglePost table tfoot tr + tr {
+      .mySinglePost table tfoot tr + tr {
         border-top: 1px solid #c5c56a; }
 
 /*--------------------------------------
