@@ -35,21 +35,45 @@
 </div>
 
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
-
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
+	<header class="l-header" role="banner">
+		<?php if ( is_front_page() ) : ?>
+		<div class="l-inner">
+				<h1 class="logo">
+					<div><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
+					<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+				</h1>
+			</div><!-- .l-inner -->
+		<?php else : ?>
+			<div class="pageLowerHd">
+				<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<div><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
+					<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+				</a>
+				<nav class="hdNav">
+					<a href="">全記事一覧</a>
+					<a href="">カテゴリー</a>
+					<a href="">タグ</a>
+					<a href="/?tag=summary">まとめ系</a>
+					<span href="">ゲーム</span>
+				</nav>
+			</div><!-- .pageLowerHd -->
 		<?php endif; ?>
 
-	</header><!-- #masthead -->
+
+
+		<?php if(1 == 2): ?>
+			<p class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+		<?php endif; ?>
+		<?php if ( 1==2 && has_nav_menu( 'top' ) ) : ?>
+			<div class="navigation-top">
+				<div class="l-inner">
+					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+				</div><!-- .l-inner -->
+			</div><!-- .navigation-top -->
+		<?php endif; ?>
+	</header><!-- .l-header -->
 
 	<?php
 

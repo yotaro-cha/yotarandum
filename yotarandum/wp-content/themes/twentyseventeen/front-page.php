@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="l-inner">
 	<div class="l-contRow2">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -58,7 +58,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
 	</div>
-</div><!-- /.wrap -->
+</div><!-- .l-inner -->
 
 <?php
 get_footer();

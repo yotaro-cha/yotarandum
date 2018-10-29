@@ -20,7 +20,7 @@
 			<div class="brwn"></div>
 			<div class="grn"></div>
 			<div class="blk">
-				<div class="wrap">
+				<div class="l-inner">
 					<p id="copyright">&copy; YotaRandum All Rights Reserved.</p>
 
 
@@ -49,7 +49,7 @@
 					get_template_part( 'template-parts/footer/site', 'info' );
 					?>
 					<?php endif; ?>
-				</div><!-- .wrap -->
+				</div><!-- .l-inner -->
 			</div>
 		</footer><!-- .l-footer -->
 	</div><!-- .site-content-contain -->

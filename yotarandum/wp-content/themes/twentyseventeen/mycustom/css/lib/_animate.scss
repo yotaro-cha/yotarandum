@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 
+@keyframes lowLogo{
+	0% {transform: rotate(0deg);}
+	3% {transform: rotate(5deg);}
+	6% {transform: rotate(0deg);}
+	9% {transform: rotate(-5deg);}
+	12% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+}
 @keyframes rotate{
 	0% {transform: rotate(0deg);}
 	50% {transform: rotate(180deg);}

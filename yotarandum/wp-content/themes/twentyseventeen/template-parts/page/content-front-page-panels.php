@@ -29,7 +29,7 @@ global $twentyseventeencounter;
 	<?php endif; ?>
 
 	<div class="panel-content">
-		<div class="wrap">
+		<div class="l-inner">
 			<header class="entry-header">
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
@@ -81,7 +81,7 @@ global $twentyseventeencounter;
 				<?php endif; ?>
 			<?php endif; ?>
 
-		</div><!-- .wrap -->
+		</div><!-- .l-inner -->
 	</div><!-- .panel-content -->
 
 </article><!-- #post-## -->
