@@ -38,7 +38,7 @@
 
 	<header class="l-header" role="banner">
 		<?php if ( is_front_page() ) : ?>
-		<div class="l-inner">
+			<div class="l-inner">
 				<h1 class="logo">
 					<div><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
 					<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
@@ -46,17 +46,26 @@
 			</div><!-- .l-inner -->
 		<?php else : ?>
 			<div class="pageLowerHd">
-				<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<div><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
-					<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
-				</a>
-				<nav class="hdNav">
-					<a href="">全記事一覧</a>
-					<a href="">カテゴリー</a>
-					<a href="">タグ</a>
-					<a href="/?tag=summary">まとめ系</a>
-					<span href="">ゲーム</span>
-				</nav>
+				<div class="spHd">
+					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<div><img src="/wp-content/uploads/2018/10/logo2.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
+						<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
+					</a>
+					<a class="spNavBtn" href="">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+				<div class="spNav">
+					<nav class="hdNav">
+						<a href="">全記事一覧</a>
+						<a href="">カテゴリー</a>
+						<a href="">タグ</a>
+						<a href="/?tag=summary">まとめ系</a>
+						<span href="">ゲーム</span>
+					</nav>
+				</div>
 			</div><!-- .pageLowerHd -->
 		<?php endif; ?>
 

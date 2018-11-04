@@ -45,6 +45,9 @@ body.single{
 	section{
 		+ section{
 			margin-top: 100px;
+			@include mq{
+				margin-top: 50px;
+			}
 		}
 	}
 	h2{
@@ -127,7 +130,8 @@ body.single{
 	em{
 		font-style: italic;
 	}
-	ul{
+	//ページ内パーツ
+	.ul1{
 		margin-bottom: 1.5em;
 		> li{
 			margin-bottom: 0.5em;
@@ -177,7 +181,7 @@ body.single{
 			}
 		}
 	}
-	ol{
+	.ol1{
 		margin-bottom: 1.5em;
 		> li{
 			counter-increment: num1;
@@ -228,7 +232,7 @@ body.single{
 			}
 		}
 	}
-	dl{
+	.dl1{
 		margin-bottom: 1.5em;
 		> dt{
 			font-size: 1.1em;
@@ -242,7 +246,7 @@ body.single{
 			position: relative;
 		}
 	}
-	table{
+	.tbl1{
 		width: auto;
 		margin-bottom: 1.5em;
 		tr{
@@ -295,6 +299,62 @@ body.single{
 			tr{
 				+ tr{
 					border-top: 1px solid $maccha1;
+				}
+			}
+		}
+	}
+	.pageIndex{
+		width: 80%;
+		margin: auto;
+		font-size: 16px;
+		text-align: center;
+		@include mq{
+			width: auto;
+		}
+		>dt{
+			display: inline-block;
+			background-color: $maccha1;
+			padding: 0.3em 2.0em 0.1em;
+			color: $brown1;
+			font-weight: bold;
+			border-radius: 5px 5px 0 0;
+		}
+		>dd{
+			padding: 20px 30px;
+			text-align: left;
+			border: 3px solid $maccha1;
+			@include mq{
+				padding: 10px;
+			}
+			a{
+				display: block;
+			}
+			> ol{
+				> li{
+					+ li{
+						margin-top: 3px;
+					}
+					> a{
+						background-color: $maccha1;
+						padding: 0.1em 0.3em;
+						color: #000;
+					}
+				}
+				> ol{
+					padding-left: 1.0em;
+					> li{
+						> a{
+							color: $maccha1;
+						}
+					}
+					> ol{
+						padding-left: 1.0em;
+						> li{
+							> a{
+								color: $brown1;
+							}
+						}
+					}
 				}
 			}
 		}

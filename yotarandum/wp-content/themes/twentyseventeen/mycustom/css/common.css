@@ -745,11 +745,11 @@ blockquote:before {
   0% {
     transform: rotate(0deg); }
   3% {
-    transform: rotate(5deg); }
+    transform: rotate(-5deg); }
   6% {
     transform: rotate(0deg); }
   9% {
-    transform: rotate(-5deg); }
+    transform: rotate(5deg); }
   12% {
     transform: rotate(0deg); }
   100% {
@@ -956,8 +956,21 @@ blockquote:before {
   justify-content: space-between;
   align-items: center;
   padding: 30px; }
+  @media screen and (max-width: 767px) {
+    .l-header .pageLowerHd {
+      display: block;
+      padding: 0; } }
+  @media screen and (max-width: 767px) {
+    .l-header .pageLowerHd .spHd {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 20px 20px 10px; } }
   .l-header .pageLowerHd .logo {
     width: 330px; }
+    @media screen and (max-width: 767px) {
+      .l-header .pageLowerHd .logo {
+        width: 200px; } }
     .l-header .pageLowerHd .logo:hover {
       animation-name: lowLogo;
       animation-duration: 2s;
@@ -965,18 +978,83 @@ blockquote:before {
       animation-iteration-count: infinite; }
     .l-header .pageLowerHd .logo .siteDesc {
       margin-top: 0.2em;
-      font-size: 16px; }
+      font-size: 14px; }
+  .l-header .pageLowerHd .spNavBtn {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .l-header .pageLowerHd .spNavBtn {
+        display: block;
+        width: 34px;
+        margin-top: 5px;
+        position: relative; }
+        .l-header .pageLowerHd .spNavBtn:before {
+          content: "";
+          display: block;
+          padding-top: 90%; }
+        .l-header .pageLowerHd .spNavBtn span {
+          display: block;
+          width: 100%;
+          height: 6px;
+          position: absolute;
+          left: 0;
+          transition: 0.3s; }
+          .l-header .pageLowerHd .spNavBtn span:nth-child(1) {
+            background-color: #000;
+            top: 0; }
+          .l-header .pageLowerHd .spNavBtn span:nth-child(2) {
+            background-color: #c5c56a;
+            margin-top: -3px;
+            top: 50%; }
+          .l-header .pageLowerHd .spNavBtn span:nth-child(3) {
+            background-color: #583822;
+            margin-top: -6px;
+            top: 100%; }
+        .l-header .pageLowerHd .spNavBtn.show span:nth-child(1) {
+          display: none; }
+        .l-header .pageLowerHd .spNavBtn.show span:nth-child(2) {
+          margin-top: 0;
+          top: 0;
+          transform: translate(0, 12px) rotate(45deg); }
+        .l-header .pageLowerHd .spNavBtn.show span:nth-child(3) {
+          margin-top: 0;
+          top: 0;
+          transform: translate(0, 12px) rotate(-45deg); } }
+  .l-header .pageLowerHd .spNav {
+    display: none; }
   .l-header .pageLowerHd nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px; }
+    @media screen and (max-width: 1024px) {
+      .l-header .pageLowerHd nav {
+        font-size: 18px; } }
+    @media screen and (max-width: 767px) {
+      .l-header .pageLowerHd nav {
+        display: block;
+        font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .l-header .pageLowerHd nav > * {
+        display: block;
+        padding: 5px 10px;
+        border-top: 1px dashed #583822; } }
     .l-header .pageLowerHd nav > * + * {
       margin-left: 1.0em; }
+      @media screen and (max-width: 767px) {
+        .l-header .pageLowerHd nav > * + * {
+          margin: 0; } }
     .l-header .pageLowerHd nav a {
-      color: #c5c56a; }
+      color: #69821b; }
+      @media screen and (max-width: 767px) {
+        .l-header .pageLowerHd nav a {
+          background-color: #c5c56a;
+          color: #583822; } }
     .l-header .pageLowerHd nav span {
       color: #ccc; }
+      @media screen and (max-width: 767px) {
+        .l-header .pageLowerHd nav span {
+          background-color: #ccc;
+          color: #583822; } }
 
 .hdColor span {
   display: block; }
@@ -1321,6 +1399,9 @@ body.single .edit-link {
       font-size: 16px; } }
   .mySinglePost section + section {
     margin-top: 100px; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost section + section {
+        margin-top: 50px; } }
   .mySinglePost h2 {
     background-color: #c5c56a;
     margin: 2em 0 1em;
@@ -1389,13 +1470,13 @@ body.single .edit-link {
     font-weight: bold; }
   .mySinglePost em {
     font-style: italic; }
-  .mySinglePost ul {
+  .mySinglePost .ul1 {
     margin-bottom: 1.5em; }
-    .mySinglePost ul > li {
+    .mySinglePost .ul1 > li {
       margin-bottom: 0.5em;
       padding-left: 1em;
       position: relative; }
-      .mySinglePost ul > li:before {
+      .mySinglePost .ul1 > li:before {
         content: "";
         display: block;
         background-color: #c5c56a;
@@ -1405,9 +1486,9 @@ body.single .edit-link {
         position: absolute;
         top: 0.6em;
         left: 0; }
-    .mySinglePost ul ul {
+    .mySinglePost .ul1 ul {
       margin-left: 1em; }
-      .mySinglePost ul ul > li:before {
+      .mySinglePost .ul1 ul > li:before {
         content: "";
         display: block;
         background-color: #fff;
@@ -1418,7 +1499,7 @@ body.single .edit-link {
         position: absolute;
         top: 0.6em;
         left: 0; }
-      .mySinglePost ul ul ul > li:before {
+      .mySinglePost .ul1 ul ul > li:before {
         content: "";
         display: block;
         width: 0.2em;
@@ -1427,14 +1508,14 @@ body.single .edit-link {
         position: absolute;
         top: 0.8em;
         left: 0; }
-  .mySinglePost ol {
+  .mySinglePost .ol1 {
     margin-bottom: 1.5em; }
-    .mySinglePost ol > li {
+    .mySinglePost .ol1 > li {
       counter-increment: num1;
       margin-bottom: 0.5em;
       padding-left: 1.6em;
       position: relative; }
-      .mySinglePost ol > li:before {
+      .mySinglePost .ol1 > li:before {
         content: counter(num1) ". ";
         color: #c5c56a;
         font-size: 1.2em;
@@ -1443,11 +1524,11 @@ body.single .edit-link {
         position: absolute;
         top: 0.2em;
         left: 0; }
-    .mySinglePost ol ol {
+    .mySinglePost .ol1 ol {
       margin-left: 1.6em; }
-      .mySinglePost ol ol > li {
+      .mySinglePost .ol1 ol > li {
         counter-increment: num2; }
-        .mySinglePost ol ol > li:before {
+        .mySinglePost .ol1 ol > li:before {
           content: counter(num2);
           color: #000;
           width: 1.5em;
@@ -1458,9 +1539,9 @@ body.single .edit-link {
           text-align: center;
           border: 2px solid #69821b;
           border-radius: 50%; }
-      .mySinglePost ol ol ol > li {
+      .mySinglePost .ol1 ol ol > li {
         counter-increment: num3; }
-        .mySinglePost ol ol ol > li:before {
+        .mySinglePost .ol1 ol ol > li:before {
           content: counter(num3) "-";
           color: #583822;
           font-size: 1em;
@@ -1468,53 +1549,91 @@ body.single .edit-link {
           border: none;
           border-radius: 0;
           top: 0.3em; }
-  .mySinglePost dl {
+  .mySinglePost .dl1 {
     margin-bottom: 1.5em; }
-    .mySinglePost dl > dt {
+    .mySinglePost .dl1 > dt {
       font-size: 1.1em;
       font-weight: bold; }
-    .mySinglePost dl > dd {
+    .mySinglePost .dl1 > dd {
       margin-top: 0.3em;
       margin-left: 0.5em;
       padding-left: 0.5em;
       border-left: 2px solid #c5c56a;
       position: relative; }
-  .mySinglePost table {
+  .mySinglePost .tbl1 {
     width: auto;
     margin-bottom: 1.5em; }
-    .mySinglePost table tr {
+    .mySinglePost .tbl1 tr {
       border-bottom: none; }
-    .mySinglePost table th,
-    .mySinglePost table td {
+    .mySinglePost .tbl1 th,
+    .mySinglePost .tbl1 td {
       padding-top: 0.2em;
       padding-bottom: 0.2em; }
-    .mySinglePost table th {
+    .mySinglePost .tbl1 th {
       padding-right: 0.8em;
       padding-left: 0.8em;
       font-weight: bold;
       text-align: center; }
-    .mySinglePost table td {
+    .mySinglePost .tbl1 td {
       padding-right: 0.8em; }
-    .mySinglePost table thead {
+    .mySinglePost .tbl1 thead {
       background-color: #c5c56a;
       color: #fff; }
-      .mySinglePost table thead tr + tr {
+      .mySinglePost .tbl1 thead tr + tr {
         border-top: 1px solid #583822; }
-      .mySinglePost table thead th,
-      .mySinglePost table thead td {
+      .mySinglePost .tbl1 thead th,
+      .mySinglePost .tbl1 thead td {
         padding-top: 0.3em;
         padding-bottom: 0.3em; }
-      .mySinglePost table thead th {
+      .mySinglePost .tbl1 thead th {
         border-bottom: none; }
-    .mySinglePost table tbody tr + tr {
+    .mySinglePost .tbl1 tbody tr + tr {
       border-top: 1px solid #c5c56a; }
-    .mySinglePost table tbody th {
+    .mySinglePost .tbl1 tbody th {
       color: #c5c56a; }
-    .mySinglePost table tfoot {
+    .mySinglePost .tbl1 tfoot {
       background-color: #583822;
       color: #fff; }
-      .mySinglePost table tfoot tr + tr {
+      .mySinglePost .tbl1 tfoot tr + tr {
         border-top: 1px solid #c5c56a; }
+  .mySinglePost .pageIndex {
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .pageIndex {
+        width: auto; } }
+    .mySinglePost .pageIndex > dt {
+      display: inline-block;
+      background-color: #c5c56a;
+      padding: 0.3em 2.0em 0.1em;
+      color: #583822;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0; }
+    .mySinglePost .pageIndex > dd {
+      padding: 20px 30px;
+      text-align: left;
+      border: 3px solid #c5c56a; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .pageIndex > dd {
+          padding: 10px; } }
+      .mySinglePost .pageIndex > dd a {
+        display: block; }
+      .mySinglePost .pageIndex > dd > ol > li + li {
+        margin-top: 3px; }
+      .mySinglePost .pageIndex > dd > ol > li > a {
+        background-color: #c5c56a;
+        padding: 0.1em 0.3em;
+        color: #000; }
+      .mySinglePost .pageIndex > dd > ol > ol {
+        padding-left: 1.0em; }
+        .mySinglePost .pageIndex > dd > ol > ol > li > a {
+          color: #c5c56a; }
+        .mySinglePost .pageIndex > dd > ol > ol > ol {
+          padding-left: 1.0em; }
+          .mySinglePost .pageIndex > dd > ol > ol > ol > li > a {
+            color: #583822; }
 
 /*--------------------------------------
   固定ページ
