@@ -60,7 +60,7 @@
 		<div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
 	<?php endif; ?>
 
-	<?php the_excerpt(); ?>
+	<div class="bassui"><?php the_excerpt(); ?></div>
 
 	<div class="entry-content">
 		<div class="mySinglePost">

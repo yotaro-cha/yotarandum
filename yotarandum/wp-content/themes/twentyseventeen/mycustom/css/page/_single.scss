@@ -10,17 +10,21 @@ body.single{
 	@include mq{
 	}
 	.entry-footer{
-		margin: 0 0 2em;
-		padding: 1em;
 		color: $maccha1;
 		svg{
-			width: 2.0em;
+			width: 1.0em;
+			height: 1.0em;
 			fill: $maccha1;
 		}
 		.cat-links, .tags-links{
-			display: inline-block;
-			font-size: 12px;
+			display: inline-flex;
+			align-items: center;
+			font-size: 14px;
+			.screen-reader-text{
+				display: none;
+			}
 			a{
+				margin-left: 0.5em;
 				color: inherit;
 			}
 		}
@@ -34,6 +38,83 @@ body.single{
 	.edit-link{
 		display: none;
 	}
+	h1{//記事タイトル
+		margin-top: 0;
+	}
+	#comments{//コメント
+		margin-top: 100px;
+		@include mq{
+			margin-top: 50px;
+		}
+		.logged-in-as{
+			display: none;
+		}
+	}
+	.post-navigation{//記事下の前後記事ボタン
+		margin-top: 100px;
+		border-top: 1px solid $maccha1;
+		@include mq{
+			margin-top: 50px;
+		}
+		.screen-reader-text,
+		.nav-subtitle{
+			display: none;
+		}
+		svg{
+			width: 1.0em;
+			height: 0.8em;
+		}
+		.nav-links{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			&:before{
+				content: "";
+				background-color: $maccha1;
+				width: 1px;
+				height: 100%;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+			> div{
+				max-width: 45%;
+				a{
+					display: block;
+					padding: 0.5em 0.8em;
+					transition: 0.3s;
+					&:hover{
+						background-color: $maccha1_a50;
+					}
+					.nav-title{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+					}
+					.nav-title-icon-wrapper{
+						margin-right: 1em;
+					}
+				}
+				&.nav-next{
+					a{
+						.nav-title{
+							justify-content: flex-end;
+						}
+						.nav-title-icon-wrapper{
+							margin-right: 0;
+							margin-left: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.bassui{
+	margin-bottom: 50px;
 }
 .mySinglePost{
 	font-size: 18px;
@@ -51,13 +132,14 @@ body.single{
 		}
 	}
 	h2{
-		background-color: $maccha1;
+		background-color: $koke1;
 		margin: 2em 0 1em;
 		padding: 1em 0.8em;
-		color: $brown1;
+		color: #fff;
 		font-size: 32px;
+//		border-top: 0.2em solid $koke1;
+//		border-bottom: 0.2em solid $koke1;
 		position: relative;
-		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) inset;
 		@include mq{
 			font-size: 26px;
 			padding: 0.8em 0.5em;
@@ -66,7 +148,7 @@ body.single{
 		&:after{
 			content: "";
 			display: block;
-			border-top: 1px dashed #fff;
+			border-top: 1px dashed $maccha1;
 			width: 100%;
 			position: absolute;
 			left: 0;
@@ -79,7 +161,7 @@ body.single{
 		}
 	}
 	h3{
-		background-color: #e2e2b4;
+		background-color: $maccha1_a50;
 		margin: 1.5em 0 1em;
 		padding: 0.3em 0.5em;
 		color: $brown1;
@@ -90,23 +172,40 @@ body.single{
 		}
 	}
 	h4{
+		padding-left: 0.3em;
+		color: $brown1;
+		font-size: 25px;
+		@include mq{
+			font-size: 22px;
+		}
+		&:after{
+			content: "";
+			display: block;
+			background-image:
+				linear-gradient(
+					-45deg,
+					rgba(255,255,255,0) 45%,
+					$koke1 45%,
+					$koke1 50%,
+					rgba(255,255,255,0) 50%,
+					rgba(255,255,255,0) 95%,
+					$koke1 95%,
+					$koke1
+				);
+			background-size: 8px 8px;
+			height: 15px;
+			@include mq{
+				height: 10px;
+			}
+		}
+	}
+	h5{
 		margin: 1.5em 0 1em;
 		padding-left: 0.3em;
 		padding-bottom: 0.2em;
 		color: $brown1;
-		font-size: 25px;
-		border-bottom: 1px solid $maccha1;
-		@include mq{
-			font-size: 22px;
-		}
-	}
-	h5{
-		margin: 1.2em 0 1em;
-		padding-left: 0.3em;
-		padding-bottom: 0.2em;
-		color: $brown1;
 		font-size: 22px;
-		border-bottom: 1px dashed $maccha1;
+		border-bottom: 1px solid $maccha1;
 		@include mq{
 			font-size: 20px;
 		}
@@ -133,10 +232,17 @@ body.single{
 	//ページ内パーツ
 	.ul1{
 		margin-bottom: 1.5em;
-		> li{
+		li{
+			position: relative;
 			margin-bottom: 0.5em;
 			padding-left: 1em;
-			position: relative;
+			&:before{
+				position: absolute;
+				top: 0.6em;
+				left: 0;
+			}
+		}
+		> li{
 			&:before{
 				content: "";
 				display: block;
@@ -144,9 +250,6 @@ body.single{
 				width: 0.6em;
 				height: 0.6em;
 				border-radius: 50%;
-				position: absolute;
-				top: 0.6em;
-				left: 0;
 			}
 		}
 		ul{
@@ -183,20 +286,24 @@ body.single{
 	}
 	.ol1{
 		margin-bottom: 1.5em;
-		> li{
-			counter-increment: num1;
+		li{
 			margin-bottom: 0.5em;
 			padding-left: 1.6em;
 			position: relative;
+			&:before{
+				line-height: 1;
+				position: absolute;
+				top: 0.2em;
+				left: 0;
+			}
+		}
+		> li{
+			counter-increment: num1;
 			&:before{
 				content: counter(num1) ". ";
 				color: $maccha1;
 				font-size: 1.2em;
 				font-weight: bold;
-				line-height: 1;
-				position: absolute;
-				top: 0.2em;
-				left: 0;
 			}
 		}
 		ol{
@@ -314,8 +421,9 @@ body.single{
 		>dt{
 			display: inline-block;
 			background-color: $maccha1;
-			padding: 0.3em 2.0em 0.1em;
+			padding: 0.3em 1.5em 0.1em;
 			color: $brown1;
+			font-size: 1.2em;
 			font-weight: bold;
 			border-radius: 5px 5px 0 0;
 		}
@@ -325,6 +433,8 @@ body.single{
 			border: 3px solid $maccha1;
 			@include mq{
 				padding: 10px;
+				border-left: none;
+				border-right: none;
 			}
 			a{
 				display: block;

@@ -21,6 +21,15 @@ Description: Used to style the TinyMCE editor.
  * 1.0 - Body
  */
 
+@font-face{
+	font-family: tegaki;
+	src: url("/wp-content/themes/twentyseventeen/mycustom/font/HuiFontP29.eot");/*For IE*/
+	src: url("/wp-content/themes/twentyseventeen/mycustom/font/HuiFontP29.woff") format("woff"),/*For Modern browser*/
+	url("/wp-content/themes/twentyseventeen/mycustom/font/HuiFontP29.ttf") format("truetype");/*For iOS Android*/
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	background-color: #fff;
 	color: #333;
@@ -48,7 +57,7 @@ button,
 input,
 select,
 textarea {
-	font-family: "リュウミン B-KL";
+	font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 }
 
 h1,
