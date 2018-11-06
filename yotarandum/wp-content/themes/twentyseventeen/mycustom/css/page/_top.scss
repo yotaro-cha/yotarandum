@@ -7,10 +7,14 @@
   トップページ
 ---------------------------------------*/
 body.home{
+	@include mq{
+		font-size: 16px;
+	}
 	.excerpt.typesquare_tags{
 		font-size: 18px;
 	}
-	@include mq{
+	.u-ttl2{
+		margin-top: 0;
 	}
 }
 

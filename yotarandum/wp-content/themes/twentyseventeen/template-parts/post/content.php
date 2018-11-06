@@ -39,7 +39,7 @@
 		};
 
 		if ( is_single() ) {
-			the_title( '<h1 class="u-ttl2">', '</h1>' );
+			the_title( '<h1 class="singleTtl">', '</h1>' );
 		} elseif ( is_front_page() && is_home() ) {
 			the_title( '<h3 class="u-ttl2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		} else {
@@ -56,7 +56,9 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<?php $image = get_field('post_main'); if( !empty($image) ): ?>
+	<?php $image = get_field('post_main'); if( empty($image) ): ?>
+		<div class="postMainImg"><img src="/wp-content/uploads/2018/10/noimg.png" alt="noimg" /></div>
+	<?php else: ?>
 		<div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
 	<?php endif; ?>
 

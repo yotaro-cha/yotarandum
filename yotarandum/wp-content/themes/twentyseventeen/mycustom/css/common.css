@@ -934,10 +934,6 @@ blockquote:before {
     .l-inner {
       padding-left: 15px;
       padding-right: 15px; } }
-  @media screen and (max-width: 767px) {
-    .l-inner {
-      padding-left: 10px;
-      padding-right: 10px; } }
 
 .l-header .logo {
   text-align: center; }
@@ -1290,7 +1286,31 @@ blockquote:before {
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 36px;
     line-height: 1.4;
-    position: relative; }
+    position: relative;
+    /*
+    		&:after{
+    			content: "";
+    			display: block;
+    			background-image:
+    				linear-gradient(
+    					-45deg,
+    					rgba(255,255,255,0) 45%,
+    					$koke1 45%,
+    					$koke1 50%,
+    					rgba(255,255,255,0) 50%,
+    					rgba(255,255,255,0) 95%,
+    					$koke1 95%,
+    					$koke1
+    				);
+    			background-size: 8px 8px;
+    			height: 15px;
+    			margin-top: 25px;
+    			@include mq{
+    				height: 10px;
+    				margin-top: 10px;
+    			}
+    		}
+    */ }
     @media screen and (max-width: 1024px) {
       .u-ttl2 {
         font-size: 30px; } }
@@ -1300,17 +1320,6 @@ blockquote:before {
     @media screen and (max-width: 767px) {
       .u-ttl2 {
         font-size: 24px; } }
-    .u-ttl2:after {
-      content: "";
-      display: block;
-      background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0) 45%, #69821b 45%, #69821b 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 95%, #69821b 95%, #69821b);
-      background-size: 8px 8px;
-      height: 15px;
-      margin-top: 25px; }
-      @media screen and (max-width: 767px) {
-        .u-ttl2:after {
-          height: 10px;
-          margin-top: 10px; } }
   .u-tbl1 table {
     width: 100%; }
   .u-appsZone {
@@ -1380,6 +1389,9 @@ blockquote:before {
 
 .postMainImg {
   margin-bottom: 25px; }
+  @media screen and (max-width: 767px) {
+    .postMainImg {
+      margin: 0 -15px 15px; } }
 
 .excerpt {
   font-family: "黎ミン M"; }
@@ -1387,14 +1399,20 @@ blockquote:before {
 /*--------------------------------------
   トップページ
 ---------------------------------------*/
+@media screen and (max-width: 767px) {
+  body.home {
+    font-size: 16px; } }
 body.home .excerpt.typesquare_tags {
   font-size: 18px; }
+body.home .u-ttl2 {
+  margin-top: 0; }
 
 /*--------------------------------------
   個別投稿
 ---------------------------------------*/
 body.single .entry-footer {
-  color: #c5c56a; }
+  color: #c5c56a;
+  text-align: center; }
   body.single .entry-footer svg {
     width: 1.0em;
     height: 1.0em;
@@ -1402,7 +1420,7 @@ body.single .entry-footer {
   body.single .entry-footer .cat-links, body.single .entry-footer .tags-links {
     display: inline-flex;
     align-items: center;
-    font-size: 14px; }
+    font-size: 10px; }
     body.single .entry-footer .cat-links .screen-reader-text, body.single .entry-footer .tags-links .screen-reader-text {
       display: none; }
     body.single .entry-footer .cat-links a, body.single .entry-footer .tags-links a {
@@ -1412,8 +1430,34 @@ body.single .entry-footer {
     margin-right: 2em; }
 body.single .edit-link {
   display: none; }
-body.single h1 {
-  margin-top: 0; }
+body.single .entry-header {
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    body.single .entry-header {
+      padding-bottom: 20px; } }
+  body.single .entry-header .entry-meta {
+    font-size: 12px; }
+    @media screen and (max-width: 767px) {
+      body.single .entry-header .entry-meta {
+        font-size: 10px; } }
+    body.single .entry-header .entry-meta .updated {
+      margin-left: 1.5em; }
+      body.single .entry-header .entry-meta .updated:before {
+        content: "更新日："; }
+    body.single .entry-header .entry-meta .byline {
+      display: none; }
+  body.single .entry-header .singleTtl {
+    padding: 1.8em 0 2em;
+    color: #69821b;
+    font-size: 40px;
+    line-height: 1.4; }
+    @media screen and (max-width: 1024px) {
+      body.single .entry-header .singleTtl {
+        font-size: 36px; } }
+    @media screen and (max-width: 767px) {
+      body.single .entry-header .singleTtl {
+        padding: 1.0em 0 1em;
+        font-size: 26px; } }
 body.single #comments {
   margin-top: 100px; }
   @media screen and (max-width: 767px) {
@@ -1471,6 +1515,9 @@ body.single .post-navigation {
 .bassui {
   margin-bottom: 50px;
   font-family: "黎ミン M"; }
+  @media screen and (max-width: 767px) {
+    .bassui {
+      font-size: 16px; } }
 
 .mySinglePost {
   font-family: "黎ミン M";
@@ -1486,17 +1533,18 @@ body.single .post-navigation {
         margin-top: 50px; } }
   .mySinglePost h2 {
     background-color: #c5c56a;
-    margin: 2em 0 1em;
+    margin: 2em -10px 1em;
     padding: 0.6em 0.8em;
     color: #583822;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 36px;
+    line-height: 1.4;
     position: relative;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
     @media screen and (max-width: 767px) {
       .mySinglePost h2 {
         font-size: 30px;
-        padding: 0.8em 0.5em; } }
+        padding: 0.8em 0.5em 0.85em; } }
     .mySinglePost h2:before, .mySinglePost h2:after {
       content: "";
       display: block;
@@ -1510,11 +1558,12 @@ body.single .post-navigation {
       bottom: 10px; }
   .mySinglePost h3 {
     background-color: #e2e2b4;
-    margin: 1.5em 0 1em;
-    padding: 0.3em 1.2em  0.3em 0.5em;
+    margin: 1.5em -10px 1em;
+    padding: 0.5em 1.2em  0.55em 0.5em;
     color: #583822;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 32px;
+    line-height: 1.4;
     border-left: 0.5em solid #c5c56a;
     position: relative; }
     @media screen and (max-width: 767px) {
@@ -1532,34 +1581,38 @@ body.single .post-navigation {
       top: 0;
       right: 0; }
   .mySinglePost h4 {
-    background-color: #e2e2b4;
-    padding-left: 0.3em;
+    background-color: #eeeed2;
+    margin: 1.5em -10px 1em;
+    padding: 0.5em 0.5em 0.55em;
     color: #583822;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 30px;
-    border-top: 2px solid #c5c56a;
+    line-height: 1.4;
+    border-top: 1px solid #c5c56a;
     border-bottom: 1px solid #c5c56a;
     position: relative; }
     @media screen and (max-width: 767px) {
       .mySinglePost h4 {
         font-size: 25px; } }
   .mySinglePost h5 {
-    margin: 1.5em 0 1em;
+    margin: 1.5em -10px 1em;
     padding-left: 0.3em;
     padding-bottom: 0.2em;
     color: #583822;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 26px;
+    line-height: 1.4;
     border-bottom: 1px solid #c5c56a; }
     @media screen and (max-width: 767px) {
       .mySinglePost h5 {
         font-size: 22px; } }
   .mySinglePost h6 {
-    margin: 1em 0;
+    margin: 1em -10px;
     padding-left: 0.5em;
     color: #583822;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 24px;
+    line-height: 1.4;
     border-left: 5px solid #c5c56a; }
     @media screen and (max-width: 767px) {
       .mySinglePost h6 {

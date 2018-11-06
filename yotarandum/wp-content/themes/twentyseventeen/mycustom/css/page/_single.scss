@@ -11,6 +11,7 @@ body.single{
 	}
 	.entry-footer{
 		color: $maccha1;
+		text-align: center;
 		svg{
 			width: 1.0em;
 			height: 1.0em;
@@ -19,7 +20,7 @@ body.single{
 		.cat-links, .tags-links{
 			display: inline-flex;
 			align-items: center;
-			font-size: 14px;
+			font-size: 10px;
 			.screen-reader-text{
 				display: none;
 			}
@@ -38,8 +39,41 @@ body.single{
 	.edit-link{
 		display: none;
 	}
-	h1{//記事タイトル
-		margin-top: 0;
+	.entry-header{
+		text-align: center;
+		@include mq{
+			padding-bottom: 20px;
+		}
+		.entry-meta{
+			font-size: 12px;
+			@include mq{
+				font-size: 10px;
+			}
+			.entry-date{
+			}
+			.updated{
+				margin-left: 1.5em;
+				&:before{
+					content: "更新日：";
+				}
+			}
+			.byline{
+				display: none;
+			}
+		}
+		.singleTtl{//記事タイトル
+			padding: 1.8em 0 2em;
+			color: $koke1;
+			font-size: 40px;
+			line-height: 1.4;
+			@include mqL{
+				font-size: 36px;
+			}
+			@include mq{
+				padding: 1.0em 0 1em;
+				font-size: 26px;
+			}
+		}
 	}
 	#comments{//コメント
 		margin-top: 100px;
@@ -113,9 +147,14 @@ body.single{
 		}
 	}
 }
+.postMainImg{
+}
 .bassui{
 	margin-bottom: 50px;
 	font-family: "黎ミン M";
+	@include mq{
+		font-size: 16px;
+	}
 }
 //記事本文
 .mySinglePost{
@@ -136,16 +175,17 @@ body.single{
 	}
 	h2{
 		background-color: $maccha1;
-		margin: 2em 0 1em;
+		margin: 2em -10px 1em;
 		padding: 0.6em 0.8em;
 		color: $brown1;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 		font-size: 36px;
+		line-height: 1.4;
 		position: relative;
 		box-shadow: 0 0 20px 0px rgba(0,0,0,0.3) inset;
 		@include mq{
 			font-size: 30px;
-			padding: 0.8em 0.5em;
+			padding: 0.8em 0.5em 0.85em;
 		}
 		&:before,
 		&:after{
@@ -165,11 +205,12 @@ body.single{
 	}
 	h3{
 		background-color: $maccha1_a50;
-		margin: 1.5em 0 1em;
-		padding: 0.3em 1.2em  0.3em 0.5em;
+		margin: 1.5em -10px 1em;
+		padding: 0.5em 1.2em  0.55em 0.5em;
 		color: $brown1;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 		font-size: 32px;
+		line-height: 1.4;
 		border-left: 0.5em solid $maccha1;
 		position: relative;
 		@include mq{
@@ -189,12 +230,14 @@ body.single{
 		}
 	}
 	h4{
-		background-color: $maccha1_a50;
-		padding-left: 0.3em;
+		background-color: $maccha1_a30;
+		margin: 1.5em -10px 1em;
+		padding: 0.5em 0.5em 0.55em;
 		color: $brown1;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 		font-size: 30px;
-		border-top: 2px solid $maccha1;
+		line-height: 1.4;
+		border-top: 1px solid $maccha1;
 		border-bottom: 1px solid $maccha1;
 		position: relative;
 		@include mq{
@@ -202,23 +245,25 @@ body.single{
 		}
 	}
 	h5{
-		margin: 1.5em 0 1em;
+		margin: 1.5em -10px 1em;
 		padding-left: 0.3em;
 		padding-bottom: 0.2em;
 		color: $brown1;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 		font-size: 26px;
+		line-height: 1.4;
 		border-bottom: 1px solid $maccha1;
 		@include mq{
 			font-size: 22px;
 		}
 	}
 	h6{
-		margin: 1em 0;
+		margin: 1em -10px;
 		padding-left: 0.5em;
 		color: $brown1;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
 		font-size: 24px;
+		line-height: 1.4;
 		border-left: 5px solid $maccha1;
 		@include mq{
 			font-size: 20px;
