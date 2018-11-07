@@ -15,12 +15,14 @@ body.single{
 		svg{
 			width: 1.0em;
 			height: 1.0em;
-			fill: $maccha1;
+			fill: $brown1;
 		}
 		.cat-links, .tags-links{
 			display: inline-flex;
 			align-items: center;
-			font-size: 10px;
+			@include mq{
+				font-size: 14px;
+			}
 			.screen-reader-text{
 				display: none;
 			}
@@ -42,17 +44,19 @@ body.single{
 	.entry-header{
 		text-align: center;
 		@include mq{
-			padding-bottom: 20px;
 		}
 		.entry-meta{
-			font-size: 12px;
+			line-height: 1.2;
 			@include mq{
-				font-size: 10px;
+				font-size: 14px;
+			}
+			.screen-reader-text{
+				display: none;
 			}
 			.entry-date{
+				display: none;
 			}
 			.updated{
-				margin-left: 1.5em;
 				&:before{
 					content: "更新日：";
 				}
@@ -62,15 +66,16 @@ body.single{
 			}
 		}
 		.singleTtl{//記事タイトル
-			padding: 1.8em 0 2em;
+			padding: 2.4em 0 2.6em;
 			color: $koke1;
 			font-size: 40px;
 			line-height: 1.4;
 			@include mqL{
+				padding: 1.8em 0 2em;
 				font-size: 36px;
 			}
 			@include mq{
-				padding: 1.0em 0 1em;
+				padding: 2.8em 0 3em;
 				font-size: 26px;
 			}
 		}
@@ -173,7 +178,7 @@ body.single{
 			}
 		}
 	}
-	h2{
+	.ttl2{
 		background-color: $maccha1;
 		margin: 2em -10px 1em;
 		padding: 0.6em 0.8em;
@@ -203,7 +208,7 @@ body.single{
 			bottom: 10px;
 		}
 	}
-	h3{
+	.ttl3{
 		background-color: $maccha1_a50;
 		margin: 1.5em -10px 1em;
 		padding: 0.5em 1.2em  0.55em 0.5em;
@@ -229,7 +234,7 @@ body.single{
 			right: 0;
 		}
 	}
-	h4{
+	.ttl4{
 		background-color: $maccha1_a30;
 		margin: 1.5em -10px 1em;
 		padding: 0.5em 0.5em 0.55em;
@@ -244,7 +249,7 @@ body.single{
 			font-size: 25px;
 		}
 	}
-	h5{
+	.ttl5{
 		margin: 1.5em -10px 1em;
 		padding-left: 0.3em;
 		padding-bottom: 0.2em;
@@ -257,7 +262,7 @@ body.single{
 			font-size: 22px;
 		}
 	}
-	h6{
+	.ttl6{
 		margin: 1em -10px;
 		padding-left: 0.5em;
 		color: $brown1;
@@ -278,8 +283,8 @@ body.single{
 	em{
 		font-style: italic;
 	}
-	mark{
-		background-color: #ff0;
+	.mk1{
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgba(255,255,255,0) 60%, rgba(255,255,0,1) 61%,);
 	}
 	//ページ内パーツ
 	.ul1{
@@ -463,13 +468,17 @@ body.single{
 		}
 	}
 	.pageIndex{
-		width: 80%;
-		margin: auto;
+		margin: 0 30px;
 		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
-		font-size: 16px;
+		font-size: 20px;
 		text-align: center;
+		@include mqL{
+			margin: 0 20px;
+		}
 		@include mq{
 			width: auto;
+			margin: 0 -10px;
+			font-size: 18px;
 		}
 		>dt{
 			display: inline-block;
@@ -495,27 +504,48 @@ body.single{
 			}
 			> ol{
 				> li{
+					counter-increment: idxNum1;
+					display: flex;
+					font-size: 1.5em;
+					position: relative;
+					@include mq{
+						font-size: 1.0em;
+					}
+					&:before{
+						content: "0"counter(idxNum1);
+						flex-shrink: 0;
+						width: 1.5em;
+						color: $maccha1;
+						font-size: 1.4em;
+						font-weight: bold;
+						border-right: 3px solid $maccha1;
+					}
 					+ li{
-						margin-top: 3px;
+						margin-top: 1.0em;
 					}
 					> a{
-						background-color: $maccha1;
-						padding: 0.1em 0.3em;
+						width: 100%;
+						padding: 0.45em 0 0 0.8em;
 						color: #000;
+						box-sizing: border-box;
 					}
 				}
 				> ol{
-					padding-left: 1.0em;
+					padding-left: 5.6em;
+					@include mq{
+						padding-left: 3.7em;
+					}
 					> li{
+						@include mq{
+							font-size: 0.8em;
+						}
 						> a{
-							color: $maccha1;
 						}
 					}
 					> ol{
 						padding-left: 1.0em;
 						> li{
 							> a{
-								color: $brown1;
 							}
 						}
 					}

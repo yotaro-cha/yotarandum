@@ -16,6 +16,8 @@
 
 		</div><!-- #content -->
 
+		<a class="l-toTop" href=""></a>
+
 		<footer class="l-footer" role="contentinfo">
 			<div class="brwn"></div>
 			<div class="grn"></div>

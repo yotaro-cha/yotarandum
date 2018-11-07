@@ -1416,11 +1416,13 @@ body.single .entry-footer {
   body.single .entry-footer svg {
     width: 1.0em;
     height: 1.0em;
-    fill: #c5c56a; }
+    fill: #583822; }
   body.single .entry-footer .cat-links, body.single .entry-footer .tags-links {
     display: inline-flex;
-    align-items: center;
-    font-size: 10px; }
+    align-items: center; }
+    @media screen and (max-width: 767px) {
+      body.single .entry-footer .cat-links, body.single .entry-footer .tags-links {
+        font-size: 14px; } }
     body.single .entry-footer .cat-links .screen-reader-text, body.single .entry-footer .tags-links .screen-reader-text {
       display: none; }
     body.single .entry-footer .cat-links a, body.single .entry-footer .tags-links a {
@@ -1432,31 +1434,31 @@ body.single .edit-link {
   display: none; }
 body.single .entry-header {
   text-align: center; }
-  @media screen and (max-width: 767px) {
-    body.single .entry-header {
-      padding-bottom: 20px; } }
   body.single .entry-header .entry-meta {
-    font-size: 12px; }
+    line-height: 1.2; }
     @media screen and (max-width: 767px) {
       body.single .entry-header .entry-meta {
-        font-size: 10px; } }
-    body.single .entry-header .entry-meta .updated {
-      margin-left: 1.5em; }
-      body.single .entry-header .entry-meta .updated:before {
-        content: "更新日："; }
+        font-size: 14px; } }
+    body.single .entry-header .entry-meta .screen-reader-text {
+      display: none; }
+    body.single .entry-header .entry-meta .entry-date {
+      display: none; }
+    body.single .entry-header .entry-meta .updated:before {
+      content: "更新日："; }
     body.single .entry-header .entry-meta .byline {
       display: none; }
   body.single .entry-header .singleTtl {
-    padding: 1.8em 0 2em;
+    padding: 2.4em 0 2.6em;
     color: #69821b;
     font-size: 40px;
     line-height: 1.4; }
     @media screen and (max-width: 1024px) {
       body.single .entry-header .singleTtl {
+        padding: 1.8em 0 2em;
         font-size: 36px; } }
     @media screen and (max-width: 767px) {
       body.single .entry-header .singleTtl {
-        padding: 1.0em 0 1em;
+        padding: 2.8em 0 3em;
         font-size: 26px; } }
 body.single #comments {
   margin-top: 100px; }
@@ -1531,7 +1533,7 @@ body.single .post-navigation {
     @media screen and (max-width: 767px) {
       .mySinglePost section + section {
         margin-top: 50px; } }
-  .mySinglePost h2 {
+  .mySinglePost .ttl2 {
     background-color: #c5c56a;
     margin: 2em -10px 1em;
     padding: 0.6em 0.8em;
@@ -1542,21 +1544,21 @@ body.single .post-navigation {
     position: relative;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
     @media screen and (max-width: 767px) {
-      .mySinglePost h2 {
+      .mySinglePost .ttl2 {
         font-size: 30px;
         padding: 0.8em 0.5em 0.85em; } }
-    .mySinglePost h2:before, .mySinglePost h2:after {
+    .mySinglePost .ttl2:before, .mySinglePost .ttl2:after {
       content: "";
       display: block;
       border-top: 1px dashed #fff;
       width: 100%;
       position: absolute;
       left: 0; }
-    .mySinglePost h2:before {
+    .mySinglePost .ttl2:before {
       top: 10px; }
-    .mySinglePost h2:after {
+    .mySinglePost .ttl2:after {
       bottom: 10px; }
-  .mySinglePost h3 {
+  .mySinglePost .ttl3 {
     background-color: #e2e2b4;
     margin: 1.5em -10px 1em;
     padding: 0.5em 1.2em  0.55em 0.5em;
@@ -1567,9 +1569,9 @@ body.single .post-navigation {
     border-left: 0.5em solid #c5c56a;
     position: relative; }
     @media screen and (max-width: 767px) {
-      .mySinglePost h3 {
+      .mySinglePost .ttl3 {
         font-size: 27px; } }
-    .mySinglePost h3:before {
+    .mySinglePost .ttl3:before {
       content: "";
       display: block;
       position: absolute;
@@ -1580,7 +1582,7 @@ body.single .post-navigation {
       border-color: #fff #fff #c5c56a #c5c56a;
       top: 0;
       right: 0; }
-  .mySinglePost h4 {
+  .mySinglePost .ttl4 {
     background-color: #eeeed2;
     margin: 1.5em -10px 1em;
     padding: 0.5em 0.5em 0.55em;
@@ -1592,9 +1594,9 @@ body.single .post-navigation {
     border-bottom: 1px solid #c5c56a;
     position: relative; }
     @media screen and (max-width: 767px) {
-      .mySinglePost h4 {
+      .mySinglePost .ttl4 {
         font-size: 25px; } }
-  .mySinglePost h5 {
+  .mySinglePost .ttl5 {
     margin: 1.5em -10px 1em;
     padding-left: 0.3em;
     padding-bottom: 0.2em;
@@ -1604,9 +1606,9 @@ body.single .post-navigation {
     line-height: 1.4;
     border-bottom: 1px solid #c5c56a; }
     @media screen and (max-width: 767px) {
-      .mySinglePost h5 {
+      .mySinglePost .ttl5 {
         font-size: 22px; } }
-  .mySinglePost h6 {
+  .mySinglePost .ttl6 {
     margin: 1em -10px;
     padding-left: 0.5em;
     color: #583822;
@@ -1615,7 +1617,7 @@ body.single .post-navigation {
     line-height: 1.4;
     border-left: 5px solid #c5c56a; }
     @media screen and (max-width: 767px) {
-      .mySinglePost h6 {
+      .mySinglePost .ttl6 {
         font-size: 20px; } }
   .mySinglePost p {
     margin-bottom: 1.5em; }
@@ -1623,8 +1625,8 @@ body.single .post-navigation {
     font-family: "リュウミン B-KL"; }
   .mySinglePost em {
     font-style: italic; }
-  .mySinglePost mark {
-    background-color: #ff0; }
+  .mySinglePost .mk1 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 60%, yellow 61%); }
   .mySinglePost .ul1 {
     margin-bottom: 1.5em; }
     .mySinglePost .ul1 li {
@@ -1755,14 +1757,18 @@ body.single .post-navigation {
       .mySinglePost .tbl1 tfoot tr + tr {
         border-top: 1px solid #c5c56a; }
   .mySinglePost .pageIndex {
-    width: 80%;
-    margin: auto;
+    margin: 0 30px;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center; }
+    @media screen and (max-width: 1024px) {
+      .mySinglePost .pageIndex {
+        margin: 0 20px; } }
     @media screen and (max-width: 767px) {
       .mySinglePost .pageIndex {
-        width: auto; } }
+        width: auto;
+        margin: 0 -10px;
+        font-size: 18px; } }
     .mySinglePost .pageIndex > dt {
       display: inline-block;
       background-color: #c5c56a;
@@ -1783,20 +1789,39 @@ body.single .post-navigation {
           border-right: none; } }
       .mySinglePost .pageIndex > dd a {
         display: block; }
-      .mySinglePost .pageIndex > dd > ol > li + li {
-        margin-top: 3px; }
-      .mySinglePost .pageIndex > dd > ol > li > a {
-        background-color: #c5c56a;
-        padding: 0.1em 0.3em;
-        color: #000; }
+      .mySinglePost .pageIndex > dd > ol > li {
+        counter-increment: idxNum1;
+        display: flex;
+        font-size: 1.5em;
+        position: relative; }
+        @media screen and (max-width: 767px) {
+          .mySinglePost .pageIndex > dd > ol > li {
+            font-size: 1.0em; } }
+        .mySinglePost .pageIndex > dd > ol > li:before {
+          content: "0" counter(idxNum1);
+          flex-shrink: 0;
+          width: 1.5em;
+          color: #c5c56a;
+          font-size: 1.4em;
+          font-weight: bold;
+          border-right: 3px solid #c5c56a; }
+        .mySinglePost .pageIndex > dd > ol > li + li {
+          margin-top: 1.0em; }
+        .mySinglePost .pageIndex > dd > ol > li > a {
+          width: 100%;
+          padding: 0.45em 0 0 0.8em;
+          color: #000;
+          box-sizing: border-box; }
       .mySinglePost .pageIndex > dd > ol > ol {
-        padding-left: 1.0em; }
-        .mySinglePost .pageIndex > dd > ol > ol > li > a {
-          color: #c5c56a; }
+        padding-left: 5.6em; }
+        @media screen and (max-width: 767px) {
+          .mySinglePost .pageIndex > dd > ol > ol {
+            padding-left: 3.7em; } }
+        @media screen and (max-width: 767px) {
+          .mySinglePost .pageIndex > dd > ol > ol > li {
+            font-size: 0.8em; } }
         .mySinglePost .pageIndex > dd > ol > ol > ol {
           padding-left: 1.0em; }
-          .mySinglePost .pageIndex > dd > ol > ol > ol > li > a {
-            color: #583822; }
 
 /*--------------------------------------
   固定ページ

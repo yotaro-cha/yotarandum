@@ -35,13 +35,35 @@ $(".spNavBtn").click(function(){
 });
 
 
-
-
 //topへ戻るボタン
 $(".l-toTop").click(function(){
 	$('html,body').animate({scrollTop: 0}, 400, 'swing');
 	return false;
 });
+
+//記事indexのclickScrl
+$(".pageIndex a").click(function(){
+	var pos = ($(window).width() > 767) ? 40 : 20;
+	var speed = 400;
+	var href= $(this).attr("href");
+	var target = $(href == "#" || href == "" ? 'html' : href);
+	var position = target.offset().top;		
+	$("html, body").animate({scrollTop:position-pos}, speed, "swing");
+	return false;
+});
+
+//clickScrl
+function clkScrl(btn, pos){
+	btn.click(function(){
+		var speed = 400;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;		
+        $("html, body").animate({scrollTop:position-pos}, speed, "swing");
+		return false;
+	});
+}
+clkScrl($("a.clkScrl"), 0);
 
 //$(".cbYt1").colorbox({iframe:true, innerWidth:720, innerHeight:480});
 //$(".cbPh1").colorbox({opacity: 0.5});	
