@@ -39,12 +39,13 @@
 					padding: vwL(30) 0;
 				}
 				@include mq{
-					padding: vw(30) 0;
+					padding: vw(60) 0 vw(50);
 				}
 				.siteDesc{
 					margin-top: 0.5em;
 					font-size: 30px;
 					@include mq{
+						margin-top: 0;
 						font-size: 1.6rem;
 					}
 				}
@@ -58,7 +59,16 @@
 		padding: 30px;
 		@include mq{
 			display: block;
+			margin-bottom: 20px;
 			padding: 0;
+			&:after{
+				content: "";
+				display: block;
+				background-color: $maccha1;
+				width: vw(200);
+				height: 1px;
+				margin: 30px auto 0;
+			}
 		}
 		.spHd{
 			@include mq{
@@ -156,7 +166,7 @@
 			}
 			@include mq{
 				display: block;
-				font-size: 16px;
+				padding-bottom: 20px;
 			}
 			> *{
 				@include mq{
@@ -253,7 +263,7 @@
 //サイドバー
 .widget-area{
 	@include mq{
-		font-size: 14px;
+		font-size: 18px;
 	}
 	svg{
 		fill:$koke1;
@@ -278,15 +288,65 @@
 		}
 	}
 	.widget{
-		> .typesquare_tags{
+	}
+	.search-form{//検索
+		display: flex;
+		padding-top: 1.5em;
+		position: relative;
+		label{
+			line-height: 1;
+			position: absolute;
+			top: 0;
+		}
+		input{
+			width: 100%;
+			border-right: none;
+			border-radius: 0;
+		}
+		button{
+			flex-shrink: 0;
+			background-color: $maccha1;
+			margin: 0;
+			padding: 0.1em 0 0;
+			color: #fff;
+			width: 5.0em;
+			svg{
+				margin-top: 0.1em;
+				margin-right: 0.3em;
+				fill: #fff;
+			}
+		}
+	}
+	.widget_categories{//分類
+		> ul{
+			line-height: 2.2;
 			> li{
-				&:first-child{
-					border-top: none;
+				+ li{
+					border-top: 1px solid $maccha1;
+				}
+				a{
+					padding: 0.2em 0;
+				}
+			}
+			ul{//2階層
+				li{
+					border-top: 1px dashed #ccc;
+					a{
+						margin-left: 1.2em;
+					}
+				}
+				ul{//3階層
+					li{
+						border-top: 1px dotted #ccc;
+						a{
+							margin-left: 2.4em;
+						}
+					}
 				}
 			}
 		}
 	}
-	.wp-tag-cloud{
+	.wp-tag-cloud{//札
 		font-size: 0.8em;
 		> li{
 			display: inline-block;
@@ -299,6 +359,7 @@
 				color: #fff;
 				border-radius: 5px;
 				position: relative;
+				transition: 0.3s;
 				&:before,
 				&:after{
 					content: "";
@@ -314,6 +375,7 @@
 					height: 1.8em;
 					border-radius: 50% 0 0 50%;
 					left: -1.0em;
+					transition: 0.3s;
 				}
 				&:after{
 					background-color: #fff;
@@ -321,6 +383,66 @@
 					height: 0.4em;
 					left: -0.6em;
 					border-radius: 50%;
+				}
+				&:hover{
+					background-color: $koke1;
+					&:before{
+						background-color: $koke1;
+					}
+				}
+			}
+		}
+	}
+	.widget_recent_entries{//直近の投稿
+		> ul{
+			> li{
+				padding: 0.8em 0;
+				line-height: 1.2;
+				&:nth-child(1){padding-top: 0;}
+				+ li{
+					border-top: 1px dashed $maccha1;
+				}
+				a{
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	.widget_recent_comments{//天啓
+		> ul{
+			> li{
+				padding: 0.8em 0;
+				line-height: 1.2;
+				&:nth-child(1){padding-top: 0;}
+				+ li{
+					border-top: 1px dashed $maccha1;
+				}
+				a{
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+				span{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.widget_archive{//資料群
+		> ul{
+			> li{
+				padding: 0.8em 0;
+				line-height: 1.2;
+				&:nth-child(1){padding-top: 0;}
+				+ li{
+					border-top: 1px dashed $maccha1;
+				}
+				a{
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 			}
 		}
