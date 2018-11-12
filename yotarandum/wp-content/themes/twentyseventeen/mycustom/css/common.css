@@ -1145,10 +1145,15 @@ blockquote:before {
     padding-top: 10%; }
 .widget-area .search-form {
   display: flex;
-  padding-top: 1.5em;
+  padding-top: 13.3334%;
+  font-size: 0;
   position: relative; }
   .widget-area .search-form label {
-    line-height: 1;
+    display: block;
+    background: url(https://yotarandum.net/wp-content/uploads/2018/11/txt_search_s.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 10%;
     position: absolute;
     top: 0; }
   .widget-area .search-form input {
@@ -1305,34 +1310,25 @@ blockquote:before {
         font-size: 10px; } }
 
 .l-toTop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 50px;
-  height: 50px;
+  display: block;
+  background: url(https://yotarandum.net/wp-content/uploads/2018/11/totop.png) center center no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
   position: fixed;
-  bottom: 10px;
+  bottom: 15px;
   right: 10px;
-  transition: opacity 0.3s; }
-  .l-toTop:before {
-    content: "";
-    display: block;
-    width: 36%;
-    height: 36%;
-    border-top: 5px solid #fff;
-    border-right: 5px solid #fff;
-    transform: translate(1%, 24%) rotate(-45deg); }
+  transition: 0.3s; }
   .l-toTop:hover {
-    opacity: 0.7; }
+    bottom: 15px; }
   @media screen and (max-width: 767px) {
     .l-toTop {
-      width: 30px;
-      height: 30px;
-      bottom: 5px;
-      right: 5px; }
-      .l-toTop:before {
-        border-width: 4px 4px 0 0; } }
+      width: 50px;
+      height: 50px;
+      bottom: 10px;
+      right: 2px; }
+      .l-toTop:hover {
+        bottom: 10px; } }
 
 .u- {
   /* タイトル */

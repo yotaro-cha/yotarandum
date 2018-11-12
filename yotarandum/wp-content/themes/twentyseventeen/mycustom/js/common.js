@@ -41,17 +41,6 @@ $(".l-toTop").click(function(){
 	return false;
 });
 
-//記事indexのclickScrl
-$(".pageIndex a").click(function(){
-	var pos = ($(window).width() > 767) ? 40 : 20;
-	var speed = 400;
-	var href= $(this).attr("href");
-	var target = $(href == "#" || href == "" ? 'html' : href);
-	var position = target.offset().top;		
-	$("html, body").animate({scrollTop:position-pos}, speed, "swing");
-	return false;
-});
-
 //clickScrl
 function clkScrl(btn, pos){
 	btn.click(function(){
