@@ -1699,10 +1699,11 @@ body.single .post-navigation {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3) inset; }
     @media screen and (max-width: 767px) {
       .mySinglePost .ttl2 {
-        margin-left: -10px;
-        margin-right: -10px;
+        margin-left: -15px;
+        margin-right: -15px;
         padding: 0.8em 0.5em 0.85em;
-        font-size: 30px; } }
+        font-size: 30px;
+        line-height: 1.2; } }
     .mySinglePost .ttl2:before, .mySinglePost .ttl2:after {
       content: "";
       display: block;
