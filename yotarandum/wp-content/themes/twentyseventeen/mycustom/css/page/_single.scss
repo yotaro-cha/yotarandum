@@ -273,6 +273,65 @@ body.single{
 			}
 		}
 	}
+	p{
+		margin-bottom: 1.5em;
+	}
+	a{
+		color: $maccha1;
+		text-decoration: underline;
+	}
+	strong{
+		font-family: "リュウミン B-KL";
+	}
+	em{
+		font-style: italic;
+	}
+  blockquote{
+    background-color: $maccha1_a30;
+    margin: 0 3.0em 1.5em;
+    padding: 2.0em;
+    border-left: 5px solid $maccha1;
+    border-right: 5px solid $maccha1;
+    overflow: hidden;
+    @include mq{
+      margin: 0 2.0em 1.5em;
+      padding: 1.0em;
+    }
+    &:before{
+      color: $brown1;
+      font-family: tegaki;
+      top: 0.1em;
+      left: -0.1em;
+      opacity: 0.2;
+      @include mq{
+        top: 0.05em;
+        left: -0.2em;
+      }
+    }
+    &:after {
+      content: "”";
+      font-size: 600%;
+      line-height: 1em;
+      color: $brown1;
+      position: absolute;
+      font-family: tegaki;
+      bottom: -0.4em;
+      right: 0em;
+      opacity: 0.2;
+      @include mq{
+        bottom: -0.5em;
+        right: -0.1em;
+      }
+    }
+    > div{
+      position: relative;
+      z-index: 1;
+      *:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+	//ページ内パーツ
 	.ttl2{
 		background-color: $maccha1;
 		margin: 2em 0 1em;
@@ -380,19 +439,6 @@ body.single{
 			font-size: 20px;
 		}
 	}
-	p{
-		margin-bottom: 1.5em;
-	}
-	a{
-		color: $maccha1;
-		text-decoration: underline;
-	}
-	strong{
-		font-family: "リュウミン B-KL";
-	}
-	em{
-		font-style: italic;
-	}
 	.mk1{//緑
 		background: linear-gradient(
 			to bottom,
@@ -428,6 +474,7 @@ body.single{
 	.link1{
 		color: #1a0dab;
 		text-decoration: none;
+    @include hvr;
 		&:before{
 			content: "";
 			display: inline-block;
@@ -439,13 +486,34 @@ body.single{
 			border-color: #1a0dab;
 			transform: translate(0,-0.15em) rotate(45deg);
 		}
-		&:hover{
-			text-decoration: underline;
-		}
 	}
-	//ページ内パーツ
+	.gaibuCiteBox1{
+		color: #1a0dab;
+		text-decoration: none;
+    @include hvr;
+    > div{
+      margin-bottom: 0.5em;
+    }
+    > p{
+      &:before{
+        content: "";
+        display: inline-block;
+        width: 0.3em;
+        height: 0.3em;
+        margin-right: 0.3em;
+        border-style: solid;
+        border-width: 0.15em 0.15em 0 0;
+        border-color: #1a0dab;
+        transform: translate(0,-0.15em) rotate(45deg);
+      }
+    }
+	}
 	.ul1{
-		margin-bottom: 1.5em;
+    margin: 0 1.5em 1.5em;
+    @include mq{
+      margin-left: 1.0em;
+      margin-right: 0;
+    }
 		> li{
 			background-color: $maccha1_a30;
 			margin-bottom: 0.5em;
@@ -525,7 +593,11 @@ body.single{
 		}
 	}
 	.ol1{
-		margin-bottom: 1.5em;
+    margin: 0 1.5em 1.5em;
+    @include mq{
+      margin-left: 1.0em;
+      margin-right: 0;
+    }
 		> li{
 			counter-increment: num1;
 			background-color: $maccha1_a30;
@@ -625,13 +697,17 @@ body.single{
 			padding: 0 1.0em 1.0em;
 			border: 2px solid $maccha1;
 			> dt{
-				font-size: 0.8em;
+        font-family: tegaki;
+        font-size: 1.2em;
 				span{
 					background-color: $maccha1;
 					display: inline-block;
 					padding: 0.2em 1.0em;
 					color: #fff;
-					font-weight: bold;
+					//font-weight: bold;
+          .fa{
+            margin-right: 0.5em;
+          }
 				}
 			}
 			> dd{
