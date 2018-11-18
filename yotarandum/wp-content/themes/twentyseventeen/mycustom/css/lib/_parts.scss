@@ -10,6 +10,9 @@
 		> li{
 			+ li{
 				margin-top: 100px;
+        @include mq{
+          margin-top: 80px;
+        }
 			}
 			a{
 				@include hvr;

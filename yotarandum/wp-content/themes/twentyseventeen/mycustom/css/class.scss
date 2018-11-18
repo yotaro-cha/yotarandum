@@ -113,6 +113,11 @@
 		}
 	}
 
+	&txt{
+	/*-- FontColor --*/
+    &Red{color: #f00;}
+    &Maccha1{color: #c5c56a;}
+	}
 	&fz{
 	/*-- Font --*/
 		@for $iFz from 6 through 50{

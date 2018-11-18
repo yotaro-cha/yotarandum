@@ -1404,10 +1404,10 @@ blockquote:before {
   .u-appsZone {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px; }
+    margin-bottom: 80px; }
     @media screen and (max-width: 767px) {
       .u-appsZone {
-        margin: 0 0 10px; } }
+        margin: 0 0 50px; } }
     .u-appsZone > * {
       display: block;
       width: 15.2941176471%;
@@ -1460,6 +1460,9 @@ blockquote:before {
 
 .newPosts > ul > li + li {
   margin-top: 100px; }
+  @media screen and (max-width: 767px) {
+    .newPosts > ul > li + li {
+      margin-top: 80px; } }
 .newPosts > ul > li a {
   transition: opacity 0.3s; }
   .newPosts > ul > li a:hover {
@@ -1696,46 +1699,6 @@ body.single .post-navigation {
     font-family: "リュウミン B-KL"; }
   .mySinglePost em {
     font-style: italic; }
-  .mySinglePost blockquote {
-    background-color: #eeeed2;
-    margin: 0 3.0em 1.5em;
-    padding: 2.0em;
-    border-left: 5px solid #c5c56a;
-    border-right: 5px solid #c5c56a;
-    overflow: hidden; }
-    @media screen and (max-width: 767px) {
-      .mySinglePost blockquote {
-        margin: 0 2.0em 1.5em;
-        padding: 1.0em; } }
-    .mySinglePost blockquote:before {
-      color: #583822;
-      font-family: tegaki;
-      top: 0.1em;
-      left: -0.1em;
-      opacity: 0.2; }
-      @media screen and (max-width: 767px) {
-        .mySinglePost blockquote:before {
-          top: 0.05em;
-          left: -0.2em; } }
-    .mySinglePost blockquote:after {
-      content: "”";
-      font-size: 600%;
-      line-height: 1em;
-      color: #583822;
-      position: absolute;
-      font-family: tegaki;
-      bottom: -0.4em;
-      right: 0em;
-      opacity: 0.2; }
-      @media screen and (max-width: 767px) {
-        .mySinglePost blockquote:after {
-          bottom: -0.5em;
-          right: -0.1em; } }
-    .mySinglePost blockquote > div {
-      position: relative;
-      z-index: 1; }
-      .mySinglePost blockquote > div *:last-child {
-        margin-bottom: 0; }
   .mySinglePost .ttl2 {
     background-color: #c5c56a;
     margin: 2em 0 1em;
@@ -1858,6 +1821,56 @@ body.single .post-navigation {
       border-width: 0.15em 0.15em 0 0;
       border-color: #1a0dab;
       transform: translate(0, -0.15em) rotate(45deg); }
+  .mySinglePost .bqBox1 {
+    background-color: #f6f6f6;
+    margin: 0 3.0em 1.5em;
+    padding: 2.0em;
+    border-left: 1px solid #a7d7f9;
+    border-right: 1px solid #a7d7f9;
+    position: relative;
+    overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .bqBox1 {
+        margin: 0 2.0em 1.5em;
+        padding: 1.0em; } }
+    .mySinglePost .bqBox1:before, .mySinglePost .bqBox1:after {
+      color: #a7d7f9;
+      font-size: 600%;
+      line-height: 1em;
+      font-family: tegaki;
+      position: absolute;
+      opacity: 0.4; }
+    .mySinglePost .bqBox1:before {
+      content: "“";
+      top: 0.1em;
+      left: -0.1em; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .bqBox1:before {
+          top: 0.05em;
+          left: -0.2em; } }
+    .mySinglePost .bqBox1:after {
+      content: "”";
+      bottom: -0.4em;
+      right: 0em; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .bqBox1:after {
+          bottom: -0.5em;
+          right: -0.1em; } }
+    .mySinglePost .bqBox1 *:last-child {
+      margin-bottom: 0; }
+    .mySinglePost .bqBox1 blockquote {
+      background: none;
+      padding: 0;
+      border-left: none;
+      z-index: 1; }
+      .mySinglePost .bqBox1 blockquote:before {
+        content: normal; }
+    .mySinglePost .bqBox1 cite {
+      display: block;
+      margin-top: 0.5em;
+      font-size: 0.9em;
+      font-style: italic;
+      text-align: right; }
   .mySinglePost .gaibuCiteBox1 {
     color: #1a0dab;
     text-decoration: none;
@@ -1967,11 +1980,11 @@ body.single .post-navigation {
         justify-content: center;
         align-items: center;
         background-color: #c5c56a;
-        width: 2.0em;
+        width: 1.0em;
         height: 100%;
         color: #fff;
-        font-size: 1.0em;
-        font-weight: bold;
+        font-family: tegaki;
+        font-size: 2.0em;
         line-height: 1;
         position: absolute;
         top: 0;

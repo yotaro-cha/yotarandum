@@ -67,14 +67,16 @@
 <section>
 	<h2 class="ttl2">シンタックスハイライターとは</h2>
 	<p>wiki様によると</p>
-	<blockquote cite="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88">
-    <div><p>シンタックスハイライト (英: syntax highlighting, 構文強調) とは、テキストエディタの機能であり、テキスト中の一部分をその分類ごとに異なる色やフォントで表示するものである。シンタックスカラーリング (syntax coloring) とも。</p></div>
-  </blockquote>
-	<p>つまりシンタックスハイライターとはブログなどでコーディング風の画面を表示出来るもの</p>
+  <div class="bqBox1">
+    <blockquote cite="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88">
+      <p>シンタックスハイライト (英: syntax highlighting, 構文強調) とは、テキストエディタの機能であり、<mark class="mk4">テキスト中の一部分をその分類ごとに異なる色やフォントで表示するもの</mark>である。シンタックスカラーリング (syntax coloring) とも。</p>
+    </blockquote><cite>シンタックスハイライト</cite>
+  </div>
+	<p>このシンタックスハイライターを使えばブログなどでコーディング風の画面が表現出来る</p>
 	<h3 class="ttl3">シンタックスハイライターの種類</h3>
-	<p>シンタックスハイライターで有名なものに</p>
+	<p>シンタックスハイライターでは有名なものに</p>
 	<ul class="ul2">
-		<li>SyntaxHighlighterEvoltednado</li>
+		<li>SyntaxHighlighterEvolted</li>
 		<li>Crayon Syntax highlighter</li>
 	</ul>
 	<p>などがあるが機能が限られていたり、多機能なものは重い</p>
@@ -82,7 +84,7 @@
 </section>
 <section>
 	<h2 class="ttl2">prism.jsの使い方</h2>
-	<p>prism.jsは導入から使用まで簡単</p>
+	<p>prism.jsは導入から記述までが簡単</p>
 	<ol class="ol1">
 		<li>公式サイトで内容(カラーやプラグインなど)を選んでjsとcssを落とす</li>
 		<li>自分のサイトでjsとcssを読み込む</li>
@@ -104,6 +106,150 @@
 	</ul>
 	<p>親切なことに各テーマからプラグインまでのファイルサイズが書かれていて、現在選択しているファイルのTotalとjs,cssの内訳も分かる</p>
 	<p>使いたい内容が選べたら下部の「DOWNLOAD JS」と「DOWNLOAD CSS」をclick</p>
+  <h4 class="ttl4">Languagesについて</h4>
+  <p>このサイトで使用しているものは</p>
+  <ul class="ul2">
+    <li>markup</li>
+    <li>css</li>
+    <li>clike</li>
+    <li>javascript</li>
+    <li>markdown</li>
+    <li>php</li>
+    <li>scss</li>
+    <li>pug</li>
+  </ul>
+  <h4 class="ttl4">Pluginsについて</h4>
+  <p>理解出来た物は説明付き(グーグル翻訳様使用)<br>
+    半分くらい分かりませんでした……<br>
+    このサイトで使用しているものには<i class="fas fa-check c-txtMaccha1"></i>付き
+  </p>
+  <dl class="dl1">
+    <dt>Line highlight<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>指定行をハイライト</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Line Numbers<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>行番号を付ける</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Show Invisibles</dt>
+    <dd>タブや改行など不可視の文字を可視化する</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Autolinker</dt>
+    <dd>コード内のURLやメールアドレスなどをクリック出来るリンクに変換する<br>
+      コメント内のテキストを特定のURLにリンクしたい場合はマークダウン構文を使用する</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>WebPlatform Docs</dt>
+    <dd>WebPlatform.orgのドキュメントにトークンをリンクさせる<br>
+      ちょっと何言ってるか分かりません……トークンてなんぞや？<br>
+      使用の際は特別なセットアップは必要ない。ダウンロードするだけでOK</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Custom Class</dt>
+    <dd>prism.jsに使用するクラス名に接頭辞を付ける(「.comment」は「.namespace--comment」)ことが出来る？<br>
+      prism.jsに使われているクラス名は一般的な名前が多いので他の用途で使用しているクラス名と被らないようにする為のプラグイン？<br>
+      よく分かりませんでした</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>File Highlight</dt>
+    <dd>外部ファイルを取得して、prism.jsでハイライト表示する<br>
+      空の&lt;pre&gt;&lt;/pre&gt;要素に「data-src」属性でファイルを指定する<br>
+      例：&lt;pre data-src="myfile.js"&gt;&lt;/pre&gt;<br>
+      注意点は「ファイルはXMLHttpRequestで取得される」ので他のサイトから持ってくる場合、そのサイトで<sup>*1</sup>CORSが有効にされていないと持ってこれない<br>
+      このプラグインは「ツールバープラグイン」との組み合わせることで、表示したコードにダウンロードボタンを付けることが出来る<br>
+        <sup>*1</sup>CORSとは：Cross-Origin Resource Sharingの略。読み込み元のページがあるサーバーから別のサーバーにあるファイルを読み込む仕組みのこと。つまり他所様のサイトから持ってくることは出来ないと言うこと</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Show Language<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+     <dd>現在表示しているコードが何の言語かを示すことが出来る<br>
+      文字列で指定出来るのでhtml,css,javascriptなどだけでなく、基本的に何でも表示出来る</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>JSONP Highlight</dt>
+    <dd>JSONPでコンテンツを取得してハイライト表示する(GitHub、GitHub Gists、Bitbucketなど)<br>
+      詳しいことは分かりませんでした</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Highlight Keywords</dt>
+    <dd>コード内で自分で決めたキーワードにクラス名を自動で付与する<br>
+      これにより特定のキーワードをcssで装飾が出来る</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Remove initial line feed<span class="c-txtRed ed">※廃止予定</span></dt>
+    <dd>コードの最初の改行を削除する<br>
+      このプラグインは廃止される予定なので、変わりに「Normalize Whitespace」プラグインを使う</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Previewers</dt>
+    <dd>コード内の値をホバーするとプレビューが表示される<br>
+      例えば、「#f00」と記述された箇所をホバーすると赤色が表示される<br>
+      サポートされている値は
+      <div class="ul3">
+        <li>angle 角度</li>
+        <li>color 色</li>
+        <li>gradient グラデーション</li>
+        <li>easing イージング、アニメーションの緩急</li>
+        <li>time 時間</li>
+      </div>
+      サイトでExamplesを試してみると分かり易い</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Autoloader</dt>
+    <dd>コードをハイライトするのに必要な言語を自動的に読み込む<br>
+      不完全な文法を自動的に処理して埋めてくれる？<br>
+      使用の際は追加で「文法ファイル」を落とす必要がある。ちょっと重い<br>
+      よく分かりませんでした</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Keep markup</dt>
+    <dd>コード内の指定箇所を強調表示する。<br>
+      指定した単語が四角で囲まれる<br>
+      サイトでExamplesを試してみると分かり易い</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Command Line<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>windowsのコマンドプロンプトやMacのターミナル風な表示が出来る<br>
+      インラインコードではなくコードブロックで使用出来る</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Unescaped markup<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>「&gt;」などをそのまま表示出来る。<br>
+      このプラグインを使わないと「&gt;」などは文字実態参照(「&amp;gt;」など)で記述する必要がある<br>
+      使用方法は2通り<br>
+      &lt;pre&gt;&lt;code&gt;の代わりに&lt;script type="text/plain"&gt;を使う<br>
+      &lt;pre&gt;&lt;code&gt;の中を&lt;!----&gt;で記述する</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Normalize Whitespace</dt>
+    <dd>空白に対する処理を指定出来る
+      <ul class="ul2">
+        <li>行の先頭や末尾の空白、タブなどを削除</li>
+        <li>タブをスペースへ、スペースをタブへ変換</li>
+        <li>インデントの指定</li>
+        <li>長い行を特定の文字数で改行</li>
+      </ul>
+      など色々出来る</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Data-URI Highlight</dt>
+    <dd>URIを自動でハイライトする<br>
+      MIMEタイプ情報にて文法が推測される</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Toolbar<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>コードの右上にツールバーを付けてボタンを表示できる<br>
+      ボタンは自分で登録出来る(コードを選択ボタンなど)<br>
+      jsにて機能を制作する</dd>
+  </dl>
+  <dl class="dl1">
+    <dt>Copy to Clipboard<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
+    <dd>コードをコピーボタンを追加する<br>
+      プラグインを落とす他、Clipboard.jsをプラグインより前に読み込む必要がある</dd>
+  </dl>
+  
+
 	<h3 class="ttl3">読み込み</h3>
 	<p>普通のファイルと同じように&lt;head&gt;&lt;/head&gt;内に「prism.js」と「prism.css」を読み込ませるだけ	</p>
 	<p>簡単！</p>
@@ -112,7 +258,7 @@
       <dt><span><i class="fa fa-hand-point-up"></i>ちなみに</span></dt>
       <dd>
         <p>一度落としたファイルをもう一度落とす場合(言語やプラグインを追加したい時)<br>
-          すでに自分が持っているプラグインなどの内容を忘れてしまっても、<strong>jsかcssファイルの冒頭に書かれているurl</strong>へ飛ぶと、その項目が選択されている状態でページが表示されるので便利<br>
+          すでに自分が持っているプラグインなどの内容を忘れてしまっても、<mark class="mk2">jsかcssファイルの冒頭に書かれているurl</mark>へ飛ぶと、その項目が選択されている状態でページが表示されるので便利<br>
           本当に親切</p>
       </dd>
     </dl>

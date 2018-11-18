@@ -147,9 +147,9 @@
 	&appsZone{
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
 		@include mq{
-			margin: 0 0 10px;
+			margin: 0 0 50px;
 		}
 		> *{
 			display: block;

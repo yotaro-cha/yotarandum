@@ -7605,6 +7605,12 @@
     padding-left: 10em !important; }
   .c-PL100R {
     padding-left: 10rem !important; }
+.c-txt {
+  /*-- FontColor --*/ }
+  .c-txtRed {
+    color: #f00; }
+  .c-txtMaccha1 {
+    color: #c5c56a; }
 .c-fz {
   /*-- Font --*/ }
   .c-fz6 {
