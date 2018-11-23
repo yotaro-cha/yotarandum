@@ -1310,7 +1310,7 @@ blockquote:before {
         font-size: 10px; } }
 
 .l-toTop {
-  display: block;
+  display: none;
   background: url(https://yotarandum.net/wp-content/uploads/2018/11/totop.png) center center no-repeat;
   background-size: contain;
   width: 70px;
@@ -1638,6 +1638,7 @@ body.single .post-navigation {
       font-weight: bold;
       border-radius: 5px 5px 0 0; }
     .mySinglePost #toc_container .toc_list {
+      background-color: #fff;
       padding: 30px 30px 20px;
       text-align: left;
       border: 3px solid #c5c56a; }
@@ -1690,6 +1691,51 @@ body.single .post-navigation {
             .mySinglePost #toc_container .toc_list ul ul > li > a > .toc_number {
               width: 2.6em;
               font-weight: normal; }
+    .mySinglePost #toc_container.fix .toc_list {
+      padding: 10px 10px 5px;
+      font-size: 14px;
+      border: 2px solid #c5c56a;
+      border-right: none;
+      position: fixed;
+      right: 0;
+      top: 40px;
+      z-index: 2; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost #toc_container.fix .toc_list {
+          padding: 10px;
+          font-size: 10px;
+          top: auto;
+          bottom: 0;
+          left: 0;
+          right: auto; } }
+      .mySinglePost #toc_container.fix .toc_list a {
+        padding-left: 2.5em; }
+      .mySinglePost #toc_container.fix .toc_list > li {
+        font-size: 1.2em; }
+        @media screen and (max-width: 767px) {
+          .mySinglePost #toc_container.fix .toc_list > li {
+            font-size: 1.0em; } }
+        .mySinglePost #toc_container.fix .toc_list > li .toc_number {
+          width: 1.2em;
+          padding-top: 0.15em;
+          font-size: 1.4em;
+          border-right: 2px solid #c5c56a; }
+        .mySinglePost #toc_container.fix .toc_list > li + li {
+          margin-top: 0.5em; }
+      .mySinglePost #toc_container.fix .toc_list ul {
+        padding-left: 2.5em; }
+        .mySinglePost #toc_container.fix .toc_list ul > li > a {
+          padding-left: 1.8em; }
+          .mySinglePost #toc_container.fix .toc_list ul > li > a > .toc_number {
+            width: 1.5em;
+            padding-top: 0.45em;
+            font-size: 1.0em; }
+        .mySinglePost #toc_container.fix .toc_list ul ul {
+          padding-left: 1.9em; }
+          .mySinglePost #toc_container.fix .toc_list ul ul > li > a {
+            padding-left: 2.8em; }
+            .mySinglePost #toc_container.fix .toc_list ul ul > li > a > .toc_number {
+              width: 2.6em; }
   .mySinglePost p {
     margin-bottom: 1.5em; }
   .mySinglePost a {

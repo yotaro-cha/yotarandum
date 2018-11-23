@@ -203,6 +203,7 @@ body.single{
 			border-radius: 5px 5px 0 0;
 		}
 		.toc_list{
+      background-color: #fff;
 			padding: 30px 30px 20px;
 			text-align: left;
 			border: 3px solid $maccha1;
@@ -272,6 +273,70 @@ body.single{
 				}
 			}
 		}
+    &.fix{
+      .toc_list{
+        padding: 10px 10px 5px;
+        font-size: 14px;
+        border: 2px solid $maccha1;
+        border-right: none;
+        position: fixed;
+        right: 0;
+        top: 40px;
+        z-index: 2;
+        @include mq{
+          padding: 10px;
+          font-size: 10px;
+          top: auto;
+          bottom: 0;
+          left: 0;
+          right: auto;
+        }
+        a{
+          padding-left: 2.5em;
+        }
+        > li{
+          font-size: 1.2em;
+          @include mq{
+            font-size: 1.0em;
+          }
+          .toc_number{
+            width: 1.2em;
+            padding-top: 0.15em;
+            font-size: 1.4em;
+            border-right: 2px solid $maccha1;
+          }
+          + li{
+            margin-top: 0.5em;
+          }
+        }
+        ul{//2階層
+          padding-left: 2.5em;
+          @include mq{
+          }
+          > li{
+            > a{
+              padding-left: 1.8em;
+              > .toc_number{
+                width: 1.5em;
+                padding-top: 0.45em;
+                font-size: 1.0em;
+              }
+            }
+          }
+          ul{//3階層
+            padding-left: 1.9em;
+            > li{
+              > a{
+                padding-left: 2.8em;
+                > .toc_number{
+                  width: 2.6em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 	}
 	p{
 		margin-bottom: 1.5em;

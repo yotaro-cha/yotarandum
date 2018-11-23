@@ -54,6 +54,37 @@ function clkScrl(btn, pos){
 }
 clkScrl($("a.clkScrl"), 0);
 
+
+$(window).load(function(){
+//このページの目次
+$("#toc_container").height($("#toc_container").height());
+var tocPos = $(".toc_list").offset().top;
+
+
+//スクロール
+var sclNum = 0;
+$(window).scroll(function(){
+	sclNum = $(window).scrollTop();
+console.log(sclNum);
+	if(sclNum > 500){	
+		$(".l-toTop").fadeIn("fast");
+	}else{	
+		$(".l-toTop").fadeOut("fast");
+	}
+	if(sclNum > tocPos){	
+		$("#toc_container").addClass("fix");
+	}else{	
+		$("#toc_container").removeClass("fix");
+	}
+});//winScrlFnc End
+});//winLrdFnc End
+
+
+
+
+
+
+
 //$(".cbYt1").colorbox({iframe:true, innerWidth:720, innerHeight:480});
 //$(".cbPh1").colorbox({opacity: 0.5});	
 //$(".cbIf1").colorbox({iframe:true, innerWidth:947, innerHeight:600});
