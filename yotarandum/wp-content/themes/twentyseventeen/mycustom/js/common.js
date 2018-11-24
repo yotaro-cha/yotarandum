@@ -57,8 +57,7 @@ clkScrl($("a.clkScrl"), 0);
 
 $(window).load(function(){
 //このページの目次
-$("#toc_container").height($("#toc_container").height());
-var tocPos = $(".toc_list").offset().top;
+var tocPos;
 
 
 //スクロール
@@ -66,14 +65,21 @@ var sclNum = 0;
 $(window).scroll(function(){
 	sclNum = $(window).scrollTop();
 console.log(sclNum);
+
+  //ページ内top
 	if(sclNum > 500){	
 		$(".l-toTop").fadeIn("fast");
 	}else{	
 		$(".l-toTop").fadeOut("fast");
 	}
-	if(sclNum > tocPos){	
+
+  //このページの目次
+  tocPos = $(".tocWrap + h2").offset().top;
+	if(sclNum > tocPos){
+    $(".tocWrap").height($(".tocWrap").height());
 		$("#toc_container").addClass("fix");
-	}else{	
+	}else{
+    $(".tocWrap").height("auto");
 		$("#toc_container").removeClass("fix");
 	}
 });//winScrlFnc End

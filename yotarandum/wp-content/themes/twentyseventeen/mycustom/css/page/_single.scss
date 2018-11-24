@@ -178,132 +178,95 @@ body.single{
 			}
 		}
 	}
-	#toc_container{
-		margin: 0 30px 100px;
-		font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
-		font-size: 20px;
-		text-align: center;
-		@include mqL{
-			margin: 0 20px 70px;
-		}
-		@include mq{
-			width: auto;
-			margin: 0 -10px 50px;
-			font-size: 18px;
-		}
-		.toc_title{
-			display: inline-block;
-			background-color: $maccha1;
-			margin: 0;
-			padding: 0.3em 1.5em 0.1em;
-			color: $brown1;
-			color: #fff;
-			font-size: 1.2em;
-			font-weight: bold;
-			border-radius: 5px 5px 0 0;
-		}
-		.toc_list{
-      background-color: #fff;
-			padding: 30px 30px 20px;
-			text-align: left;
-			border: 3px solid $maccha1;
-			@include mq{
-				padding: 20px 10px;
-				border-left: none;
-				border-right: none;
-			}
-			a{
-				display: block;
-				padding-left: 2.5em;
-				color: #000;
-				text-decoration: none;
-				position: relative;
-			}
-			> li{
-				font-size: 1.2em;
-				position: relative;
-				@include mq{
-					font-size: 1.0em;
-				}
-				.toc_number{
-					display: block;
-					width: 1.2em;
-					height: 100%;
-					padding-top: 0.15em;
-					color: $maccha1;
-					font-size: 1.4em;
-					font-weight: bold;
-					line-height: 1;
-					border-right: 3px solid $maccha1;
-					box-sizing: border-box;
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
-				+ li{
-					margin-top: 0.5em;
-				}
-			}
-			ul{//2階層
-				padding-left: 2.5em;
-				@include mq{
-				}
-				> li{
-					> a{
-						padding-left: 1.8em;
-						> .toc_number{
-							width: 1.5em;
-							padding-top: 0.45em;
-							font-size: 1.0em;
-							border-right: none;
-						}
-					}
-				}
-				ul{//3階層
-					padding-left: 1.9em;
-					> li{
-						> a{
-							padding-left: 2.8em;
-							> .toc_number{
-								width: 2.6em;
-								font-weight: normal;
-							}
-						}
-					}
-				}
-			}
-		}
-    &.fix{
+  .tocWrap{
+    margin-bottom: 100px;
+    @include mqL{
+      margin-bottom: 70px;
+    }
+    @include mq{
+      margin-bottom: 50px;
+    }
+  	#toc_container{
+      margin: 0 30px;
+      font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
+      font-size: 20px;
+      text-align: center;
+      @include mqL{
+        margin: 0 20px;
+      }
+      @include mq{
+        width: auto;
+        margin: 0 -10px;
+        font-size: 18px;
+      }
+      .toc_title{
+        display: inline-block;
+        background-color: $maccha1;
+        margin: 0;
+        padding: 0.3em 1.5em 0.1em;
+        color: $brown1;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 5px 5px 0 0;
+        span{
+          font-size: 0.8em;
+          a{
+            color: $brown1;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      &.contracted{//閉じてる
+        .toc_title{
+          padding-bottom: 0.3em;
+          border-radius: 5px;
+          span{
+            a{
+            }
+          }
+        }
+      }
       .toc_list{
-        padding: 10px 10px 5px;
-        font-size: 14px;
-        border: 2px solid $maccha1;
-        border-right: none;
-        position: fixed;
-        right: 0;
-        top: 40px;
-        z-index: 2;
+        background-color: rgba(255,255,255,0.9);
+        padding: 30px 30px 20px;
+        text-align: left;
+        border: 3px solid $maccha1;
         @include mq{
-          padding: 10px;
-          font-size: 10px;
-          top: auto;
-          bottom: 0;
-          left: 0;
-          right: auto;
+          background-color: rgba(255,255,255,0.95);
+          padding: 20px 10px;
+          border-left: none;
+          border-right: none;
         }
         a{
+          display: block;
           padding-left: 2.5em;
+          color: #000;
+          text-decoration: none;
+          position: relative;
         }
         > li{
           font-size: 1.2em;
+          position: relative;
           @include mq{
             font-size: 1.0em;
           }
           .toc_number{
+            display: block;
             width: 1.2em;
+            height: 100%;
             padding-top: 0.15em;
+            color: $maccha1;
             font-size: 1.4em;
-            border-right: 2px solid $maccha1;
+            font-weight: bold;
+            line-height: 1;
+            border-right: 3px solid $maccha1;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
           }
           + li{
             margin-top: 0.5em;
@@ -320,6 +283,7 @@ body.single{
                 width: 1.5em;
                 padding-top: 0.45em;
                 font-size: 1.0em;
+                border-right: none;
               }
             }
           }
@@ -330,6 +294,97 @@ body.single{
                 padding-left: 2.8em;
                 > .toc_number{
                   width: 2.6em;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.fix{//固定
+        width: 300px !important;
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        top: 40px;
+        z-index: 2;
+        @include mqL{
+          width: 250px !important;
+          font-size: 14px;
+        }
+        @include mq{
+          width: auto !important;
+          font-size: 10px;
+          top: auto;
+          bottom: 0;
+          left: 0;
+          right: 60px;
+        }
+        .toc_title{
+          display: block;
+          span{
+            @include mq{
+              font-size: 1.0em;
+            }
+            a{
+            }
+          }
+        }
+        .toc_list{
+          padding: 10px;
+          border: 2px solid $maccha1;
+          border-right: none;
+          @include mq{
+            padding: 5px;
+            border-right: 2px solid $maccha1;
+            border-bottom: none;
+            border-left: none;
+          }
+          a{
+            padding-left: 1.8em;
+          }
+          > li{
+            font-size: 1.2em;
+            @include mq{
+              font-size: 1.0em;
+            }
+            .toc_number{
+              width: 1.0em;
+              padding-top: 0.35em;
+              font-size: 1.2em;
+              border-right: 1px solid $maccha1;
+            }
+            + li{
+              margin-top: 0.5em;
+            }
+          }
+          ul{//2階層
+            padding-left: 1.8em;
+            @include mq{
+            }
+            > li{
+              display: 0.9em;
+              > a{
+                padding-left:2.2em;
+                > .toc_number{
+                  width: 1.8em;
+                  padding-top: 0.45em;
+                  font-size: 1.0em;
+                }
+              }
+            }
+            ul{//3階層
+              padding-left: 2.4em;
+              > li{
+                font-size: 0.8em;
+                > a{
+                  padding-left: 2.8em;
+                  > .toc_number{
+                    width: 2.7em;
+                    font-size: 0.8em;
+                  }
                 }
               }
             }
@@ -337,7 +392,7 @@ body.single{
         }
       }
     }
-	}
+  }
 	p{
 		margin-bottom: 1.5em;
 	}
