@@ -1639,7 +1639,7 @@ body.single .post-navigation {
         display: inline-block;
         background-color: #c5c56a;
         margin: 0;
-        padding: 0.3em 1.5em 0.1em;
+        padding: 0.3em 1.0em 0.1em;
         color: #583822;
         color: #fff;
         font-size: 1.2em;
@@ -2253,6 +2253,43 @@ body.single .post-navigation {
       color: #fff; }
       .mySinglePost .tbl1 tfoot tr + tr {
         border-top: 1px solid #c5c56a; }
+  .mySinglePost .tblDl1 {
+    width: auto;
+    margin-bottom: 1.5em; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .tblDl1 tbody {
+        display: block; } }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .tblDl1 tr {
+        display: block; } }
+    .mySinglePost .tblDl1 tr + tr {
+      border-top: 1px solid #c5c56a; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .tblDl1 tr + tr {
+          margin-top: 1.0em;
+          border-top: none; } }
+    .mySinglePost .tblDl1 th,
+    .mySinglePost .tblDl1 td {
+      padding: 1.0em; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .tblDl1 th,
+        .mySinglePost .tblDl1 td {
+          display: block; } }
+    .mySinglePost .tblDl1 th {
+      background-color: #eeeed2;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+      border-right: 1px solid #c5c56a; }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .tblDl1 th {
+          padding: 0.5em;
+          border-right: none; } }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .tblDl1 td {
+        padding: 0.5em 0; } }
+    .mySinglePost .tblDl1 td *:last-child {
+      margin-bottom: 0; }
 
 /*--------------------------------------
   固定ページ

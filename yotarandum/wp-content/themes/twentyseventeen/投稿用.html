@@ -154,16 +154,15 @@
     <li>
       <p class="c-MB2P">TOMORROW NIGHT</p>
       <div class="c-MB3P"><img src="https://yotarandum.net/wp-content/uploads/2018/12/prism.js_img_color08.png" alt=""></div>
-      <p>TWILIGHTに似ているがこちらの方がより黒く、枠線が付く</p>
+      <p>TWILIGHTに似ているがこちらの方がより黒い</p>
     </li>
   </ul>
   <p>の全8種類<br>このサイトではcssを上書きする形でカスタムするので、一番軽い「Tomorrow Night(1.71KB)」を使用</p>
   <h4 class="ttl4">Languagesについて</h4>
   <p>このサイトで使用しているものは</p>
   <ul class="ul2">
-    <li>markup</li>
+    <li>markup(htmlのこと)</li>
     <li>css</li>
-    <li>clike</li>
     <li>javascript</li>
     <li>markdown</li>
     <li>php</li>
@@ -175,132 +174,134 @@
     半分くらい分かりませんでした……<br>
     このサイトで使用しているものには<i class="fas fa-check c-txtMaccha1"></i>付き
   </p>
-  <dl class="dl1">
-    <dt>Line highlight<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>指定行をハイライト</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Line Numbers<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>行番号を付ける</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Show Invisibles</dt>
-    <dd>タブや改行など不可視の文字を可視化する</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Autolinker</dt>
-    <dd>コード内のURLやメールアドレスなどをクリック出来るリンクに変換する<br>
-      コメント内のテキストを特定のURLにリンクしたい場合はマークダウン構文を使用する</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>WebPlatform Docs</dt>
-    <dd>WebPlatform.orgのドキュメントにトークンをリンクさせる<br>
-      ちょっと何言ってるか分かりません……トークンてなんぞや？<br>
-      使用の際は特別なセットアップは必要ない。ダウンロードするだけでOK</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Custom Class</dt>
-    <dd>prism.jsに使用するクラス名に接頭辞を付ける(「.comment」は「.namespace--comment」)ことが出来る？<br>
-      prism.jsに使われているクラス名は一般的な名前が多いので他の用途で使用しているクラス名と被らないようにする為のプラグイン？<br>
-      よく分かりませんでした</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>File Highlight</dt>
-    <dd>外部ファイルを取得して、prism.jsでハイライト表示する<br>
-      空の&lt;pre&gt;&lt;/pre&gt;要素に「data-src」属性でファイルを指定する<br>
-      例：&lt;pre data-src="myfile.js"&gt;&lt;/pre&gt;<br>
-      注意点は「ファイルはXMLHttpRequestで取得される」ので他のサイトから持ってくる場合、そのサイトで<sup>*1</sup>CORSが有効にされていないと持ってこれない<br>
-      このプラグインは「ツールバープラグイン」との組み合わせることで、表示したコードにダウンロードボタンを付けることが出来る<br>
-        <sup>*1</sup>CORSとは：Cross-Origin Resource Sharingの略。読み込み元のページがあるサーバーから別のサーバーにあるファイルを読み込む仕組みのこと。つまり他所様のサイトから持ってくることは出来ないと言うこと</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Show Language<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-     <dd>現在表示しているコードが何の言語かを示すことが出来る<br>
-      文字列で指定出来るのでhtml,css,javascriptなどだけでなく、基本的に何でも表示出来る</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>JSONP Highlight</dt>
-    <dd>JSONPでコンテンツを取得してハイライト表示する(GitHub、GitHub Gists、Bitbucketなど)<br>
-      詳しいことは分かりませんでした</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Highlight Keywords</dt>
-    <dd>コード内で自分で決めたキーワードにクラス名を自動で付与する<br>
-      これにより特定のキーワードをcssで装飾が出来る</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Remove initial line feed<span class="c-txtRed ed">※廃止予定</span></dt>
-    <dd>コードの最初の改行を削除する<br>
-      このプラグインは廃止される予定なので、変わりに「Normalize Whitespace」プラグインを使う</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Previewers</dt>
-    <dd>コード内の値をホバーするとプレビューが表示される<br>
-      例えば、「#f00」と記述された箇所をホバーすると赤色が表示される<br>
-      サポートされている値は
-      <div class="ul3">
-        <li>angle 角度</li>
-        <li>color 色</li>
-        <li>gradient グラデーション</li>
-        <li>easing イージング、アニメーションの緩急</li>
-        <li>time 時間</li>
-      </div>
-      サイトでExamplesを試してみると分かり易い</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Autoloader</dt>
-    <dd>コードをハイライトするのに必要な言語を自動的に読み込む<br>
-      不完全な文法を自動的に処理して埋めてくれる？<br>
-      使用の際は追加で「文法ファイル」を落とす必要がある。ちょっと重い<br>
-      よく分かりませんでした</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Keep markup</dt>
-    <dd>コード内の指定箇所を強調表示する。<br>
-      指定した単語が四角で囲まれる<br>
-      サイトでExamplesを試してみると分かり易い</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Command Line<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>windowsのコマンドプロンプトやMacのターミナル風な表示が出来る<br>
-      インラインコードではなくコードブロックで使用出来る</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Unescaped markup<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>「&gt;」などをそのまま表示出来る。<br>
-      このプラグインを使わないと「&gt;」などは文字実態参照(「&amp;gt;」など)で記述する必要がある<br>
-      使用方法は2通り<br>
-      &lt;pre&gt;&lt;code&gt;の代わりに&lt;script type="text/plain"&gt;を使う<br>
-      &lt;pre&gt;&lt;code&gt;の中を&lt;!----&gt;で記述する</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Normalize Whitespace</dt>
-    <dd>空白に対する処理を指定出来る
-      <ul class="ul2">
-        <li>行の先頭や末尾の空白、タブなどを削除</li>
-        <li>タブをスペースへ、スペースをタブへ変換</li>
-        <li>インデントの指定</li>
-        <li>長い行を特定の文字数で改行</li>
-      </ul>
-      など色々出来る</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Data-URI Highlight</dt>
-    <dd>URIを自動でハイライトする<br>
-      MIMEタイプ情報にて文法が推測される</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Toolbar<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>コードの右上にツールバーを付けてボタンを表示できる<br>
-      ボタンは自分で登録出来る(コードを選択ボタンなど)<br>
-      jsにて機能を制作する</dd>
-  </dl>
-  <dl class="dl1">
-    <dt>Copy to Clipboard<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></dt>
-    <dd>コードをコピーボタンを追加する<br>
-      プラグインを落とす他、Clipboard.jsをプラグインより前に読み込む必要がある</dd>
-  </dl>
-  
+	<table class="tblDl1">
+		<tr>
+			<th>Line highlight<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>指定行をハイライト</td>
+		</tr>
+		<tr>
+			<th>Line Numbers<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>行番号を付ける</td>
+		</tr>
+		<tr>
+			<th>Show Invisibles</th>
+			<td>タブや改行など不可視の文字を可視化する</td>
+		</tr>
+		<tr>
+			<th>Autolinker</th>
+			<td>コード内のURLやメールアドレスなどをクリック出来るリンクに変換する<br>
+				コメント内のテキストを特定のURLにリンクしたい場合はマークダウン構文を使用する</td>
+		</tr>
+		<tr>
+			<th>WebPlatform Docs</th>
+			<td>WebPlatform.orgのドキュメントにトークンをリンクさせる<br>
+				ちょっと何言ってるか分かりません……トークンてなんぞや？<br>
+				使用の際は特別なセットアップは必要ない。ダウンロードするだけでOK</td>
+		</tr>
+		<tr>
+			<th>Custom Class</th>
+			<td>prism.jsに使用するクラス名に接頭辞を付ける(「.comment」は「.namespace--comment」)ことが出来る？<br>
+				prism.jsに使われているクラス名は一般的な名前が多いので他の用途で使用しているクラス名と被らないようにする為のプラグイン？<br>
+				よく分かりませんでした</td>
+		</tr>
+		<tr>
+			<th>File Highlight</th>
+			<td>外部ファイルを取得して、prism.jsでハイライト表示する<br>
+				空の&lt;pre&gt;&lt;/pre&gt;要素に「data-src」属性でファイルを指定する<br>
+				例：&lt;pre data-src="myfile.js"&gt;&lt;/pre&gt;<br>
+				注意点は「ファイルはXMLHttpRequestで取得される」ので他のサイトから持ってくる場合、そのサイトで<sup>*1</sup>CORSが有効にされていないと持ってこれない<br>
+				このプラグインは「ツールバープラグイン」との組み合わせることで、表示したコードにダウンロードボタンを付けることが出来る<br>
+					<sup>*1</sup>CORSとは：Cross-Origin Resource Sharingの略。読み込み元のページがあるサーバーから別のサーバーにあるファイルを読み込む仕組みのこと。つまり他所様のサイトから持ってくることは出来ないと言うこと</td>
+		</tr>
+		<tr>
+			<th>Show Language<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>現在表示しているコードが何の言語かを示すことが出来る<br>
+				文字列で指定出来るのでhtml,css,javascriptなどだけでなく、基本的に何でも表示出来る</td>
+		</tr>
+		<tr>
+			<th>JSONP Highlight</th>
+			<td>JSONPでコンテンツを取得してハイライト表示する(GitHub、GitHub Gists、Bitbucketなど)<br>
+				詳しいことは分かりませんでした</td>
+		</tr>
+		<tr>
+			<th>Highlight Keywords</th>
+			<td>コード内で自分で決めたキーワードにクラス名を自動で付与する<br>
+				これにより特定のキーワードをcssで装飾が出来る</td>
+		</tr>
+		<tr>
+			<th>Remove initial line feed<span class="c-txtRed">※廃止予定</span></th>
+			<td>コードの最初の改行を削除する<br>
+				<mark class="mk2">このプラグインは<span class="c-txtRed">廃止される予定</span>なので、変わりに「Normalize Whitespace」プラグインを使う</mark></td>
+		</tr>
+		<tr>
+			<th>Previewers</th>
+			<td>コード内の値をホバーするとプレビューが表示される<br>
+				例えば、「#f00」と記述された箇所をホバーすると赤色が表示される<br>
+				サポートされている値は
+				<div class="ul3">
+					<li>angle 角度</li>
+					<li>color 色</li>
+					<li>gradient グラデーション</li>
+					<li>easing イージング、アニメーションの緩急</li>
+					<li>time 時間</li>
+				</div>
+				サイトでExamplesを試してみると分かり易い</td>
+		</tr>
+		<tr>
+			<th>Autoloader</th>
+			<td>コードをハイライトするのに必要な言語を自動的に読み込む<br>
+				不完全な文法を自動的に処理して埋めてくれる？<br>
+				使用の際は追加で「文法ファイル」を落とす必要がある。ちょっと重い<br>
+				よく分かりませんでした</td>
+		</tr>
+		<tr>
+			<th>Keep markup</th>
+			<td>コード内の指定箇所を強調表示する。<br>
+				指定した単語が四角で囲まれる<br>
+				サイトでExamplesを試してみると分かり易い</td>
+		</tr>
+		<tr>
+			<th>Command Line<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>windowsのコマンドプロンプトやMacのターミナル風な表示が出来る<br>
+				インラインコードではなくコードブロックで使用出来る</td>
+		</tr>
+		<tr>
+			<th>Unescaped markup<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>「&gt;」などをそのまま表示出来る。<br>
+				このプラグインを使わないと「&gt;」などは文字実態参照(「&amp;gt;」など)で記述する必要がある<br>
+				使用方法は2通り<br>
+				&lt;pre&gt;&lt;code&gt;の代わりに&lt;script type="text/plain"&gt;を使う<br>
+				&lt;pre&gt;&lt;code&gt;の中を&lt;!----&gt;で記述する</td>
+		</tr>
+		<tr>
+			<th>Normalize Whitespace</th>
+			<td>空白に対する処理を指定出来る
+				<ul class="ul2">
+					<li>行の先頭や末尾の空白、タブなどを削除</li>
+					<li>タブをスペースへ、スペースをタブへ変換</li>
+					<li>インデントの指定</li>
+					<li>長い行を特定の文字数で改行</li>
+				</ul>
+				など色々出来る</td>
+		</tr>
+		<tr>
+			<th>Data-URI Highlight</th>
+			<td>URIを自動でハイライトする<br>
+				MIMEタイプ情報にて文法が推測される</td>
+		</tr>
+		<tr>
+			<th>Toolbar<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>コードの右上にツールバーを付けてボタンを表示できる<br>
+				ボタンは自分で登録出来る(コードを選択ボタンなど)<br>
+				jsにて機能を制作する</td>
+		</tr>
+		<tr>
+			<th>Copy to Clipboard<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<td>コードをコピーボタンを追加する<br>
+				プラグインを落とす他、Clipboard.jsをプラグインより前に読み込む必要がある</td>
+		</tr>
+	</table>
+
 
 	<h3 class="ttl3">読み込み</h3>
 	<p>普通のファイルと同じように&lt;head&gt;&lt;/head&gt;内に「prism.js」と「prism.css」を読み込ませるだけ	</p>

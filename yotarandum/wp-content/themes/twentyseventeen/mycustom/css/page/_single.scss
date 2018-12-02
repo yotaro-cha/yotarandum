@@ -203,7 +203,7 @@ body.single{
         display: inline-block;
         background-color: $maccha1;
         margin: 0;
-        padding: 0.3em 1.5em 0.1em;
+        padding: 0.3em 1.0em 0.1em;
         color: $brown1;
         color: #fff;
         font-size: 1.2em;
@@ -1048,6 +1048,53 @@ body.single{
 				+ tr{
 					border-top: 1px solid $maccha1;
 				}
+			}
+		}
+	}
+	.tblDl1{
+		width: auto;
+		margin-bottom: 1.5em;
+		tbody{
+			@include mq{
+				display: block;
+			}
+		}
+		tr{
+			@include mq{
+				display: block;
+			}
+			+ tr{
+				border-top: 1px solid $maccha1;
+				@include mq{
+					margin-top: 1.0em;
+					border-top: none;
+				}
+			}
+		}
+		th,
+		td{
+			padding: 1.0em;
+			@include mq{
+				display: block;
+			}
+		}
+		th{
+			background-color: $maccha1_a30;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: middle;
+			border-right: 1px solid $maccha1;
+			@include mq{
+				padding: 0.5em;
+				border-right: none;
+			}
+		}
+		td{
+			@include mq{
+				padding: 0.5em 0;
+			}
+			*:last-child{
+				margin-bottom: 0;
 			}
 		}
 	}
