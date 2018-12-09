@@ -280,7 +280,7 @@ body.single{
             > a{
               padding-left: 1.8em;
               > .toc_number{
-                width: 1.5em;
+                width: 1.6em;
                 padding-top: 0.45em;
                 font-size: 1.0em;
                 border-right: none !important;
@@ -1097,6 +1097,9 @@ body.single{
 				margin-bottom: 0;
 			}
 		}
+	}
+	.img1{
+		box-shadow: 0 0 3px 0 $maccha1
 	}
 	//クラスタグ
 

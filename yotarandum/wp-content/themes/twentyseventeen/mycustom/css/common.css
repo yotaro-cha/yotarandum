@@ -1698,7 +1698,7 @@ body.single .post-navigation {
           .mySinglePost .tocWrap #toc_container .toc_list ul > li > a {
             padding-left: 1.8em; }
             .mySinglePost .tocWrap #toc_container .toc_list ul > li > a > .toc_number {
-              width: 1.5em;
+              width: 1.6em;
               padding-top: 0.45em;
               font-size: 1.0em;
               border-right: none !important; }
@@ -2290,6 +2290,8 @@ body.single .post-navigation {
         padding: 0.5em 0; } }
     .mySinglePost .tblDl1 td *:last-child {
       margin-bottom: 0; }
+  .mySinglePost .img1 {
+    box-shadow: 0 0 3px 0 #c5c56a; }
 
 /*--------------------------------------
   固定ページ

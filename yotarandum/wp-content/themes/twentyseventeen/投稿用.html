@@ -106,6 +106,7 @@
 	</ul>
 	<p>親切なことに各テーマからプラグインまでのファイルサイズが書かれていて、現在選択しているファイルのTotalとjs,cssの内訳も分かる</p>
 	<p>使いたい内容が選べたら下部の「DOWNLOAD JS」と「DOWNLOAD CSS」をclick</p>
+  <div class="img1"><img src="https://yotarandum.net/wp-content/uploads/2018/12/prism.js_img02.png" alt=""></div>
   <h4 class="ttl4">Compression levelについて</h4>
   <p>圧縮度</p>
   <ul class="ul2">
@@ -161,11 +162,14 @@
   <h4 class="ttl4">Languagesについて</h4>
   <p>このサイトで使用しているものは</p>
   <ul class="ul2">
-    <li>markup(htmlのこと)</li>
-    <li>css</li>
-    <li>javascript</li>
+    <li>Markup(htmlのこと)</li>
+    <li>CSS</li>
+    <li>C-like(JavaScriptを選ぶと同時に選ばれる)</li>
+    <li>JavaScript</li>
     <li>markdown</li>
-    <li>php</li>
+    <li>Markup templating(PHPを選ぶと同時に選ばれる)</li>
+    <li>JSON + JSONP</li>
+    <li>PHP</li>
     <li>scss</li>
     <li>pug</li>
   </ul>
@@ -245,7 +249,7 @@
 					<li>easing イージング、アニメーションの緩急</li>
 					<li>time 時間</li>
 				</div>
-				サイトでExamplesを試してみると分かり易い</td>
+				<a target="_blank" href="https://prismjs.com/plugins/previewers/">サイト</a>でExamplesを試してみると分かり易い</td>
 		</tr>
 		<tr>
 			<th>Autoloader</th>
@@ -258,7 +262,7 @@
 			<th>Keep markup</th>
 			<td>コード内の指定箇所を強調表示する。<br>
 				指定した単語が四角で囲まれる<br>
-				サイトでExamplesを試してみると分かり易い</td>
+				<a target="_blank" href="https://prismjs.com/plugins/keep-markup/">サイト</a>でExamplesを見ると分かり易い</td>
 		</tr>
 		<tr>
 			<th>Command Line<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
@@ -317,7 +321,33 @@
     </dl>
   </div>
 	<h3 class="ttl3">記述方法</h3>
-  <p>てきすと</p>
+  <p>コード表示したい箇所を<br>
+		&lt;pre&gt;&lt;code class="language-テキスト(言語名)"&gt;<br>
+		ここにコード<br>
+		&lt;/code &gt;&lt;/pre&gt;<br>
+		で囲む</p>
+	<p>例えばhtmlのコードを載せる時は<br>
+		&lt;pre&gt;&lt;code class="language-html"&gt;<br>
+		&amp;lt;span&amp;gt;ここにコード&amp;lt;/span&amp;gt;
+		&lt;/code &gt;&lt;/pre&gt;<br>
+	と書く<br>
+	タグはエスケープ処理(<mark class="mk2">&lt;を&amp;lt;に、&gt;を&amp;gt;にする</mark>)が必要</p>
+	<p>これを表示させると</p>
+	<pre><code class="language-html">
+	&lt;span&gt;ここにコード&lt;/span&gt;
+	</code></pre>
+	<p>になる</p>
+	<p>このサイトではplugin「Unescaped markup」を使用しているので<br>
+		&lt;script type="text/plain" code class="language-html"&gt;<br>
+		&lt;span&gt;ここにコード&lt;/span&gt;
+		&lt;/script&gt;<br>
+	とタグの<mark class="mk2">エスケープ処理を気にせずそのまま書ける</mark></p>
+	<p>表示は</p>
+		<script type="text/plain" code class="language-html">
+		<span>ここにコード</span>
+		</script>
+	<p>と表示も記述したままの物が出る</p>
+	
 
 </section>
 
