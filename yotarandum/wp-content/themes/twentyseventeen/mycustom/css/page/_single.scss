@@ -336,6 +336,7 @@ body.single{
         .toc_list{
           padding: 10px;
           border: 2px solid $maccha1;
+          line-height: 1.4;
           @include mq{
             padding: 5px;
           }
@@ -349,12 +350,12 @@ body.single{
             }
             .toc_number{
               width: 1.0em;
-              padding-top: 0.35em;
+              padding-top: 0.05em;
               font-size: 1.2em;
               border-right: 1px solid $maccha1;
             }
             + li{
-              margin-top: 0.5em;
+              margin-top: 0.2em;
             }
           }
           ul{//2階層
@@ -367,7 +368,7 @@ body.single{
                 padding-left:2.0em;
                 > .toc_number{
                   width: 1.8em;
-                  padding-top: 0.45em;
+                  padding-top: 0.1em;
                   font-size: 1.0em;
                 }
               }
@@ -380,6 +381,7 @@ body.single{
                   padding-left: 2.8em;
                   > .toc_number{
                     width: 2.7em;
+                    padding-top: 0.2em;
                     //font-size: 0.8em;
                   }
                 }

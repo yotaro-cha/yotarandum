@@ -180,7 +180,7 @@
   </p>
 	<table class="tblDl1">
 		<tr>
-			<th>Line highlight<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
+			<th>Line Highlight<i class="fas fa-check c-txtMaccha1 c-ML5E"></i></th>
 			<td>指定行をハイライト</td>
 		</tr>
 		<tr>
@@ -204,7 +204,7 @@
 		</tr>
 		<tr>
 			<th>Custom Class</th>
-			<td>prism.jsに使用するクラス名に接頭辞を付ける(「.comment」は「.namespace--comment」)ことが出来る？<br>
+			<td>prism.jsに使用するクラス名に接頭辞(「.comment」は「.namespace--comment」など)を付けることが出来る？<br>
 				prism.jsに使われているクラス名は一般的な名前が多いので他の用途で使用しているクラス名と被らないようにする為のプラグイン？<br>
 				よく分かりませんでした</td>
 		</tr>
@@ -321,32 +321,162 @@
     </dl>
   </div>
 	<h3 class="ttl3">記述方法</h3>
+  <p>基本的な記述方法とプラグインの使い方について</p>
+  <h4 class="ttl4">基本的な使い方</h4>
   <p>コード表示したい箇所を<br>
 		&lt;pre&gt;&lt;code class="language-テキスト(言語名)"&gt;<br>
 		ここにコード<br>
-		&lt;/code &gt;&lt;/pre&gt;<br>
+		&lt;/code&gt;&lt;/pre&gt;<br>
 		で囲む</p>
 	<p>例えばhtmlのコードを載せる時は<br>
 		&lt;pre&gt;&lt;code class="language-html"&gt;<br>
 		&amp;lt;span&amp;gt;ここにコード&amp;lt;/span&amp;gt;
-		&lt;/code &gt;&lt;/pre&gt;<br>
-	と書く<br>
-	タグはエスケープ処理(<mark class="mk2">&lt;を&amp;lt;に、&gt;を&amp;gt;にする</mark>)が必要</p>
+		&lt;/code&gt;&lt;/pre&gt;<br>
+	と書く</p>
 	<p>これを表示させると</p>
-	<pre><code class="language-html">
-	&lt;span&gt;ここにコード&lt;/span&gt;
-	</code></pre>
+<pre><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
 	<p>になる</p>
-	<p>このサイトではplugin「Unescaped markup」を使用しているので<br>
-		&lt;script type="text/plain" code class="language-html"&gt;<br>
+  <div class="dlBox1 is_L is_T">
+    <dl>
+      <dt><span><i class="fa fa-exclamation"></i>注意</span></dt>
+      <dd>
+        <ul class="ul3">
+          <li>タグはエスケープ処理(<mark class="mk2">「&lt;」を「&amp;lt;」に、「&gt;」を「&amp;gt;」にする</mark>)が必要</li>
+          <li>記述の際は行頭にあるタブなどのインデントが反映されてしまうのでソースの整形には気を付ける</li>
+          <li><mark class="mk2">&lt;code&gt;の後に改行を入れると</mark>表示した際に不要な行が冒頭に1行入ってしまう<br>
+          （プラグインのline Numbersを使用すると分かるが1行目に空の行が入っている）<br>
+          これはwordpressだから？</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <p>インラインで表示したい場合は&lt;pre&gt;&lt;/pre&gt;を無くして&lt;code class="language-html"&gt;&lt;/code&gt;で挟む</p>
+  <p>&lt;code class="language-html"&gt;&amp;lt;span&amp;gt;ここにコード&amp;lt;/span&amp;gt;&lt;/code&gt;<br>
+	と書く</p>
+  <p>これを表示させると<code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;</code>になる</p>
+  <h4 class="ttl4">プラグインの使い方</h4>
+  <p>このサイトで使用しているもので、使い方の分かるものについて</p>
+  <h5 class="ttl5">Line Highlight</h5>
+  <p>指定行をハイライトするプラグイン</p>
+  <p>使用の際は&lt;pre&gt;にdata-line属性を付けて<br>
+    &lt;pre data-line="2"&gt;<br>
+    などにする</p>
+	<p>これを表示させると</p>
+<pre data-line="2"><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>と2行目がハイライトされる</p>
+  <p>指定の仕方</p>
+  <ul class="ul2">
+    <li>一行ずつ指定する場合は ,(カンマ)で区切る</li>
+    <li>複数行をまとめて指定する場合は -(ハイフン)を使用する</li>
+  </ul>
+  <p>
+    2、4～6、8行目をハイライトした場合は<br>
+    &lt;pre data-line="2,4-6,8"&gt;&lt;code class="language-html"&gt;&lt;span&gt;か<br>
+    &lt;pre data-line="2,8,4-6"&gt;&lt;code class="language-html"&gt;&lt;span&gt;<br>
+    と指定する(指定の順番は自由)
+  </p>
+	<p>これを表示させると</p>
+<pre data-line="2,8,4-6"><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>と2、4～6、8行目がハイライトされる</p>
+  <p>また、行の開始番号の指定や、アンカーリンクの設定なども出来る模様</p>
+
+  <h5 class="ttl5">Line Numbers</h5>
+  <p>行番号を付けるプラグイン</p>
+  <p>使用の際は&lt;pre&gt;にクラスline-numbersを付けて<br>
+    &lt;pre class="line-numbers"&gt;<br>
+    にする</p>
+	<p>これを表示させると</p>
+<pre class="line-numbers"><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>と行番号が出る</p>
+  <p>&lt;pre&gt;にdata-start属性を使用すると行の開始番号をしてい出来る</p>
+  <p>例：&lt;pre class="line-numbers" data-start="3"&gt;</p>
+<pre class="line-numbers" data-start="3"><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>指定した通り行の開始が3になった<br>
+  ちなみに開始番号はマイナスの値も指定出来る</p>  
+  <p>例：&lt;pre class="line-numbers" data-start="-2"&gt;</p>
+<pre class="line-numbers" data-start="-2"><code class="language-html">&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+
+  <h5 class="ttl5">Show Language</h5>
+  <p>現在表示しているコードが何の言語かを示すことが出来るプラグイン<br>
+    文字列で指定するのでhtml,css,javascriptなどだけでなく好きな文字列を指定出来る<br>
+    指定した文字列はコードをホバーすると表示される</p>
+  <p><strong>例 「text」にしてみる：</strong>&lt;pre&gt;&lt;code class="language-text"&gt;</p>
+<pre><code class="language-text">&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>普通に表示出来た</p>
+  <p><strong>例 数字にしてみる：</strong>&lt;pre&gt;&lt;code class="language-1234"&gt;</p>
+<pre><code class="language-1234">&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>これも普通に表示出来た</p>
+  <p><strong>例 半角スペースを入れてみる：</strong>&lt;pre&gt;&lt;code class="language-te xt"&gt;</p>
+<pre><code class="language-te xt">&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>半角スペース以降が表示されない</p>
+  <p><strong>例 全角文字を指定：</strong>&lt;pre&gt;&lt;code class="language-てきすと"&gt;</p>
+<pre><code class="language-てきすと">&lt;span&gt;ここにコード&lt;/span&gt;
+</code></pre>
+  <p>表示されない</p>
+  <p>全角やスペースじゃなければ基本的に何でも表示出来る</p>
+
+  <h5 class="ttl5">Command Line</h5>
+  <p>コマンドライン自体に詳しくないので説明が出来ませぬ……<br>
+  <a target="_blank" href="http://www.de2p.co.jp/tech/wordpress/syntax-highlighting-3/">こちらの記事</a>が分かり易く解説しているようです</p>
+
+  <h5 class="ttl5">Unescaped markup</h5>
+	<p>タグの<mark class="mk2">エスケープ処理を気にせずそのまま書ける</mark>プラグイン</p>
+  <p>記述方法は2通りで</p>
+  <p>
+		&lt;script type="text/plain" class="language-html"&gt;<br>
 		&lt;span&gt;ここにコード&lt;/span&gt;
 		&lt;/script&gt;<br>
-	とタグの<mark class="mk2">エスケープ処理を気にせずそのまま書ける</mark></p>
+    とscriptタグで囲むか</p>
+  <p>
+    &lt;pre class="language-html"&gt;&lt;code&gt;&lt;!--<br>
+    &lt;span&gt;ここにコード&lt;/span&gt;<br>
+    --&gt;&lt;/code&gt;&lt;/pre&gt;<br>
+	  と&lt;code&gt;&lt;/code&gt;をhtmlのコメント&lt;!----&gt;で囲む</p>
 	<p>表示は</p>
-		<script type="text/plain" code class="language-html">
-		<span>ここにコード</span>
-		</script>
+  <p><strong>scriptで囲んだ場合</strong></p>
+<script type="text/plain" code class="language-html"><span>ここにコード</span>
+</script>
+  <p><strong>htmlのコメントで囲んだ場合</strong></p>
+<pre class="language-html"><code><!--<span>ここにコード</span>
+--></code></pre>
 	<p>と表示も記述したままの物が出る</p>
+
+  <h5 class="ttl5">Toolbar</h5>
+  <p>コードの右上にツールバーを付けてボタンを表示できるプラグイン<br>
+    ボタンは自分で登録出来る(コードを選択ボタンなど)<br>
+    ボタンの機能はjsにて自分で設定する</p>
+
+  <h5 class="ttl5">Copy to Clipboard</h5>
+  <p>「コードをコピーボタン」を追加するプラグイン<br>
+    記述の際にやることは特に無いが、このプラグインを落とす他、<a target="_blank" href="https://clipboardjs.com/">Clipboard.js</a>をプラグインより前に読み込む必要がある<br>
+    それも恐らくpackageに自動的にロードされているので、特にやることは無い</p>
 	
 
 </section>

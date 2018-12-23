@@ -1738,7 +1738,8 @@ body.single .post-navigation {
               font-size: 1.0em; } }
         .mySinglePost .tocWrap #toc_container.fix .toc_list {
           padding: 10px;
-          border: 2px solid #c5c56a; }
+          border: 2px solid #c5c56a;
+          line-height: 1.4; }
           @media screen and (max-width: 767px) {
             .mySinglePost .tocWrap #toc_container.fix .toc_list {
               padding: 5px; } }
@@ -1748,11 +1749,11 @@ body.single .post-navigation {
             font-size: 1.2em; }
             .mySinglePost .tocWrap #toc_container.fix .toc_list > li .toc_number {
               width: 1.0em;
-              padding-top: 0.35em;
+              padding-top: 0.05em;
               font-size: 1.2em;
               border-right: 1px solid #c5c56a; }
             .mySinglePost .tocWrap #toc_container.fix .toc_list > li + li {
-              margin-top: 0.5em; }
+              margin-top: 0.2em; }
           .mySinglePost .tocWrap #toc_container.fix .toc_list ul {
             padding-left: 1.8em; }
             .mySinglePost .tocWrap #toc_container.fix .toc_list ul > li {
@@ -1761,7 +1762,7 @@ body.single .post-navigation {
                 padding-left: 2.0em; }
                 .mySinglePost .tocWrap #toc_container.fix .toc_list ul > li > a > .toc_number {
                   width: 1.8em;
-                  padding-top: 0.45em;
+                  padding-top: 0.1em;
                   font-size: 1.0em; }
             .mySinglePost .tocWrap #toc_container.fix .toc_list ul ul {
               padding-left: 2.4em; }
@@ -1770,7 +1771,8 @@ body.single .post-navigation {
                 .mySinglePost .tocWrap #toc_container.fix .toc_list ul ul > li > a {
                   padding-left: 2.8em; }
                   .mySinglePost .tocWrap #toc_container.fix .toc_list ul ul > li > a > .toc_number {
-                    width: 2.7em; }
+                    width: 2.7em;
+                    padding-top: 0.2em; }
   .mySinglePost p {
     margin-bottom: 1.5em; }
   .mySinglePost a {
