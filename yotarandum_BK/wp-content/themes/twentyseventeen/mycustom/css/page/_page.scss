@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "../lib/mq";
+@import "../lib/var";
+
+/*--------------------------------------
+  固定ページ
+---------------------------------------*/
+body.page{
+	@include mq{
+	}
+	.entry-title{
+		display: none;
+	}
+}
+
+

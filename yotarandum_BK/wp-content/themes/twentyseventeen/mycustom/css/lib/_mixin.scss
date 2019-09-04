@@ -1,0 +1,132 @@
+@charset "utf-8";
+//=================
+//     mixin
+//=================
+
+@import "mq";
+@import "var";
+
+//フォント
+@mixin meiryo{//フォント メイリオ
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+@mixin noto{//フォント Noto
+	font-family: "Noto Sans Japanese";
+}
+@mixin yuGo{//フォント Yu Gothic
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+//画像
+@mixin img100{
+	width: 100%;
+	height: auto;
+}
+@mixin spImg100{
+	@include mq{
+		width: 100%;
+		height: auto;
+	}
+}
+
+//アイコン
+@mixin icn($icnNo:"\f007"){
+	&:before{
+		display: none;
+		font-family: "Font Awesome 5 Solid";
+		content: $icnNo;
+	}
+	svg{
+		margin-right: 7px;
+		color: inherit;
+	}
+}
+
+//矢印
+@mixin arrow($bdc:#000, $bdw:3px){
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.5em;
+		border-style: solid;
+		border-width: $bdw $bdw 0 0;
+		border-color: $bdc $bdc transparent transparent;
+		box-sizing: border-box;
+		transform: rotate(45deg);
+	}
+}
+
+@mixin arrowT($bdc:#000, $bdw:3px){
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.5em;
+		border-style: solid;
+		border-width: $bdw $bdw 0 0;
+		border-color: $bdc $bdc transparent transparent;
+		box-sizing: border-box;
+		transform: rotate(-45deg);
+	}
+}
+
+//ホバー
+@mixin hvr($op:0.7){//透過
+	transition: opacity 0.3s;
+	&:hover{
+		opacity: $op;
+		text-decoration: none;
+	}
+}
+@mixin hvrScale($op:0.7, $scale:1.1){//ホバーで拡大
+	.img{
+		overflow: hidden;
+		img{
+			transition: transform 0.3s;
+		}
+	}
+	&:hover{
+		.img{
+			img{
+				transform: scale($scale)
+			}
+		}
+	}
+}
+
+//cssによる長いテキストの…処理
+@mixin clamp($bg:#fff, $lh:1.5, $row:2) {
+	height: (($row * $lh)-0.1) * 1em;
+	line-height: $lh;
+	overflow: hidden;
+	position: relative;
+	&:before,
+	&:after{
+		background-color: $bg;
+		position: absolute;
+	}
+	&:before{
+		content: "…";
+		padding: 0 0.3em;
+		top: ((($row)-1) * $lh) * 1em;
+		right: 0;
+	}
+	&:after{
+		content: "";
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+//iOS smooth scroll
+@mixin smoothScroll {
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+
