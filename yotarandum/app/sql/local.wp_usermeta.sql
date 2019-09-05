@@ -17,7 +17,6 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,"wp_user_level","10"),
 (14,1,"dismissed_wp_pointers",""),
 (15,1,"show_welcome_panel","1"),
-(16,1,"session_tokens","a:1:{s:64:\"79eb98c68da8d98b9a50f7f802311b7b120a3b7c98464b51f3362d6fd858d474\";a:4:{s:10:\"expiration\";i:1568035315;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:78:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0\";s:5:\"login\";i:1566825715;}}"),
+(16,1,"session_tokens","a:1:{s:64:\"ca4c526bee29858c0a9762473b326d25ae4d50878bb0b5e9bd45ee29785924df\";a:4:{s:10:\"expiration\";i:1568817818;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:77:\"Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0\";s:5:\"login\";i:1567608218;}}"),
 (17,1,"wp_dashboard_quick_press_last_post_id","4"),
-(18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}"),
-(19,1,"aioseop_seen_about_page","3.2.5");
+(18,1,"community-events-location","a:1:{s:2:\"ip\";s:12:\"192.168.95.0\";}");
