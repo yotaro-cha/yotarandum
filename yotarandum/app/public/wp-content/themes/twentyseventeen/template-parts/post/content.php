@@ -26,6 +26,14 @@
 	?>
 
 	<header class="entry-header">
+    <div class="entry-meta">
+      <span class="posted-on">
+        <span class="screen-reader-text">投稿日:</span>
+        <a href="http://yotarandum.local/?p=20" rel="bookmark">
+          <time class="entry-date published updated" datetime="2019-09-10T22:18:54+09:00">2019年9月10日</time>
+        </a>
+      </span>
+    </div>
 		<?php
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
@@ -57,7 +65,7 @@
 	<?php endif; ?>
 
 	<?php $image = get_field('post_main'); if( empty($image) ): ?>
-		<div class="postMainImg"><img src="https://yotarandum.net/wp-content/uploads/2018/10/noimg.png" alt="noimg" /></div>
+		<div class="postMainImg"><img src="/wp-content/uploads/2018/10/noimg.png" alt="noimg" /></div>
 	<?php else: ?>
 		<div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
 	<?php endif; ?>

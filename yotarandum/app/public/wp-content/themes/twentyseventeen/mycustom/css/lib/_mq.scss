@@ -16,7 +16,7 @@
       @content;
     }
   } @else if $bp == xm {
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 900px) {
       @content;
     }
   } @else if $bp == l {

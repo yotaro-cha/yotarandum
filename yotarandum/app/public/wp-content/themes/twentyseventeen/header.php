@@ -26,12 +26,12 @@
 <meta name="theme-color" content="#c5c56a">
 
 <?php wp_head(); ?>
-<link rel='stylesheet'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/font/awesome.min.css' type='text/css' media='all' />
-<link rel='stylesheet'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/plugin/prism.css' type='text/css' media='all' />
-<link rel='stylesheet'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/common.css' type='text/css' media='all' />
-<link rel='stylesheet'  href='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/css/class.css' type='text/css' media='all' />
-<script type='text/javascript' src='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/js/prism.js'></script>
-<script type='text/javascript' src='https://yotarandum.net/wp-content/themes/twentyseventeen/mycustom/js/common.js'></script>
+<link rel='stylesheet'  href='/wp-content/themes/twentyseventeen/mycustom/font/awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='/wp-content/themes/twentyseventeen/mycustom/css/plugin/prism.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='/wp-content/themes/twentyseventeen/mycustom/css/common.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='/wp-content/themes/twentyseventeen/mycustom/css/class.css' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-content/themes/twentyseventeen/mycustom/js/prism.js'></script>
+<script type='text/javascript' src='/wp-content/themes/twentyseventeen/mycustom/js/common.js'></script>
 </head>
 
 <body <?php body_class(); ?>>
