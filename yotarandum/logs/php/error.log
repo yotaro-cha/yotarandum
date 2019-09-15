@@ -5,3 +5,5 @@
 [15-Sep-2019 05:53:15 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-includes/update.php on line 569
 [15-Sep-2019 06:13:20 UTC] PHP Warning:  Error while sending QUERY packet. PID=131 in /app/public/wp-includes/wp-db.php on line 2007
 [15-Sep-2019 06:13:21 UTC] PHP Warning:  Error while sending QUERY packet. PID=46 in /app/public/wp-includes/wp-db.php on line 2007
+[15-Sep-2019 08:48:23 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-admin/includes/translation-install.php on line 65
+[15-Sep-2019 08:48:30 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-admin/includes/translation-install.php on line 65

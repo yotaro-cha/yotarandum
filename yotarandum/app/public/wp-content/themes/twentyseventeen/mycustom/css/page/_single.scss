@@ -42,15 +42,6 @@ body.single{
       @include mq{
         font-size: 14px;
       }
-      .screen-reader-text, .entry-date {
-        display: none;
-      }
-      .updated:before {
-        content: "更新日：";
-      }
-      .byline {
-        display: none;
-      }
     }
     .singleTtl{
       padding: 2.4em 0 2.6em;

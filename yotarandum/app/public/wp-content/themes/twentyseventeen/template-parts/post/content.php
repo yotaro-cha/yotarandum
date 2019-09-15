@@ -26,26 +26,20 @@
 	?>
 
 	<header class="entry-header">
-    <div class="entry-meta">
-      <span class="posted-on">
-        <span class="screen-reader-text">投稿日:</span>
-        <a href="http://yotarandum.local/?p=20" rel="bookmark">
-          <time class="entry-date published updated" datetime="2019-09-10T22:18:54+09:00">2019年9月10日</time>
-        </a>
-      </span>
-    </div>
-		<?php
-		if ( 'post' === get_post_type() ) {
-			echo '<div class="entry-meta">';
-			if ( is_single() ) {
-				twentyseventeen_posted_on();
-			} else {
-				echo twentyseventeen_time_link();
-				twentyseventeen_edit_link();
-			};
-			echo '</div><!-- .entry-meta -->';
-		};
+    <aside class="entry-meta">
+      <div class="dayPost">
+        <span class="screen-reader-text">投稿日</span>
+        <time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:i:sP'); ?>"><?php the_time('Y年n月j日'); ?></time>
+      </div>
+      <?php if(get_the_modified_time('Y-m-d') != get_the_time('Y-m-d')) : ?>
+      <div class="dayUpdate">
+        <span class="screen-reader-text">更新日</span>
+        <time datetime="<?php the_modified_time('Y-m-d'); ?>T<?php the_modified_time('H:i:sP'); ?>"><?php the_modified_time('Y年n月j日'); ?></time>
+      </div>
+      <?php endif; ?>
+    </aside>
 
+		<?php
 		if ( is_single() ) {
 			the_title( '<h1 class="singleTtl">', '</h1>' );
 		} elseif ( is_front_page() && is_home() ) {

@@ -1505,12 +1505,6 @@ body.single .entry-header {
     @media screen and (max-width: 767px) {
       body.single .entry-header .entry-meta {
         font-size: 14px; } }
-    body.single .entry-header .entry-meta .screen-reader-text, body.single .entry-header .entry-meta .entry-date {
-      display: none; }
-    body.single .entry-header .entry-meta .updated:before {
-      content: "更新日："; }
-    body.single .entry-header .entry-meta .byline {
-      display: none; }
   body.single .entry-header .singleTtl {
     padding: 2.4em 0 2.6em;
     color: #69821b;
