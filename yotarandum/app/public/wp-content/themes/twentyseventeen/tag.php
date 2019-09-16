@@ -12,15 +12,12 @@
 
 get_header(); ?>
 
-<div class="l-inner">archive.php
+<div class="l-inner">tag.php
 	<div class="l-contRow2">
     <div id="primary" class="content-area">
     <?php if ( have_posts() ) : ?>
       <header class="page-header">
-        <?php
-          the_archive_title( '<h1 class="page-title">', '</h1>' );
-          the_archive_description( '<div class="taxonomy-description">', '</div>' );
-        ?>
+        <h1 class="pageTtl">札：<strong><?php single_tag_title(); ?></strong></h1>
       </header><!-- .page-header -->
     <?php endif; ?>
 
@@ -39,8 +36,22 @@ get_header(); ?>
            * If you want to override this in a child theme, then include a file
            * called content-___.php (where ___ is the Post Format name) and that will be used instead.
            */
-          get_template_part( 'template-parts/post/content', get_post_format() );
+          //get_template_part( 'template-parts/post/content', get_post_format() );
+        ?>
 
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <h3 class="u-ttl2"><?php the_title(); ?></h3>
+            <?php $image = get_field('post_main'); if( empty($image) ): ?>
+              <div class="postMainImg"><img src="/wp-content/uploads/2018/10/noimg.png" alt="noimg" /></div>
+            <?php else: ?>
+              <div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+            <?php endif; ?>
+            <div class="excerpt"><?php the_excerpt(); ?></div>
+          </a>
+        </li>
+
+        <?php
         endwhile;
 
         the_posts_pagination(
