@@ -13,30 +13,34 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-	if ( is_sticky() && is_home() ) :
-		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
-	endif;
-	?>
-
-	<?php
-	if ( is_single() ) {
-		twentyseventeen_entry_footer();
-	}
-	?>
-
 	<header class="entry-header">
     <aside class="entry-meta">
-      <div class="dayPost">
-        <span class="screen-reader-text">投稿日</span>
-        <time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:i:sP'); ?>"><?php the_time('Y年n月j日'); ?></time>
-      </div>
-      <?php if(get_the_modified_time('Y-m-d') != get_the_time('Y-m-d')) : ?>
-      <div class="dayUpdate">
-        <span class="screen-reader-text">更新日</span>
-        <time datetime="<?php the_modified_time('Y-m-d'); ?>T<?php the_modified_time('H:i:sP'); ?>"><?php the_modified_time('Y年n月j日'); ?></time>
-      </div>
-      <?php endif; ?>
+      <ul class="catTags">
+        <li class="cat-links">
+          <span class="screen-reader-text">カテゴリー</span>
+          <i class="fas fa-folder-open"></i>
+          <?php the_category(", ", "multiple"); ?>
+        </li>
+        <li class="tag-links">
+          <span class="screen-reader-text">タグ</span>
+          <i class="fas fa-tag"></i>
+          <?php the_tags("", ", ", ""); ?>
+        </li>
+      </ul>
+      <ul class="days">
+        <li class="dayPost">
+          <span class="screen-reader-text">投稿日</span>
+          <i class="fas fa-file-signature"></i>
+          <time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:i:sP'); ?>"><?php the_time('Y年n月j日'); ?></time>
+        </li>
+        <?php if(get_the_modified_time('Y-m-d') != get_the_time('Y-m-d')) : ?>
+        <li class="dayUpdate">
+          <span class="screen-reader-text">更新日</span>
+          <i class="fas fa-redo-alt"></i>
+          <time datetime="<?php the_modified_time('Y-m-d'); ?>T<?php the_modified_time('H:i:sP'); ?>"><?php the_modified_time('Y年n月j日'); ?></time>
+        </li>
+        <?php endif; ?>
+      </ul>
     </aside>
 
 		<?php

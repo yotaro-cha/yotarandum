@@ -5,7 +5,7 @@
 	&ttl1{
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 5px solid #c5c56a;
+    border-bottom: 5px solid $maccha1;
 		@include mq{
       margin-left: -10px;
       margin-right: -10px;
@@ -20,7 +20,7 @@
 	}
 	&ttl2{
     margin: 2em 0 1em;
-    color: #69821b;
+    color: $koke1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 36px;
     line-height: 1.4;

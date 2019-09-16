@@ -22,7 +22,7 @@
     text-align: center;
   }
   .siteDesc {
-    color: #c5c56a;
+    color: $maccha1;
   }
 }
 
@@ -84,7 +84,7 @@
       margin-left: 1.0em;
     }
     a {
-      color: #69821b;
+      color: $koke1;
     }
     span {
       color: #ccc;
@@ -100,7 +100,7 @@
     &:after {
       content: "";
       display: block;
-      background-color: #c5c56a;
+      background-color: $maccha1;
       width: 31.25vw;
       height: 1px;
       margin: 30px auto 0;
@@ -152,12 +152,12 @@
         top: 0;
       }
       &:nth-child(2) {
-        background-color: #c5c56a;
+        background-color: $maccha1;
         margin-top: -3px;
         top: 50%;
       }
       &:nth-child(3) {
-        background-color: #583822;
+        background-color: $brown1;
         margin-top: -6px;
         top: 100%;
       }
@@ -203,7 +203,7 @@
   .l-header .pageLowerHd nav > * {
     display: block;
     padding: 5px 10px;
-    border-top: 1px dashed #583822;
+    border-top: 1px dashed $brown1;
   }
 }
 
@@ -215,15 +215,15 @@
 
 @include mq{
   .l-header .pageLowerHd nav a {
-    background-color: #c5c56a;
-    color: #583822;
+    background-color: $maccha1;
+    color: $brown1;
   }
 }
 
 @include mq{
   .l-header .pageLowerHd nav span {
     background-color: #ccc;
-    color: #583822;
+    color: $brown1;
   }
 }
 
@@ -237,11 +237,11 @@
   }
   .grn {
     height: 10px;
-    background-color: #c5c56a;
+    background-color: $maccha1;
   }
   .brwn {
     height: 5px;
-    background-color: #583822;
+    background-color: $brown1;
   }
 }
 
@@ -319,7 +319,7 @@
 
 .widget-area {
   svg {
-    fill: #69821b;
+    fill: $koke1;
     width: 1.0em;
     height: 1.0em;
   }
@@ -327,7 +327,7 @@
     margin-bottom: 50px;
   }
   .widget-title {
-    border-bottom: 3px solid #c5c56a;
+    border-bottom: 3px solid $maccha1;
     margin-bottom: 10px;
     padding-bottom: 10px;
     font-size: 0;
@@ -358,7 +358,7 @@
     }
     button {
       flex-shrink: 0;
-      background-color: #c5c56a;
+      background-color: $maccha1;
       margin: 0;
       padding: 0.1em 0 0;
       color: #fff;
@@ -374,7 +374,7 @@
     line-height: 2.2;
     > li {
       + li {
-        border-top: 1px solid #c5c56a;
+        border-top: 1px solid $maccha1;
       }
       a {
         padding: 0.2em 0;
@@ -403,7 +403,7 @@
       padding-left: 1em;
       a {
         display: inline-block;
-        background-color: #c5c56a;
+        background-color: $maccha1;
         padding: 0.4em 0.5em 0.4em 0.4em;
         color: #fff;
         border-radius: 5px;
@@ -418,7 +418,7 @@
           bottom: 0;
         }
         &:before {
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1.0em;
           height: 1.8em;
           border-radius: 50% 0 0 50%;
@@ -433,9 +433,9 @@
           border-radius: 50%;
         }
         &:hover {
-          background-color: #69821b;
+          background-color: $koke1;
           &:before {
-            background-color: #69821b;
+            background-color: $koke1;
           }
         }
       }
@@ -448,7 +448,7 @@
       padding-top: 0;
     }
     + li {
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover {
       text-decoration: underline;
@@ -461,7 +461,7 @@
       padding-top: 0;
     }
     + li {
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover {
       text-decoration: underline;
@@ -477,7 +477,7 @@
       padding-top: 0;
     }
     + li {
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover {
       text-decoration: underline;
@@ -567,11 +567,11 @@
 .l-footer {
   .brwn {
     height: 5px;
-    background-color: #583822;
+    background-color: $brown1;
   }
   .grn {
     height: 10px;
-    background-color: #c5c56a;
+    background-color: $maccha1;
   }
   .blk {
     background-color: #000;

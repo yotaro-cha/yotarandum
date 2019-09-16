@@ -246,32 +246,32 @@ select, textarea{
 
 input{
   &[type=text]::-webkit-input-placeholder, &[type=tel]::-webkit-input-placeholder, &[type=password]::-webkit-input-placeholder, &[type=email]::-webkit-input-placeholder, &[type=search]::-webkit-input-placeholder, &[type=url]::-webkit-input-placeholder, &[type=datetime]::-webkit-input-placeholder, &[type=date]::-webkit-input-placeholder, &[type=month]::-webkit-input-placeholder, &[type=week]::-webkit-input-placeholder, &[type=time]::-webkit-input-placeholder, &[type=datetime-local]::-webkit-input-placeholder, &[type=number]::-webkit-input-placeholder{
-    color: #5f5f00;
+    color: $green1;
   }
 }
 
 select::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
-  color: #5f5f00;
+  color: $green1;
 }
 
 input{
   &[type=text]:-ms-input-placeholder, &[type=tel]:-ms-input-placeholder, &[type=password]:-ms-input-placeholder, &[type=email]:-ms-input-placeholder, &[type=search]:-ms-input-placeholder, &[type=url]:-ms-input-placeholder, &[type=datetime]:-ms-input-placeholder, &[type=date]:-ms-input-placeholder, &[type=month]:-ms-input-placeholder, &[type=week]:-ms-input-placeholder, &[type=time]:-ms-input-placeholder, &[type=datetime-local]:-ms-input-placeholder, &[type=number]:-ms-input-placeholder{
-    color: #5f5f00;
+    color: $green1;
   }
 }
 
 select:-ms-input-placeholder, textarea:-ms-input-placeholder{
-  color: #5f5f00;
+  color: $green1;
 }
 
 input{
   &[type=text]::-moz-placeholder, &[type=tel]::-moz-placeholder, &[type=password]::-moz-placeholder, &[type=email]::-moz-placeholder, &[type=search]::-moz-placeholder, &[type=url]::-moz-placeholder, &[type=datetime]::-moz-placeholder, &[type=date]::-moz-placeholder, &[type=month]::-moz-placeholder, &[type=week]::-moz-placeholder, &[type=time]::-moz-placeholder, &[type=datetime-local]::-moz-placeholder, &[type=number]::-moz-placeholder{
-    color: #5f5f00;
+    color: $green1;
   }
 }
 
 select::-moz-placeholder, textarea::-moz-placeholder{
-  color: #5f5f00;
+  color: $green1;
 }
 
 input{
@@ -1139,7 +1139,7 @@ blockquote{
     text-align: center;
   }
   .siteDesc{
-    color: #c5c56a;
+    color: $maccha1;
   }
 }
 
@@ -1201,7 +1201,7 @@ blockquote{
       margin-left: 1.0em;
     }
     a{
-      color: #69821b;
+      color: $koke1;
     }
     span{
       color: #ccc;
@@ -1217,7 +1217,7 @@ blockquote{
     &:after{
       content: "";
       display: block;
-      background-color: #c5c56a;
+      background-color: $maccha1;
       width: 31.25vw;
       height: 1px;
       margin: 30px auto 0;
@@ -1269,12 +1269,12 @@ blockquote{
         top: 0;
       }
       &:nth-child(2){
-        background-color: #c5c56a;
+        background-color: $maccha1;
         margin-top: -3px;
         top: 50%;
       }
       &:nth-child(3){
-        background-color: #583822;
+        background-color: $brown1;
         margin-top: -6px;
         top: 100%;
       }
@@ -1320,7 +1320,7 @@ blockquote{
   .l-header .pageLowerHd nav > *{
     display: block;
     padding: 5px 10px;
-    border-top: 1px dashed #583822;
+    border-top: 1px dashed $brown1;
   }
 }
 
@@ -1332,15 +1332,15 @@ blockquote{
 
 @media screen and (max-width: 767px){
   .l-header .pageLowerHd nav a{
-    background-color: #c5c56a;
-    color: #583822;
+    background-color: $maccha1;
+    color: $brown1;
   }
 }
 
 @media screen and (max-width: 767px){
   .l-header .pageLowerHd nav span{
     background-color: #ccc;
-    color: #583822;
+    color: $brown1;
   }
 }
 
@@ -1354,11 +1354,11 @@ blockquote{
   }
   .grn{
     height: 10px;
-    background-color: #c5c56a;
+    background-color: $maccha1;
   }
   .brwn{
     height: 5px;
-    background-color: #583822;
+    background-color: $brown1;
   }
 }
 
@@ -1436,7 +1436,7 @@ blockquote{
 
 .widget-area{
   svg{
-    fill: #69821b;
+    fill: $koke1;
     width: 1.0em;
     height: 1.0em;
   }
@@ -1444,7 +1444,7 @@ blockquote{
     margin-bottom: 50px;
   }
   .widget-title{
-    border-bottom: 3px solid #c5c56a;
+    border-bottom: 3px solid $maccha1;
     margin-bottom: 10px;
     padding-bottom: 10px;
     font-size: 0;
@@ -1475,7 +1475,7 @@ blockquote{
     }
     button{
       flex-shrink: 0;
-      background-color: #c5c56a;
+      background-color: $maccha1;
       margin: 0;
       padding: 0.1em 0 0;
       color: #fff;
@@ -1491,7 +1491,7 @@ blockquote{
     line-height: 2.2;
     > li{
       + li{
-        border-top: 1px solid #c5c56a;
+        border-top: 1px solid $maccha1;
       }
       a{
         padding: 0.2em 0;
@@ -1520,7 +1520,7 @@ blockquote{
       padding-left: 1em;
       a{
         display: inline-block;
-        background-color: #c5c56a;
+        background-color: $maccha1;
         padding: 0.4em 0.5em 0.4em 0.4em;
         color: #fff;
         border-radius: 5px;
@@ -1535,7 +1535,7 @@ blockquote{
           bottom: 0;
         }
         &:before{
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1.0em;
           height: 1.8em;
           border-radius: 50% 0 0 50%;
@@ -1550,9 +1550,9 @@ blockquote{
           border-radius: 50%;
         }
         &:hover{
-          background-color: #69821b;
+          background-color: $koke1;
           &:before{
-            background-color: #69821b;
+            background-color: $koke1;
           }
         }
       }
@@ -1565,7 +1565,7 @@ blockquote{
       padding-top: 0;
     }
     + li{
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover{
       text-decoration: underline;
@@ -1578,7 +1578,7 @@ blockquote{
       padding-top: 0;
     }
     + li{
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover{
       text-decoration: underline;
@@ -1594,7 +1594,7 @@ blockquote{
       padding-top: 0;
     }
     + li{
-      border-top: 1px dashed #c5c56a;
+      border-top: 1px dashed $maccha1;
     }
     a:hover{
       text-decoration: underline;
@@ -1664,11 +1664,11 @@ blockquote{
 .l-footer{
   .brwn{
     height: 5px;
-    background-color: #583822;
+    background-color: $brown1;
   }
   .grn{
     height: 10px;
-    background-color: #c5c56a;
+    background-color: $maccha1;
   }
   .blk{
     background-color: #000;
@@ -1734,7 +1734,7 @@ blockquote{
 .u-ttl1{
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 5px solid #c5c56a;
+  border-bottom: 5px solid $maccha1;
   img{
     width: auto;
     height: 50px;
@@ -1756,7 +1756,7 @@ blockquote{
 
 .u-ttl2{
   margin: 2em 0 1em;
-  color: #69821b;
+  color: $koke1;
   font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
   font-size: 36px;
   line-height: 1.4;
@@ -1938,12 +1938,12 @@ body{
   }
   &.single{
     .entry-footer{
-      color: #c5c56a;
+      color: $maccha1;
       text-align: center;
       svg{
         width: 1.0em;
         height: 1.0em;
-        fill: #583822;
+        fill: $brown1;
       }
       .cat-links, .tags-links{
         display: inline-flex;
@@ -1979,7 +1979,7 @@ body{
       }
       .singleTtl{
         padding: 2.4em 0 2.6em;
-        color: #69821b;
+        color: $koke1;
         font-size: 40px;
         line-height: 1.4;
       }
@@ -1992,7 +1992,7 @@ body{
     }
     .post-navigation{
       margin-top: 100px;
-      border-top: 1px solid #c5c56a;
+      border-top: 1px solid $maccha1;
       .screen-reader-text, .nav-subtitle{
         display: none;
       }
@@ -2007,7 +2007,7 @@ body{
         position: relative;
         &:before{
           content: "";
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1px;
           height: 100%;
           margin: auto;
@@ -2119,10 +2119,10 @@ body{
       text-align: center;
       .toc_title{
         display: inline-block;
-        background-color: #c5c56a;
+        background-color: $maccha1;
         margin: 0;
         padding: 0.3em 1.0em 0.1em;
-        color: #583822;
+        color: $brown1;
         color: #fff;
         font-size: 1.2em;
         font-weight: bold;
@@ -2130,7 +2130,7 @@ body{
         span{
           font-size: 0.8em;
           a{
-            color: #583822;
+            color: $brown1;
             &:hover{
               text-decoration: none;
             }
@@ -2145,7 +2145,7 @@ body{
         background-color: rgba(255, 255, 255, 0.9);
         padding: 30px 30px 20px;
         text-align: left;
-        border: 3px solid #c5c56a;
+        border: 3px solid $maccha1;
         a{
           display: block;
           padding-left: 2.5em;
@@ -2161,11 +2161,11 @@ body{
             width: 1.2em;
             height: 100%;
             padding-top: 0.15em;
-            color: #c5c56a;
+            color: $maccha1;
             font-size: 1.4em;
             font-weight: bold;
             line-height: 1;
-            border-right: 3px solid #c5c56a;
+            border-right: 3px solid $maccha1;
             box-sizing: border-box;
             position: absolute;
             top: 0;
@@ -2213,7 +2213,7 @@ body{
         }
         .toc_list{
           padding: 10px;
-          border: 2px solid #c5c56a;
+          border: 2px solid $maccha1;
           line-height: 1.4;
           a{
             padding-left: 1.8em;
@@ -2224,7 +2224,7 @@ body{
               width: 1.0em;
               padding-top: 0.05em;
               font-size: 1.2em;
-              border-right: 1px solid #c5c56a;
+              border-right: 1px solid $maccha1;
             }
             + li{
               margin-top: 0.2em;
@@ -2265,7 +2265,7 @@ body{
     margin-bottom: 1.5em;
   }
   a{
-    color: #c5c56a;
+    color: $maccha1;
     text-decoration: underline;
   }
   strong{
@@ -2275,10 +2275,10 @@ body{
     font-style: italic;
   }
   .ttl2{
-    background-color: #c5c56a;
+    background-color: $maccha1;
     margin: 2em 0 1em;
     padding: 0.6em 0.8em;
-    color: #583822;
+    color: $brown1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 36px;
     line-height: 1.4;
@@ -2303,11 +2303,11 @@ body{
     background-color: #e2e2b4;
     margin: 1.5em 0 1em;
     padding: 0.5em 1.2em  0.55em 0.5em;
-    color: #583822;
+    color: $brown1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 32px;
     line-height: 1.4;
-    border-left: 0.5em solid #c5c56a;
+    border-left: 0.5em solid $maccha1;
     position: relative;
     &:before{
       content: "";
@@ -2317,7 +2317,7 @@ body{
       height: 0;
       border-style: solid;
       border-width: 0.5em;
-      border-color: #fff #fff #c5c56a #c5c56a;
+      border-color: #fff #fff $maccha1 $maccha1;
       top: 0;
       right: 0;
     }
@@ -2326,32 +2326,32 @@ body{
     background-color: #eeeed2;
     margin: 1.5em 0 1em;
     padding: 0.3em 0.5em 0.35em;
-    color: #583822;
+    color: $brown1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 29px;
     line-height: 1.4;
-    border-top: 1px solid #c5c56a;
-    border-bottom: 1px solid #c5c56a;
+    border-top: 1px solid $maccha1;
+    border-bottom: 1px solid $maccha1;
     position: relative;
   }
   .ttl5{
     margin: 1.3em 0 1em;
     padding-left: 0.3em;
     padding-bottom: 0.2em;
-    color: #583822;
+    color: $brown1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 26px;
     line-height: 1.4;
-    border-bottom: 1px solid #c5c56a;
+    border-bottom: 1px solid $maccha1;
   }
   .ttl6{
     margin: 1em 0;
     padding-left: 0.5em;
-    color: #583822;
+    color: $brown1;
     font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
     font-size: 24px;
     line-height: 1.4;
-    border-left: 5px solid #c5c56a;
+    border-left: 5px solid $maccha1;
   }
   .mk1{
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 60%, greenyellow 61%);
@@ -2468,7 +2468,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #c5c56a;
+        background-color: $maccha1;
         width: 2.0em;
         height: 100%;
         color: #fff;
@@ -2503,7 +2503,7 @@ body{
         &:before{
           content: "";
           display: block;
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1.0em;
           height: 1.0em;
           border-radius: 50%;
@@ -2530,7 +2530,7 @@ body{
           background-color: #fff;
           width: 0.2em;
           height: 0.2em;
-          box-shadow: 0 0 0 0.2em #c5c56a;
+          box-shadow: 0 0 0 0.2em $maccha1;
           border-radius: 50%;
           position: absolute;
           top: 0.85em;
@@ -2556,7 +2556,7 @@ body{
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1.0em;
           height: 100%;
           color: #fff;
@@ -2585,7 +2585,7 @@ body{
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #c5c56a;
+          background-color: $maccha1;
           width: 1.5em;
           height: 1.5em;
           color: #fff;
@@ -2612,7 +2612,7 @@ body{
         position: relative;
         &:before{
           content: counter(num3) ". ";
-          color: #c5c56a;
+          color: $maccha1;
           font-size: 1.0em;
           font-weight: bold;
           line-height: 1;
@@ -2637,7 +2637,7 @@ body{
         margin-top: 0.3em;
         margin-left: 0.5em;
         padding-left: 0.5em;
-        border-left: 2px solid #c5c56a;
+        border-left: 2px solid $maccha1;
       }
     }
   }
@@ -2646,13 +2646,13 @@ body{
     padding: 0 3.0em;
     > dl{
       padding: 0 1.0em 1.0em;
-      border: 2px solid #c5c56a;
+      border: 2px solid $maccha1;
       >{
         dt{
           font-family: tegaki;
           font-size: 1.2em;
           span{
-            background-color: #c5c56a;
+            background-color: $maccha1;
             display: inline-block;
             padding: 0.2em 1.0em;
             color: #fff;
@@ -2710,11 +2710,11 @@ body{
     padding: 0 3.0em;
     > dl{
       padding: 3.0em 1.0em 1.0em;
-      border: 2px solid #c5c56a;
+      border: 2px solid $maccha1;
       position: relative;
       >{
         dt{
-          background-color: #c5c56a;
+          background-color: $maccha1;
           display: inline-block;
           padding: 0.2em 1.0em;
           color: #fff;
@@ -2727,7 +2727,7 @@ body{
             width: 0;
             height: 0;
             border-style: solid;
-            border-color: #69821b transparent transparent;
+            border-color: $koke1 transparent transparent;
             position: absolute;
             bottom: -0.9em;
           }
@@ -2786,10 +2786,10 @@ body{
       padding-right: 0.8em;
     }
     thead{
-      background-color: #c5c56a;
+      background-color: $maccha1;
       color: #fff;
       tr + tr{
-        border-top: 1px solid #583822;
+        border-top: 1px solid $brown1;
       }
       th, td{
         padding-top: 0.3em;
@@ -2801,17 +2801,17 @@ body{
     }
     tbody{
       tr + tr{
-        border-top: 1px solid #c5c56a;
+        border-top: 1px solid $maccha1;
       }
       th{
-        color: #c5c56a;
+        color: $maccha1;
       }
     }
     tfoot{
-      background-color: #583822;
+      background-color: $brown1;
       color: #fff;
       tr + tr{
-        border-top: 1px solid #c5c56a;
+        border-top: 1px solid $maccha1;
       }
     }
   }
@@ -2819,7 +2819,7 @@ body{
     width: auto;
     margin-bottom: 1.5em;
     tr + tr{
-      border-top: 1px solid #c5c56a;
+      border-top: 1px solid $maccha1;
     }
     th, td{
       padding: 1.0em;
@@ -2829,14 +2829,14 @@ body{
       font-weight: bold;
       text-align: center;
       vertical-align: middle;
-      border-right: 1px solid #c5c56a;
+      border-right: 1px solid $maccha1;
     }
     td *:last-child{
       margin-bottom: 0;
     }
   }
   .img1{
-    box-shadow: 0 0 3px 0 #c5c56a;
+    box-shadow: 0 0 3px 0 $maccha1;
   }
 }
 
