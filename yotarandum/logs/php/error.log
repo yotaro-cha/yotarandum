@@ -7,3 +7,12 @@
 [15-Sep-2019 06:13:21 UTC] PHP Warning:  Error while sending QUERY packet. PID=46 in /app/public/wp-includes/wp-db.php on line 2007
 [15-Sep-2019 08:48:23 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-admin/includes/translation-install.php on line 65
 [15-Sep-2019 08:48:30 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-admin/includes/translation-install.php on line 65
+[23-Sep-2019 15:08:49 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 25
+[23-Sep-2019 15:47:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_post_fiedl() in /app/public/wp-content/themes/twentyseventeen/tag.php:25
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(78): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/twentyseventeen/tag.php on line 25
+[23-Sep-2019 15:51:08 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /app/public/wp-content/themes/twentyseventeen/tag.php on line 25
