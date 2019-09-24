@@ -96,6 +96,50 @@
 	&thumTxtList1{
 	}
 	&postList1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    > li {
+      width: 30%;
+      margin-bottom: 100px;
+      @include mq{
+        margin-bottom: 80px;
+      }
+      a {
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.7;
+          text-decoration: none;
+        }
+      }
+    }
+    &.col1{
+      display: block;
+      > li{
+        width: auto;
+      }
+    }
+    &.col2{
+      > li{
+        width: 48%;
+        margin-right: 4%;
+        &:nth-child(even){
+          margin-right: 0;
+        }
+      }
+    }
+    &.col3{
+      > li{
+        width: 32%;
+        margin-right: 2%;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+        h3{
+          font-size: 24px;
+        }
+      }
+    }
 	}
 	&cateList1{
 	}

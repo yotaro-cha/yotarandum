@@ -1385,6 +1385,37 @@ blockquote:before {
     @media screen and (max-width: 767px) {
       .u-ttl2 {
         font-size: 24px; } }
+  .u-postList1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .u-postList1 > li {
+      width: 30%;
+      margin-bottom: 100px; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > li {
+          margin-bottom: 80px; } }
+      .u-postList1 > li a {
+        transition: opacity 0.3s; }
+        .u-postList1 > li a:hover {
+          opacity: 0.7;
+          text-decoration: none; }
+    .u-postList1.col1 {
+      display: block; }
+      .u-postList1.col1 > li {
+        width: auto; }
+    .u-postList1.col2 > li {
+      width: 48%;
+      margin-right: 4%; }
+      .u-postList1.col2 > li:nth-child(even) {
+        margin-right: 0; }
+    .u-postList1.col3 > li {
+      width: 32%;
+      margin-right: 2%; }
+      .u-postList1.col3 > li:nth-child(3n) {
+        margin-right: 0; }
+      .u-postList1.col3 > li h3 {
+        font-size: 24px; }
   .u-tbl1 table {
     width: 100%; }
   .u-appsZone {
@@ -1442,33 +1473,6 @@ blockquote:before {
   .u-clamp2 {
     overflow: hidden; }
 
-.newPosts > ul > li + li {
-  margin-top: 100px; }
-  @media screen and (max-width: 767px) {
-    .newPosts > ul > li + li {
-      margin-top: 80px; } }
-.newPosts > ul > li a {
-  transition: opacity 0.3s; }
-  .newPosts > ul > li a:hover {
-    opacity: 0.7;
-    text-decoration: none; }
-
-.archivePosts > ul {
-  display: flex;
-  align-items: flex-start; }
-  .archivePosts > ul > li {
-    width: 30%; }
-    .archivePosts > ul > li + li {
-      margin-top: 100px; }
-      @media screen and (max-width: 767px) {
-        .archivePosts > ul > li + li {
-          margin-top: 80px; } }
-    .archivePosts > ul > li a {
-      transition: opacity 0.3s; }
-      .archivePosts > ul > li a:hover {
-        opacity: 0.7;
-        text-decoration: none; }
-
 .postMainImg {
   margin-bottom: 25px; }
   @media screen and (max-width: 767px) {
@@ -1492,10 +1496,30 @@ body.home .u-ttl2 {
 /*--------------------------------------
   一覧ページ
 ---------------------------------------*/
+body.archive .pageHeader {
+  margin-bottom: 80px; }
+  body.archive .pageHeader h1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+    body.archive .pageHeader h1 > img {
+      width: auto;
+      height: 50px; }
+      @media screen and (max-width: 767px) {
+        body.archive .pageHeader h1 > img {
+          height: 30px; } }
+    body.archive .pageHeader h1 strong {
+      font-size: 40px;
+      line-height: 1.2; }
+      @media screen and (max-width: 767px) {
+        body.archive .pageHeader h1 strong {
+          font-size: 30px; } }
 body.archive.category {
   /* 分類 */ }
 body.archive.tag {
   /* 札 */ }
+body.archive.date {
+  /* 日付 */ }
 
 /*--------------------------------------
   個別投稿

@@ -113,7 +113,7 @@ get_header(); ?>
 
         <section class="newPosts">
           <h2 class="u-ttl1"><img src="/wp-content/uploads/2018/10/txt_news_s.png" alt=""></h2>
-          <ul>
+          <ul class="u-postList1 col1">
 
             <?php
             // Show the selected front page content.

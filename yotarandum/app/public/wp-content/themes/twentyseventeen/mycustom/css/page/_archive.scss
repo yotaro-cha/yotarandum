@@ -6,9 +6,36 @@
 body.archive{
 	@include mq{
 	}
+  .pageHeader{
+    margin-bottom: 80px;
+    h1{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      > img{
+        width: auto;
+        height: 50px;
+        @include mq{
+          height: 30px;
+        }
+      }
+      strong{
+        font-size: 40px;
+        line-height: 1.2;
+        @include mq{
+          font-size: 30px;
+        }
+      }
+    }
+    .description{
+      
+    }
+  }
 	&.category{/* 分類 */
 	}
 	&.tag{/* 札 */
+	}
+	&.date{/* 日付 */
 	}
 }
 
