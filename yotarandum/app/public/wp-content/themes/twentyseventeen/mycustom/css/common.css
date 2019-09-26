@@ -1607,7 +1607,6 @@ body.single .post-navigation {
   body.single .post-navigation .nav-links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative; }
     body.single .post-navigation .nav-links:before {
       content: "";
@@ -1620,24 +1619,25 @@ body.single .post-navigation {
       left: 0;
       right: 0; }
     body.single .post-navigation .nav-links > div {
-      max-width: 45%; }
+      width: 50%; }
       body.single .post-navigation .nav-links > div a {
-        display: block;
+        display: flex;
+        align-items: center;
+        height: 100%;
         padding: 0.5em 0.8em;
         transition: 0.3s; }
         body.single .post-navigation .nav-links > div a:hover {
           background-color: #e2e2b4; }
         body.single .post-navigation .nav-links > div a .nav-title {
           display: flex;
-          justify-content: space-between;
           align-items: center; }
         body.single .post-navigation .nav-links > div a .nav-title-icon-wrapper {
           margin-right: 1em; }
-      body.single .post-navigation .nav-links > div.nav-next a .nav-title {
+      body.single .post-navigation .nav-links > div.nav-next a {
         justify-content: flex-end; }
-      body.single .post-navigation .nav-links > div.nav-next a .nav-title-icon-wrapper {
-        margin-right: 0;
-        margin-left: 1em; }
+        body.single .post-navigation .nav-links > div.nav-next a .nav-title-icon-wrapper {
+          margin-right: 0;
+          margin-left: 1em; }
 
 .bassui {
   margin-bottom: 50px;

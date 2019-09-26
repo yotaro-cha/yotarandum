@@ -16,3 +16,21 @@ Stack trace:
 #3 {main}
   thrown in /app/public/wp-content/themes/twentyseventeen/tag.php on line 25
 [23-Sep-2019 15:51:08 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in /app/public/wp-content/themes/twentyseventeen/tag.php on line 25
+[26-Sep-2019 12:53:25 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:53:26 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:53:26 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:53:26 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:54:33 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:54:33 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:54:33 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:54:33 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:55:34 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/post/content.php on line 68
+[26-Sep-2019 12:55:34 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/post/content.php on line 68
+[26-Sep-2019 12:57:41 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:57:41 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:57:41 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 12:57:41 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
+[26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26

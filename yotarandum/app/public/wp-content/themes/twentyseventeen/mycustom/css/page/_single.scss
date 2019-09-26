@@ -124,7 +124,6 @@ body.single{
     .nav-links {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       position: relative;
       &:before {
         content: "";
@@ -138,9 +137,11 @@ body.single{
         right: 0;
       }
       > div {
-        max-width: 45%;
+        width: 50%;
         a {
-          display: block;
+          display: flex;
+          align-items: center;
+          height: 100%;
           padding: 0.5em 0.8em;
           transition: 0.3s;
           &:hover {
@@ -148,20 +149,21 @@ body.single{
           }
           .nav-title {
             display: flex;
-            justify-content: space-between;
             align-items: center;
           }
           .nav-title-icon-wrapper {
             margin-right: 1em;
           }
         }
-        &.nav-next a {
-          .nav-title {
+        &.nav-next{
+          a {
             justify-content: flex-end;
-          }
-          .nav-title-icon-wrapper {
-            margin-right: 0;
-            margin-left: 1em;
+            .nav-title {
+            }
+            .nav-title-icon-wrapper {
+              margin-right: 0;
+              margin-left: 1em;
+            }
           }
         }
       }
