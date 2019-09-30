@@ -443,15 +443,24 @@
   }
   .widget_recent_entries > ul > li {
     padding: 0.8em 0;
-    line-height: 1.2;
+    line-height: 1.4;
     &:nth-child(1) {
       padding-top: 0;
     }
     + li {
       border-top: 1px dashed $maccha1;
     }
-    a:hover {
-      text-decoration: underline;
+    a {
+      display: block;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .post-date{
+      display: block;
+      margin-top: 0.8em;
+      font-size: 0.9em;
+      text-align: right;
     }
   }
   .widget_recent_comments > ul > li {
