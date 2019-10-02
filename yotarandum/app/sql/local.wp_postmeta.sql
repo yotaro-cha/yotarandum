@@ -21,7 +21,7 @@ INSERT INTO `wp_postmeta` VALUES
 (22,19,"post_main",""),
 (23,19,"_post_main","field_5d779fa722c10"),
 (24,20,"_edit_last","1"),
-(25,20,"_edit_lock","1569507335:1"),
+(25,20,"_edit_lock","1570023970:1"),
 (30,20,"post_main","100"),
 (31,20,"_post_main","field_5d779fa722c10"),
 (32,22,"post_main","21"),

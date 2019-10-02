@@ -22,13 +22,14 @@ get_header(); ?>
             <h1>
               <?php if(is_category()): ?>
               <img src="/wp-content/uploads/2018/10/txt_category_s.png" alt="">
+              <strong>：<?php single_cat_title(); ?></strong>
               <?php elseif(is_tag()): ?>
               <img src="/wp-content/uploads/2018/10/txt_tag_s.png" alt="">
+              <strong>：<?php single_tag_title(); ?></strong>
               <?php elseif(is_date()): ?>
               <img src="/wp-content/uploads/2018/10/txt_archive_s.png" alt="">
+              <strong>：<?php echo get_post_time( 'Y年m月' ); ?></strong>
               <?php endif; ?>
-
-              <strong>：<?php single_tag_title(); ?></strong>
             </h1>
             <?php the_archive_description( '<div class="description">', '</div>' ); ?>
           </header><!-- .pageHeader -->
