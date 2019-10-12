@@ -2,29 +2,19 @@
 
 
 @keyframes lowLogo {
-  0% {
-    transform: rotate(0deg);
-  }
+  0% {transform: rotate(0deg);}
+  3% {transform: rotate(-5deg);}
+  6% {transform: rotate(0deg);}
+  9% {transform: rotate(5deg);}
+  12% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
 
-  3% {
-    transform: rotate(-5deg);
-  }
-
-  6% {
-    transform: rotate(0deg);
-  }
-
-  9% {
-    transform: rotate(5deg);
-  }
-
-  12% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
+@keyframes anim404 {
+  0% {transform: translateY(5px);}
+  33% {transform: translateY(0);}
+  66% {transform: translateY(-5px);}
+  100% {transform: translateY(0);}
 }
 
 

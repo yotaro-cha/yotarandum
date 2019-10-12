@@ -97,14 +97,6 @@
     display: block;
     margin-bottom: 20px;
     padding: 0;
-    &:after {
-      content: "";
-      display: block;
-      background-color: $maccha1;
-      width: 31.25vw;
-      height: 1px;
-      margin: 30px auto 0;
-    }
   }
 }
 

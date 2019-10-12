@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+  404ページ
+---------------------------------------*/
+body.error404{
+	@include mq{
+	}
+  .sorryBox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    @include mq{
+      display: block;
+      margin-bottom: 50px;
+    }
+    .img{
+      width: 40%;
+      @include mq{
+        width: auto;
+      }
+      &:hover{
+        animation-name: anim404;
+        animation-duration: 0.05s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+    .txt{
+      width: 60%;
+      @include mq{
+        width: auto;
+      }
+      h1{
+        font-size: 100px;
+        @include mq{
+          font-size: 50px;
+          text-align: center;
+        }
+      }
+      p{
+        font-size: 24px;
+        @include mq{
+          font-size: 18px;
+          line-height: 1.4;
+        }
+        + p{
+          margin-top: 1.0em;
+        }
+      }
+    }
+  }
+  h2{
+    margin-top: 80px;
+  }
+  .search-form {
+    display: flex;
+    padding-top: 7%;
+    font-size: 0;
+    position: relative;
+    @include mq{
+      padding-top: 50px;
+    }
+    label {
+      display: block;
+      background: url(/wp-content/uploads/2018/11/txt_search_s.png) 0 0 no-repeat;
+      background-size: contain;
+      width: 100%;
+      padding-top: 5%;
+      position: absolute;
+      top: 0;
+      @include mq{
+        padding-top: 40px;
+      }
+    }
+    input {
+      width: 100%;
+      border-right: none;
+      border-radius: 0;
+    }
+    button {
+      flex-shrink: 0;
+      background-color: $maccha1;
+      margin: 0;
+      padding: 0.1em 0 0;
+      color: #fff;
+      width: 8.0em;
+      svg {
+        margin-top: 0.1em;
+        margin-right: 0.3em;
+        width: 20px;
+        height: 30px;
+        margin-right: 5px;
+        padding-top: 7px;
+        fill: #fff;
+      }
+      span{
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        vertical-align: top;
+        line-height: 1;
+      }
+    }
+  }
+	&.category{/* 分類 */
+	}
+	&.tag{/* 札 */
+	}
+	&.date{/* 日付 */
+	}
+}
+
+

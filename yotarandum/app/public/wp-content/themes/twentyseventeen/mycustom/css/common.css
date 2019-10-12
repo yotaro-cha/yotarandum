@@ -760,6 +760,15 @@ blockquote:before {
     transform: rotate(0deg); }
   100% {
     transform: rotate(0deg); } }
+@keyframes anim404 {
+  0% {
+    transform: translateY(5px); }
+  33% {
+    transform: translateY(0); }
+  66% {
+    transform: translateY(-5px); }
+  100% {
+    transform: translateY(0); } }
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }
@@ -975,14 +984,7 @@ blockquote:before {
   .l-header .pageLowerHd {
     display: block;
     margin-bottom: 20px;
-    padding: 0; }
-    .l-header .pageLowerHd:after {
-      content: "";
-      display: block;
-      background-color: #c5c56a;
-      width: 31.25vw;
-      height: 1px;
-      margin: 30px auto 0; } }
+    padding: 0; } }
 @media screen and (max-width: 767px) {
   .l-header .pageLowerHd .spHd {
     display: flex;
@@ -1570,6 +1572,14 @@ body.archive.date {
 /*--------------------------------------
   個別投稿
 ---------------------------------------*/
+@media screen and (max-width: 767px) {
+  body.single .l-header .pageLowerHd:after {
+    content: "";
+    display: block;
+    background-color: #c5c56a;
+    width: 31.25vw;
+    height: 1px;
+    margin: 30px auto 0; } }
 body.single .entry-footer {
   color: #c5c56a;
   text-align: center; }
@@ -2386,3 +2396,97 @@ body.single .post-navigation {
 ---------------------------------------*/
 body.page .entry-title {
   display: none; }
+
+/*--------------------------------------
+  404ページ
+---------------------------------------*/
+body.error404 .sorryBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px; }
+  @media screen and (max-width: 767px) {
+    body.error404 .sorryBox {
+      display: block;
+      margin-bottom: 50px; } }
+  body.error404 .sorryBox .img {
+    width: 40%; }
+    @media screen and (max-width: 767px) {
+      body.error404 .sorryBox .img {
+        width: auto; } }
+    body.error404 .sorryBox .img:hover {
+      animation-name: anim404;
+      animation-duration: 0.05s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; }
+  body.error404 .sorryBox .txt {
+    width: 60%; }
+    @media screen and (max-width: 767px) {
+      body.error404 .sorryBox .txt {
+        width: auto; } }
+    body.error404 .sorryBox .txt h1 {
+      font-size: 100px; }
+      @media screen and (max-width: 767px) {
+        body.error404 .sorryBox .txt h1 {
+          font-size: 50px;
+          text-align: center; } }
+    body.error404 .sorryBox .txt p {
+      font-size: 24px; }
+      @media screen and (max-width: 767px) {
+        body.error404 .sorryBox .txt p {
+          font-size: 18px;
+          line-height: 1.4; } }
+      body.error404 .sorryBox .txt p + p {
+        margin-top: 1.0em; }
+body.error404 h2 {
+  margin-top: 80px; }
+body.error404 .search-form {
+  display: flex;
+  padding-top: 7%;
+  font-size: 0;
+  position: relative; }
+  @media screen and (max-width: 767px) {
+    body.error404 .search-form {
+      padding-top: 50px; } }
+  body.error404 .search-form label {
+    display: block;
+    background: url(/wp-content/uploads/2018/11/txt_search_s.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 5%;
+    position: absolute;
+    top: 0; }
+    @media screen and (max-width: 767px) {
+      body.error404 .search-form label {
+        padding-top: 40px; } }
+  body.error404 .search-form input {
+    width: 100%;
+    border-right: none;
+    border-radius: 0; }
+  body.error404 .search-form button {
+    flex-shrink: 0;
+    background-color: #c5c56a;
+    margin: 0;
+    padding: 0.1em 0 0;
+    color: #fff;
+    width: 8.0em; }
+    body.error404 .search-form button svg {
+      margin-top: 0.1em;
+      margin-right: 0.3em;
+      width: 20px;
+      height: 30px;
+      margin-right: 5px;
+      padding-top: 7px;
+      fill: #fff; }
+    body.error404 .search-form button span {
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      vertical-align: top;
+      line-height: 1; }
+body.error404.category {
+  /* 分類 */ }
+body.error404.tag {
+  /* 札 */ }
+body.error404.date {
+  /* 日付 */ }

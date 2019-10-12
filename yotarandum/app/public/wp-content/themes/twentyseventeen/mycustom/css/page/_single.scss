@@ -6,6 +6,18 @@
 body.single{
 	@include mq{
 	}
+  .l-header .pageLowerHd {
+    &:after {
+      @include mq{
+        content: "";
+        display: block;
+        background-color: $maccha1;
+        width: 31.25vw;
+        height: 1px;
+        margin: 30px auto 0;
+      }
+    }
+  }
   .entry-footer{
     color: $maccha1;
     text-align: center;
