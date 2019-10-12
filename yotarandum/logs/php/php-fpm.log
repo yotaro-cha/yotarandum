@@ -70,7 +70,14 @@
 [02-Oct-2019 13:30:56] NOTICE: ready to handle connections
 [02-Oct-2019 14:42:26] NOTICE: Terminating ...
 [02-Oct-2019 14:42:26] NOTICE: exiting, bye-bye!
+<<<<<<< HEAD
 [12-Oct-2019 12:40:01] NOTICE: fpm is running, pid 72
 [12-Oct-2019 12:40:01] NOTICE: ready to handle connections
 [12-Oct-2019 13:35:53] NOTICE: Terminating ...
 [12-Oct-2019 13:35:53] NOTICE: exiting, bye-bye!
+=======
+[05-Oct-2019 13:52:08] NOTICE: fpm is running, pid 51
+[05-Oct-2019 13:52:08] NOTICE: ready to handle connections
+[05-Oct-2019 15:14:46] NOTICE: Terminating ...
+[05-Oct-2019 15:14:46] NOTICE: exiting, bye-bye!
+>>>>>>> 63932f45e835d37fa8bf9cafac2b4c4891434628
