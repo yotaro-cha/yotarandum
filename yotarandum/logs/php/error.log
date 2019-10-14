@@ -35,3 +35,12 @@ Stack trace:
 [26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'url' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
 [26-Sep-2019 13:00:27 UTC] PHP Warning:  Illegal string offset 'alt' in /app/public/wp-content/themes/twentyseventeen/template-parts/page/content-front-page.php on line 26
 [05-Oct-2019 13:52:49 UTC] PHP Warning:  予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /app/public/wp-includes/update.php on line 569
+[14-Oct-2019 11:51:45 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/twentyseventeen/404.php on line 62
+[14-Oct-2019 11:52:41 UTC] PHP Parse error:  syntax error, unexpected end of file in /app/public/wp-content/themes/twentyseventeen/404.php on line 62
+[14-Oct-2019 12:21:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_tags_with_count() in /app/public/wp-content/themes/twentyseventeen/404.php:88
+Stack trace:
+#0 /app/public/wp-includes/template-loader.php(78): include()
+#1 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#2 /app/public/index.php(17): require('/app/public/wp-...')
+#3 {main}
+  thrown in /app/public/wp-content/themes/twentyseventeen/404.php on line 88

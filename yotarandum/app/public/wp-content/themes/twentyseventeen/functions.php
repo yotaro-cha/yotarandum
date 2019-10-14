@@ -610,3 +610,21 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+
+/* タグ(記事数), タグ(記事数), ...を表示する関数 */
+function the_tags_with_count( $before = '', $sep = '', $after = '') {
+    $posttags = get_the_tags();
+ 
+    if(!$posttags) return false; // tagの無い記事の場合終了
+ 
+    foreach($posttags as $tag) {
+        $link = get_tag_link( $tag->term_id);
+        if ( is_wp_error( $link ) )
+            return $link;
+        $tag_links[] = '<li><a href="' . esc_url( $link ) . '" rel="tag">' . $tag->name . '（' . $tag->count . '）' .'</a></li>';
+    }
+    $tag_links = apply_filters( "term_links-$taxonomy", $tag_links );
+    echo $before . join( $sep, $tag_links) . $after; 
+}

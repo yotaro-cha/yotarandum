@@ -2484,9 +2484,75 @@ body.error404 .search-form {
       font-size: 20px;
       vertical-align: top;
       line-height: 1; }
-body.error404.category {
+body.error404 .secNews {
+  /* 直近の投稿 */ }
+body.error404 .secCategories {
   /* 分類 */ }
-body.error404.tag {
+  body.error404 .secCategories ul {
+    line-height: 2.2; }
+    body.error404 .secCategories ul > li + li {
+      border-top: 1px solid #c5c56a; }
+    body.error404 .secCategories ul > li a {
+      padding: 0.2em 0; }
+      body.error404 .secCategories ul > li a:hover {
+        text-decoration: underline; }
+    body.error404 .secCategories ul ul li {
+      border-top: 1px dashed #ccc; }
+      body.error404 .secCategories ul ul li a {
+        margin-left: 1.2em; }
+    body.error404 .secCategories ul ul ul li {
+      border-top: 1px dotted #ccc; }
+      body.error404 .secCategories ul ul ul li a {
+        margin-left: 2.4em; }
+body.error404 .secTags {
   /* 札 */ }
-body.error404.date {
+  body.error404 .secTags ul {
+    font-size: 0.8em; }
+    body.error404 .secTags ul > li {
+      display: inline-block;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      padding-left: 1em; }
+      body.error404 .secTags ul > li a {
+        display: inline-block;
+        background-color: #c5c56a;
+        padding: 0.4em 0.5em 0.4em 0.4em;
+        color: #fff;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.3s; }
+        body.error404 .secTags ul > li a:before, body.error404 .secTags ul > li a:after {
+          content: "";
+          display: block;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0; }
+        body.error404 .secTags ul > li a:before {
+          background-color: #c5c56a;
+          width: 1.0em;
+          height: 1.8em;
+          border-radius: 50% 0 0 50%;
+          left: -1.0em;
+          transition: 0.3s; }
+        body.error404 .secTags ul > li a:after {
+          background-color: #fff;
+          width: 0.4em;
+          height: 0.4em;
+          left: -0.6em;
+          border-radius: 50%; }
+        body.error404 .secTags ul > li a:hover {
+          background-color: #69821b; }
+          body.error404 .secTags ul > li a:hover:before {
+            background-color: #69821b; }
+body.error404 .secArchives {
   /* 日付 */ }
+  body.error404 .secArchives ul li {
+    padding: 0.8em 0;
+    line-height: 1.2; }
+    body.error404 .secArchives ul li:nth-child(1) {
+      padding-top: 0; }
+    body.error404 .secArchives ul li + li {
+      border-top: 1px dashed #c5c56a; }
+    body.error404 .secArchives ul li a:hover {
+      text-decoration: underline; }

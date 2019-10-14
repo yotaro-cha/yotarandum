@@ -21,13 +21,13 @@ get_header(); ?>
           <header class="pageHeader">
             <h1>
               <?php if(is_category()): ?>
-              <img src="/wp-content/uploads/2018/10/txt_category_s.png" alt="">
+              <img src="/wp-content/uploads/2018/10/txt_category_s.png" alt="分類">
               <strong>：<?php single_cat_title(); ?></strong>
               <?php elseif(is_tag()): ?>
-              <img src="/wp-content/uploads/2018/10/txt_tag_s.png" alt="">
+              <img src="/wp-content/uploads/2018/10/txt_tag_s.png" alt="札">
               <strong>：<?php single_tag_title(); ?></strong>
               <?php elseif(is_date()): ?>
-              <img src="/wp-content/uploads/2018/10/txt_archive_s.png" alt="">
+              <img src="/wp-content/uploads/2018/10/txt_archive_s.png" alt="資料群">
               <strong>：<?php echo get_post_time( 'Y年m月' ); ?></strong>
               <?php endif; ?>
             </h1>
