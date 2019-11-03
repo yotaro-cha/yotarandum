@@ -18,7 +18,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
         <div class="sorryBox">
-          <div class="img"><img src="/wp-content/uploads/2019/10/yotaro_sorry.png" alt="ごめんなさい"></div>
+          <div class="img"><img src="/wp-content/uploads/assets/yotaro_sorry.png" alt="ごめんなさい"></div>
           <div class="txt">
 					  <h1 class="page-title">ごめんよぉ！</h1>
             <p>お探しのページはこのサイトには無いんだよぉ。<br>
@@ -32,7 +32,7 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 
           <section class="secNews">
-            <h2 class="u-ttl1"><img src="/wp-content/uploads/2018/10/txt_news_s.png" alt="直近の投稿"></h2>
+            <h2 class="u-ttl1"><img src="/wp-content/uploads/assets/txt_news_s.png" alt="直近の投稿"></h2>
             <ul class="u-postList1 col1">
               <?php
                 $wp_query = new WP_Query();
@@ -60,7 +60,7 @@ get_header(); ?>
                   </ul>
                   <h3 class="u-ttl2"><?php the_title(); ?></h3>
                   <?php $image = get_field('post_main'); if( empty($image) ): ?>
-                    <div class="postMainImg"><img src="/wp-content/uploads/2018/10/noimg.png" alt="noimg" /></div>
+                    <div class="postMainImg"><img src="/wp-content/uploads/assets/noimg.png" alt="noimg" /></div>
                   <?php else: ?>
                     <div class="postMainImg"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
                   <?php endif; ?>
@@ -73,7 +73,7 @@ get_header(); ?>
 
 
           <section class="secCategories">
-            <h2 class="u-ttl1"><img src="/wp-content/uploads/2018/10/txt_category_s.png" alt="分類"></h2>
+            <h2 class="u-ttl1"><img src="/wp-content/uploads/assets/txt_category_s.png" alt="分類"></h2>
             <ul>
               <?php wp_list_categories(array(
                 "title_li" => "",
@@ -84,7 +84,7 @@ get_header(); ?>
 
 
           <section class="secTags">
-            <h2 class="u-ttl1"><img src="/wp-content/uploads/2018/10/txt_tag_s.png" alt="札"></h2>
+            <h2 class="u-ttl1"><img src="/wp-content/uploads/assets/txt_tag_s.png" alt="札"></h2>
             <ul>
               <?php the_tags_with_count(); ?>
             </ul>
@@ -92,7 +92,7 @@ get_header(); ?>
 
 
           <section class="secArchives">
-            <h2 class="u-ttl1"><img src="/wp-content/uploads/2018/10/txt_archive_s.png" alt="資料群"></h2>
+            <h2 class="u-ttl1"><img src="/wp-content/uploads/assets/txt_archive_s.png" alt="資料群"></h2>
             <ul>
               <?php wp_get_archives('type=monthly&limit=12&show_post_count=true'); ?>
             </ul>

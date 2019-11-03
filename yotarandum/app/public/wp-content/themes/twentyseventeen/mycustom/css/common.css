@@ -1136,7 +1136,7 @@ blockquote:before {
   position: relative; }
   .widget-area .search-form label {
     display: block;
-    background: url(/wp-content/uploads/2018/11/txt_search_s.png) 0 0 no-repeat;
+    background: url(/wp-content/uploads/assets/txt_search_s.png) 0 0 no-repeat;
     background-size: contain;
     width: 100%;
     padding-top: 10%;
@@ -1250,17 +1250,17 @@ blockquote:before {
 .widget-area #custom_html-2 .widget-title {
   display: none; }
 .widget-area #categories-2 .widget-title span {
-  background: url(/wp-content/uploads/2018/10/txt_category_s.png) 0 0 no-repeat; }
+  background: url(/wp-content/uploads/assets/txt_category_s.png) 0 0 no-repeat; }
 .widget-area #tag_cloud-2 .widget-title {
   margin-bottom: 11px; }
   .widget-area #tag_cloud-2 .widget-title span {
-    background: url(/wp-content/uploads/2018/10/txt_tag_s.png) 0 0 no-repeat; }
+    background: url(/wp-content/uploads/assets/txt_tag_s.png) 0 0 no-repeat; }
 .widget-area #recent-posts-2 .widget-title span {
-  background: url(/wp-content/uploads/2018/10/txt_news_s.png) 0 0 no-repeat; }
+  background: url(/wp-content/uploads/assets/txt_news_s.png) 0 0 no-repeat; }
 .widget-area #recent-comments-2 .widget-title span {
-  background: url(/wp-content/uploads/2018/10/txt_comment_s.png) 0 0 no-repeat; }
+  background: url(/wp-content/uploads/assets/txt_comment_s.png) 0 0 no-repeat; }
 .widget-area #archives-2 .widget-title span {
-  background: url(/wp-content/uploads/2018/10/txt_archive_s.png) 0 0 no-repeat; }
+  background: url(/wp-content/uploads/assets/txt_archive_s.png) 0 0 no-repeat; }
 
 @media screen and (max-width: 767px) {
   .widget-area .widget {
@@ -1309,7 +1309,7 @@ blockquote:before {
     font-size: 10px; } }
 .l-toTop {
   display: none;
-  background: url(/wp-content/uploads/2018/11/totop.png) center center no-repeat;
+  background: url(/wp-content/uploads/assets/totop.png) center center no-repeat;
   background-size: contain;
   width: 70px;
   height: 70px;
@@ -2398,6 +2398,168 @@ body.page .entry-title {
   display: none; }
 
 /*--------------------------------------
+  このサイトについて
+---------------------------------------*/
+#pageAbout .aboutBox {
+  margin-bottom: 80px; }
+  @media screen and (max-width: 767px) {
+    #pageAbout .aboutBox {
+      display: block;
+      margin-bottom: 50px; } }
+  #pageAbout .aboutBox .img {
+    background-color: #efefef;
+    padding: 50px;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      #pageAbout .aboutBox .img {
+        padding: 10px; } }
+    #pageAbout .aboutBox .img img {
+      max-width: 600px; }
+      #pageAbout .aboutBox .img img:hover {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; }
+  #pageAbout .aboutBox .txt {
+    padding: 20px; }
+    @media screen and (max-width: 767px) {
+      #pageAbout .aboutBox .txt {
+        padding: 10px; } }
+    #pageAbout .aboutBox .txt h1 {
+      font-size: 100px; }
+      @media screen and (max-width: 767px) {
+        #pageAbout .aboutBox .txt h1 {
+          font-size: 50px;
+          text-align: center; } }
+    #pageAbout .aboutBox .txt p {
+      font-size: 24px; }
+      @media screen and (max-width: 767px) {
+        #pageAbout .aboutBox .txt p {
+          font-size: 18px;
+          line-height: 1.4; } }
+      #pageAbout .aboutBox .txt p + p {
+        margin-top: 1.0em; }
+#pageAbout h2 {
+  margin-top: 80px; }
+#pageAbout .search-form {
+  display: flex;
+  padding-top: 7%;
+  font-size: 0;
+  position: relative; }
+  @media screen and (max-width: 767px) {
+    #pageAbout .search-form {
+      padding-top: 50px; } }
+  #pageAbout .search-form label {
+    display: block;
+    background: url(/wp-content/uploads/assets/txt_search_s.png) 0 0 no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 5%;
+    position: absolute;
+    top: 0; }
+    @media screen and (max-width: 767px) {
+      #pageAbout .search-form label {
+        padding-top: 40px; } }
+  #pageAbout .search-form input {
+    width: 100%;
+    border-right: none;
+    border-radius: 0; }
+  #pageAbout .search-form button {
+    flex-shrink: 0;
+    background-color: #c5c56a;
+    margin: 0;
+    padding: 0.1em 0 0;
+    color: #fff;
+    width: 8.0em; }
+    #pageAbout .search-form button svg {
+      margin-top: 0.1em;
+      margin-right: 0.3em;
+      width: 20px;
+      height: 30px;
+      margin-right: 5px;
+      padding-top: 7px;
+      fill: #fff; }
+    #pageAbout .search-form button span {
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      vertical-align: top;
+      line-height: 1; }
+#pageAbout .secNews {
+  /* 直近の投稿 */ }
+#pageAbout .secCategories {
+  /* 分類 */ }
+  #pageAbout .secCategories ul {
+    line-height: 2.2; }
+    #pageAbout .secCategories ul > li + li {
+      border-top: 1px solid #c5c56a; }
+    #pageAbout .secCategories ul > li a {
+      padding: 0.2em 0; }
+      #pageAbout .secCategories ul > li a:hover {
+        text-decoration: underline; }
+    #pageAbout .secCategories ul ul li {
+      border-top: 1px dashed #ccc; }
+      #pageAbout .secCategories ul ul li a {
+        margin-left: 1.2em; }
+    #pageAbout .secCategories ul ul ul li {
+      border-top: 1px dotted #ccc; }
+      #pageAbout .secCategories ul ul ul li a {
+        margin-left: 2.4em; }
+#pageAbout .secTags {
+  /* 札 */ }
+  #pageAbout .secTags ul {
+    font-size: 0.8em; }
+    #pageAbout .secTags ul > li {
+      display: inline-block;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      padding-left: 1em; }
+      #pageAbout .secTags ul > li a {
+        display: inline-block;
+        background-color: #c5c56a;
+        padding: 0.4em 0.5em 0.4em 0.4em;
+        color: #fff;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.3s; }
+        #pageAbout .secTags ul > li a:before, #pageAbout .secTags ul > li a:after {
+          content: "";
+          display: block;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0; }
+        #pageAbout .secTags ul > li a:before {
+          background-color: #c5c56a;
+          width: 1.0em;
+          height: 1.8em;
+          border-radius: 50% 0 0 50%;
+          left: -1.0em;
+          transition: 0.3s; }
+        #pageAbout .secTags ul > li a:after {
+          background-color: #fff;
+          width: 0.4em;
+          height: 0.4em;
+          left: -0.6em;
+          border-radius: 50%; }
+        #pageAbout .secTags ul > li a:hover {
+          background-color: #69821b; }
+          #pageAbout .secTags ul > li a:hover:before {
+            background-color: #69821b; }
+#pageAbout .secArchives {
+  /* 日付 */ }
+  #pageAbout .secArchives ul li {
+    padding: 0.8em 0;
+    line-height: 1.2; }
+    #pageAbout .secArchives ul li:nth-child(1) {
+      padding-top: 0; }
+    #pageAbout .secArchives ul li + li {
+      border-top: 1px dashed #c5c56a; }
+    #pageAbout .secArchives ul li a:hover {
+      text-decoration: underline; }
+
+/*--------------------------------------
   404ページ
 ---------------------------------------*/
 body.error404 .sorryBox {
@@ -2449,7 +2611,7 @@ body.error404 .search-form {
       padding-top: 50px; } }
   body.error404 .search-form label {
     display: block;
-    background: url(/wp-content/uploads/2018/11/txt_search_s.png) 0 0 no-repeat;
+    background: url(/wp-content/uploads/assets/txt_search_s.png) 0 0 no-repeat;
     background-size: contain;
     width: 100%;
     padding-top: 5%;

@@ -1,0 +1,210 @@
+[HTTP] Binding to address: :1080
+Creating API v1 with WebPath: 
+Creating API v2 with WebPath: 
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+Got message in APIv2 websocket channel
+[APIv2] BROADCAST /api/v2/websocket
+Got message in APIv1 event stream
+Sending content: {
+  "ID": "aA9iOljn8rsQt8LmsJi465azlYXEqx0eczVMyDU9umA=@mailhog.example",
+  "From": {
+    "Relays": null,
+    "Mailbox": "www-data",
+    "Domain": "b7ae86ecfb89",
+    "Params": ""
+  },
+  "To": [
+    {
+      "Relays": null,
+      "Mailbox": "mailhog",
+      "Domain": "flywheel.local",
+      "Params": ""
+    }
+  ],
+  "Content": {
+    "Headers": {
+      "Content-Transfer-Encoding": [
+        "8bit"
+      ],
+      "Content-Type": [
+        "text/plain; charset=UTF-8"
+      ],
+      "Date": [
+        "Sun, 3 Nov 2019 05:19:18 +0000"
+      ],
+      "From": [
+        "WordPress \u003cwordpress@yotarandum.local\u003e"
+      ],
+      "MIME-Version": [
+        "1.0"
+      ],
+      "Message-ID": [
+        "\u003c62236ff98a00c5230da8774a7e2b1374@yotarandum.local\u003e"
+      ],
+      "Received": [
+        "from localhost by mailhog.example (MailHog)\r\n          id aA9iOljn8rsQt8LmsJi465azlYXEqx0eczVMyDU9umA=@mailhog.example; Sun, 03 Nov 2019 05:19:18 +0000"
+      ],
+      "Return-Path": [
+        "\u003cwww-data@b7ae86ecfb89\u003e"
+      ],
+      "Subject": [
+        "=?UTF-8?B?W+S4juWkqumDjuOBruWCmeW/mOmMsl0gV29yZFByZXNzIDUuMg==?=  =?UTF-8?B?LjQg44G444Gu44K144Kk44OI5pu05paw44GM5a6M5LqG44GX44G+44GX44Gf?="
+      ],
+      "To": [
+        "dev-email@flywheel.local"
+      ],
+      "X-Mailer": [
+        "PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)"
+      ],
+      "X-PHP-Originating-Script": [
+        "1000:class-phpmailer.php"
+      ]
+    },
+    "Body": "サイト (http://yotarandum.local) を WordPress 5.2.4 へ自動更新しました。\r\n\r\n何もする必要はありません。 バージョン 5.2.4 について詳しくは「WordPress について」画面をご覧ください。\r\nhttp://yotarandum.local/wp-admin/about.php\r\n\r\n問題が生じたり、サポートが必要な場合は、WordPress.org のサポートフォーラムのボランティアが助けになるでしょう。\r\nhttps://ja.wordpress.org/support/\r\n\r\n最新版が利用できるプラグインまたはテーマもあります。今すぐ更新してください。\r\nhttp://yotarandum.local/wp-admin/\r\n\r\nWordPress チーム\r\n",
+    "Size": 1197,
+    "MIME": null
+  },
+  "Created": "2019-11-03T05:19:18.789204879Z",
+  "MIME": null,
+  "Raw": {
+    "From": "www-data@b7ae86ecfb89",
+    "To": [
+      "mailhog@flywheel.local"
+    ],
+    "Data": "To: dev-email@flywheel.local\r\nSubject: =?UTF-8?B?W+S4juWkqumDjuOBruWCmeW/mOmMsl0gV29yZFByZXNzIDUuMg==?=  =?UTF-8?B?LjQg44G444Gu44K144Kk44OI5pu05paw44GM5a6M5LqG44GX44G+44GX44Gf?=\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Sun, 3 Nov 2019 05:19:18 +0000\r\nFrom: WordPress \u003cwordpress@yotarandum.local\u003e\r\nMessage-ID: \u003c62236ff98a00c5230da8774a7e2b1374@yotarandum.local\u003e\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\nサイト (http://yotarandum.local) を WordPress 5.2.4 へ自動更新しました。\r\n\r\n何もする必要はありません。 バージョン 5.2.4 について詳しくは「WordPress について」画面をご覧ください。\r\nhttp://yotarandum.local/wp-admin/about.php\r\n\r\n問題が生じたり、サポートが必要な場合は、WordPress.org のサポートフォーラムのボランティアが助けになるでしょう。\r\nhttps://ja.wordpress.org/support/\r\n\r\n最新版が利用できるプラグインまたはテーマもあります。今すぐ更新してください。\r\nhttp://yotarandum.local/wp-admin/\r\n\r\nWordPress チーム\r\n",
+    "Helo": "localhost"
+  }
+}
+
+[APIv1] BROADCAST /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events

@@ -47,7 +47,7 @@
 		<?php if ( is_front_page() ) : ?>
 			<div class="l-inner">
 				<h1 class="logo">
-					<div><img src="/wp-content/uploads/2018/11/logo3.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
+					<div><img src="/wp-content/uploads/assets/logo3.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
 					<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 				</h1>
 			</div><!-- .l-inner -->
@@ -55,7 +55,7 @@
 			<div class="pageLowerHd">
 				<div class="spHd">
 					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<div><img src="/wp-content/uploads/2018/11/logo3.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
+						<div><img src="/wp-content/uploads/assets/logo3.png" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100%;"></div>
 						<p class="siteDesc"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
 					</a>
 					<a class="spNavBtn" href="">
