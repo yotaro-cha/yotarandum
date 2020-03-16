@@ -1,5 +1,5 @@
-/* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+markup-templating+json+markdown+php+scss+pug&plugins=line-highlight+line-numbers+toolbar+unescaped-markup+command-line+show-language+copy-to-clipboard */
+/* PrismJS 1.19.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+git+json+jsonp+markdown+markup-templating+php+pug+python+ruby+scss&plugins=line-highlight+line-numbers+show-language+command-line+unescaped-markup+toolbar+copy-to-clipboard */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -11,6 +11,7 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -230,6 +231,12 @@ div.code-toolbar:hover > .toolbar {
 	opacity: 1;
 }
 
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
+}
+
 div.code-toolbar > .toolbar .toolbar-item {
 	display: inline-block;
 }
@@ -273,17 +280,6 @@ div.code-toolbar > .toolbar span:focus {
 	text-decoration: none;
 }
 
-/* Fallback, in case JS does not run, to ensure the code is at least visible */
-[class*='lang-'] script[type='text/plain'],
-[class*='language-'] script[type='text/plain'],
-script[type='text/plain'][class*='lang-'],
-script[type='text/plain'][class*='language-'] {
-	display: block;
-	font: 100% Consolas, Monaco, monospace;
-	white-space: pre;
-	overflow: auto;
-}
-
 .command-line-prompt {
 	border-right: 1px solid #999;
 	display: block;
@@ -316,5 +312,16 @@ script[type='text/plain'][class*='language-'] {
 
 .command-line-prompt > span[data-prompt]:before {
 	content: attr(data-prompt);
+}
+
+/* Fallback, in case JS does not run, to ensure the code is at least visible */
+[class*='lang-'] script[type='text/plain'],
+[class*='language-'] script[type='text/plain'],
+script[type='text/plain'][class*='lang-'],
+script[type='text/plain'][class*='language-'] {
+	display: block;
+	font: 100% Consolas, Monaco, monospace;
+	white-space: pre;
+	overflow: auto;
 }
 
