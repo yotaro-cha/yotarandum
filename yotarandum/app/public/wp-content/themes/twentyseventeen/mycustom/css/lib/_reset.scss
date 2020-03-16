@@ -100,32 +100,24 @@ html{
   line-height: 1.8;
   letter-spacing: 0;
   word-wrap: break-word;
-}
-
-@include mq(l){
-  html{
+  @include mq(l){
     font-size: 16px;
   }
-}
-
-@include mq{
-  html{
-    font-size: 3.125vw;
+  @include mq{
   }
 }
+
 
 body{
   margin: 0;
   padding: 0;
   font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
   font-style: inherit;
-}
-
-@include mq{
-  body{
+  @include mq{
     -webkit-text-size-adjust: 100%;
   }
 }
+
 
 *:first-child + html body{
   font-size: 87%;

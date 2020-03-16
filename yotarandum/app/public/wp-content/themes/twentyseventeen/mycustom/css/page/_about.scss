@@ -4,7 +4,9 @@
   このサイトについて
 ---------------------------------------*/
 #pageAbout{
+  font-size: 24px;
 	@include mq{
+    font-size: 16px;
 	}
   .aboutBox{
     margin-bottom: 80px;
@@ -78,8 +80,12 @@
     }
     input {
       width: 100%;
+      font-size: 24px;
       border-right: none;
       border-radius: 0;
+      @include mq{
+        font-size: 16px;
+      }
     }
     button {
       flex-shrink: 0;
@@ -108,6 +114,13 @@
     }
   }
 	.secNews{/* 直近の投稿 */
+    .u-postList1{
+      .excerpt{
+        @include mq{
+          
+        }
+      }
+    }
 	}
 	.secCategories{/* 分類 */
     ul{

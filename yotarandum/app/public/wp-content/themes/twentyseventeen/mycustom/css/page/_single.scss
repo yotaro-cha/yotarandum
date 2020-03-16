@@ -197,16 +197,38 @@ body.single{
   font-family: "黎ミン M";
   font-size: 18px;
   line-height: 1.8;
-  section + section{
-    margin-top: 100px;
+  @include mq{
+    font-size: 16px;
+  }
+  section{
+    + section{
+      margin-top: 100px;
+      @include mq{
+        margin-top: 50px;
+      }
+    }
   }
   .tocWrap{
     margin-bottom: 100px;
+    @include mq(l){
+      margin-bottom: 70px;
+    }
+    @include mq{
+      margin-bottom: 50px;
+    }
     #toc_container{
       margin: 0 30px;
       font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
       font-size: 20px;
       text-align: center;
+      @include mq(l){
+        margin: 0 20px;
+      }
+      @include mq{
+        width: auto;
+        margin: 0 -10px;
+        font-size: 18px;
+      }
       .toc_title{
         display: inline-block;
         background-color: $maccha1;
@@ -544,6 +566,16 @@ body.single{
         border-color: #1a0dab;
         transform: translate(0, -0.15em) rotate(45deg);
       }
+    }
+  }
+  .bgBoxLGrey{
+    background-color: #efefef;
+    &.c-disB{
+      padding: 1.0em;
+    }
+    &.c-disIB{
+      margin: 0.25em 0.5em;
+      padding: 0.5em;
     }
   }
   .ul1{
@@ -908,6 +940,11 @@ body.single{
   .tblDl1{
     width: auto;
     margin-bottom: 1.5em;
+    border-top: 1px solid $maccha1;
+    border-bottom: 1px solid $maccha1;
+    @include mq{
+      border: none;
+    }
     tr + tr{
       border-top: 1px solid $maccha1;
     }
@@ -928,45 +965,9 @@ body.single{
   .img1{
     box-shadow: 0 0 3px 0 $maccha1;
   }
-}
+ 
+}//.mySinglePost
 
-@include mq{
-  .mySinglePost{
-    font-size: 16px;
-  }
-}
-
-@include mq{
-  .mySinglePost section + section{
-    margin-top: 50px;
-  }
-}
-
-@include mq(l){
-  .mySinglePost .tocWrap{
-    margin-bottom: 70px;
-  }
-}
-
-@include mq{
-  .mySinglePost .tocWrap{
-    margin-bottom: 50px;
-  }
-}
-
-@include mq(l){
-  .mySinglePost .tocWrap #toc_container{
-    margin: 0 20px;
-  }
-}
-
-@include mq{
-  .mySinglePost .tocWrap #toc_container{
-    width: auto;
-    margin: 0 -10px;
-    font-size: 18px;
-  }
-}
 
 @include mq{
   .mySinglePost .tocWrap #toc_container .toc_list{

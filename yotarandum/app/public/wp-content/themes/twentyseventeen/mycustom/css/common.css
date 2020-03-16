@@ -72,22 +72,19 @@ html {
   line-height: 1.8;
   letter-spacing: 0;
   word-wrap: break-word; }
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 16px; } }
 
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 16px; } }
-@media screen and (max-width: 767px) {
-  html {
-    font-size: 3.125vw; } }
 body {
   margin: 0;
   padding: 0;
   font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
   font-style: inherit; }
+  @media screen and (max-width: 767px) {
+    body {
+      -webkit-text-size-adjust: 100%; } }
 
-@media screen and (max-width: 767px) {
-  body {
-    -webkit-text-size-adjust: 100%; } }
 *:first-child + html body {
   font-size: 87%; }
 
@@ -1706,15 +1703,35 @@ body.single .post-navigation {
   font-family: "黎ミン M";
   font-size: 18px;
   line-height: 1.8; }
+  @media screen and (max-width: 767px) {
+    .mySinglePost {
+      font-size: 16px; } }
   .mySinglePost section + section {
     margin-top: 100px; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost section + section {
+        margin-top: 50px; } }
   .mySinglePost .tocWrap {
     margin-bottom: 100px; }
+    @media screen and (max-width: 1024px) {
+      .mySinglePost .tocWrap {
+        margin-bottom: 70px; } }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .tocWrap {
+        margin-bottom: 50px; } }
     .mySinglePost .tocWrap #toc_container {
       margin: 0 30px;
       font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
       font-size: 20px;
       text-align: center; }
+      @media screen and (max-width: 1024px) {
+        .mySinglePost .tocWrap #toc_container {
+          margin: 0 20px; } }
+      @media screen and (max-width: 767px) {
+        .mySinglePost .tocWrap #toc_container {
+          width: auto;
+          margin: 0 -10px;
+          font-size: 18px; } }
       .mySinglePost .tocWrap #toc_container .toc_title {
         display: inline-block;
         background-color: #c5c56a;
@@ -1987,6 +2004,13 @@ body.single .post-navigation {
       border-width: 0.15em 0.15em 0 0;
       border-color: #1a0dab;
       transform: translate(0, -0.15em) rotate(45deg); }
+  .mySinglePost .bgBoxLGrey {
+    background-color: #efefef; }
+    .mySinglePost .bgBoxLGrey.c-disB {
+      padding: 1.0em; }
+    .mySinglePost .bgBoxLGrey.c-disIB {
+      margin: 0.25em 0.5em;
+      padding: 0.5em; }
   .mySinglePost .ul1 {
     margin: 0 1.5em 1.5em; }
     .mySinglePost .ul1 > li {
@@ -2255,7 +2279,12 @@ body.single .post-navigation {
         border-top: 1px solid #c5c56a; }
   .mySinglePost .tblDl1 {
     width: auto;
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    border-top: 1px solid #c5c56a;
+    border-bottom: 1px solid #c5c56a; }
+    @media screen and (max-width: 767px) {
+      .mySinglePost .tblDl1 {
+        border: none; } }
     .mySinglePost .tblDl1 tr + tr {
       border-top: 1px solid #c5c56a; }
     .mySinglePost .tblDl1 th, .mySinglePost .tblDl1 td {
@@ -2271,26 +2300,6 @@ body.single .post-navigation {
   .mySinglePost .img1 {
     box-shadow: 0 0 3px 0 #c5c56a; }
 
-@media screen and (max-width: 767px) {
-  .mySinglePost {
-    font-size: 16px; } }
-@media screen and (max-width: 767px) {
-  .mySinglePost section + section {
-    margin-top: 50px; } }
-@media screen and (max-width: 1024px) {
-  .mySinglePost .tocWrap {
-    margin-bottom: 70px; } }
-@media screen and (max-width: 767px) {
-  .mySinglePost .tocWrap {
-    margin-bottom: 50px; } }
-@media screen and (max-width: 1024px) {
-  .mySinglePost .tocWrap #toc_container {
-    margin: 0 20px; } }
-@media screen and (max-width: 767px) {
-  .mySinglePost .tocWrap #toc_container {
-    width: auto;
-    margin: 0 -10px;
-    font-size: 18px; } }
 @media screen and (max-width: 767px) {
   .mySinglePost .tocWrap #toc_container .toc_list {
     background-color: rgba(255, 255, 255, 0.95);
@@ -2400,164 +2409,173 @@ body.page .entry-title {
 /*--------------------------------------
   このサイトについて
 ---------------------------------------*/
-#pageAbout .aboutBox {
-  margin-bottom: 80px; }
+#pageAbout {
+  font-size: 24px; }
   @media screen and (max-width: 767px) {
-    #pageAbout .aboutBox {
+    #pageAbout {
+      font-size: 16px; } }
+  #pageAbout .aboutBox {
+    margin-bottom: 80px; }
+    @media screen and (max-width: 767px) {
+      #pageAbout .aboutBox {
+        display: block;
+        margin-bottom: 50px; } }
+    #pageAbout .aboutBox .img {
+      background-color: #efefef;
+      padding: 50px;
+      text-align: center; }
+      @media screen and (max-width: 767px) {
+        #pageAbout .aboutBox .img {
+          padding: 10px; } }
+      #pageAbout .aboutBox .img img {
+        max-width: 600px; }
+        #pageAbout .aboutBox .img img:hover {
+          animation-name: rotate;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; }
+    #pageAbout .aboutBox .txt {
+      padding: 20px; }
+      @media screen and (max-width: 767px) {
+        #pageAbout .aboutBox .txt {
+          padding: 10px; } }
+      #pageAbout .aboutBox .txt h1 {
+        font-size: 100px; }
+        @media screen and (max-width: 767px) {
+          #pageAbout .aboutBox .txt h1 {
+            font-size: 50px;
+            text-align: center; } }
+      #pageAbout .aboutBox .txt p {
+        font-size: 24px; }
+        @media screen and (max-width: 767px) {
+          #pageAbout .aboutBox .txt p {
+            font-size: 18px;
+            line-height: 1.4; } }
+        #pageAbout .aboutBox .txt p + p {
+          margin-top: 1.0em; }
+  #pageAbout h2 {
+    margin-top: 80px; }
+  #pageAbout .search-form {
+    display: flex;
+    padding-top: 7%;
+    font-size: 0;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      #pageAbout .search-form {
+        padding-top: 50px; } }
+    #pageAbout .search-form label {
       display: block;
-      margin-bottom: 50px; } }
-  #pageAbout .aboutBox .img {
-    background-color: #efefef;
-    padding: 50px;
-    text-align: center; }
-    @media screen and (max-width: 767px) {
-      #pageAbout .aboutBox .img {
-        padding: 10px; } }
-    #pageAbout .aboutBox .img img {
-      max-width: 600px; }
-      #pageAbout .aboutBox .img img:hover {
-        animation-name: rotate;
-        animation-duration: 5s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite; }
-  #pageAbout .aboutBox .txt {
-    padding: 20px; }
-    @media screen and (max-width: 767px) {
-      #pageAbout .aboutBox .txt {
-        padding: 10px; } }
-    #pageAbout .aboutBox .txt h1 {
-      font-size: 100px; }
+      background: url(/wp-content/uploads/assets/txt_search_s.png) 0 0 no-repeat;
+      background-size: contain;
+      width: 100%;
+      padding-top: 5%;
+      position: absolute;
+      top: 0; }
       @media screen and (max-width: 767px) {
-        #pageAbout .aboutBox .txt h1 {
-          font-size: 50px;
-          text-align: center; } }
-    #pageAbout .aboutBox .txt p {
-      font-size: 24px; }
+        #pageAbout .search-form label {
+          padding-top: 40px; } }
+    #pageAbout .search-form input {
+      width: 100%;
+      font-size: 24px;
+      border-right: none;
+      border-radius: 0; }
       @media screen and (max-width: 767px) {
-        #pageAbout .aboutBox .txt p {
-          font-size: 18px;
-          line-height: 1.4; } }
-      #pageAbout .aboutBox .txt p + p {
-        margin-top: 1.0em; }
-#pageAbout h2 {
-  margin-top: 80px; }
-#pageAbout .search-form {
-  display: flex;
-  padding-top: 7%;
-  font-size: 0;
-  position: relative; }
-  @media screen and (max-width: 767px) {
-    #pageAbout .search-form {
-      padding-top: 50px; } }
-  #pageAbout .search-form label {
-    display: block;
-    background: url(/wp-content/uploads/assets/txt_search_s.png) 0 0 no-repeat;
-    background-size: contain;
-    width: 100%;
-    padding-top: 5%;
-    position: absolute;
-    top: 0; }
-    @media screen and (max-width: 767px) {
-      #pageAbout .search-form label {
-        padding-top: 40px; } }
-  #pageAbout .search-form input {
-    width: 100%;
-    border-right: none;
-    border-radius: 0; }
-  #pageAbout .search-form button {
-    flex-shrink: 0;
-    background-color: #c5c56a;
-    margin: 0;
-    padding: 0.1em 0 0;
-    color: #fff;
-    width: 8.0em; }
-    #pageAbout .search-form button svg {
-      margin-top: 0.1em;
-      margin-right: 0.3em;
-      width: 20px;
-      height: 30px;
-      margin-right: 5px;
-      padding-top: 7px;
-      fill: #fff; }
-    #pageAbout .search-form button span {
-      display: inline-block;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-size: 20px;
-      vertical-align: top;
-      line-height: 1; }
-#pageAbout .secNews {
-  /* 直近の投稿 */ }
-#pageAbout .secCategories {
-  /* 分類 */ }
-  #pageAbout .secCategories ul {
-    line-height: 2.2; }
-    #pageAbout .secCategories ul > li + li {
-      border-top: 1px solid #c5c56a; }
-    #pageAbout .secCategories ul > li a {
-      padding: 0.2em 0; }
-      #pageAbout .secCategories ul > li a:hover {
-        text-decoration: underline; }
-    #pageAbout .secCategories ul ul li {
-      border-top: 1px dashed #ccc; }
-      #pageAbout .secCategories ul ul li a {
-        margin-left: 1.2em; }
-    #pageAbout .secCategories ul ul ul li {
-      border-top: 1px dotted #ccc; }
-      #pageAbout .secCategories ul ul ul li a {
-        margin-left: 2.4em; }
-#pageAbout .secTags {
-  /* 札 */ }
-  #pageAbout .secTags ul {
-    font-size: 0.8em; }
-    #pageAbout .secTags ul > li {
-      display: inline-block;
-      margin-right: 0.5em;
-      margin-bottom: 0.5em;
-      padding-left: 1em; }
-      #pageAbout .secTags ul > li a {
+        #pageAbout .search-form input {
+          font-size: 16px; } }
+    #pageAbout .search-form button {
+      flex-shrink: 0;
+      background-color: #c5c56a;
+      margin: 0;
+      padding: 0.1em 0 0;
+      color: #fff;
+      width: 8.0em; }
+      #pageAbout .search-form button svg {
+        margin-top: 0.1em;
+        margin-right: 0.3em;
+        width: 20px;
+        height: 30px;
+        margin-right: 5px;
+        padding-top: 7px;
+        fill: #fff; }
+      #pageAbout .search-form button span {
         display: inline-block;
-        background-color: #c5c56a;
-        padding: 0.4em 0.5em 0.4em 0.4em;
-        color: #fff;
-        border-radius: 5px;
-        position: relative;
-        transition: 0.3s; }
-        #pageAbout .secTags ul > li a:before, #pageAbout .secTags ul > li a:after {
-          content: "";
-          display: block;
-          margin: auto;
-          position: absolute;
-          top: 0;
-          bottom: 0; }
-        #pageAbout .secTags ul > li a:before {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        vertical-align: top;
+        line-height: 1; }
+  #pageAbout .secNews {
+    /* 直近の投稿 */ }
+  #pageAbout .secCategories {
+    /* 分類 */ }
+    #pageAbout .secCategories ul {
+      line-height: 2.2; }
+      #pageAbout .secCategories ul > li + li {
+        border-top: 1px solid #c5c56a; }
+      #pageAbout .secCategories ul > li a {
+        padding: 0.2em 0; }
+        #pageAbout .secCategories ul > li a:hover {
+          text-decoration: underline; }
+      #pageAbout .secCategories ul ul li {
+        border-top: 1px dashed #ccc; }
+        #pageAbout .secCategories ul ul li a {
+          margin-left: 1.2em; }
+      #pageAbout .secCategories ul ul ul li {
+        border-top: 1px dotted #ccc; }
+        #pageAbout .secCategories ul ul ul li a {
+          margin-left: 2.4em; }
+  #pageAbout .secTags {
+    /* 札 */ }
+    #pageAbout .secTags ul {
+      font-size: 0.8em; }
+      #pageAbout .secTags ul > li {
+        display: inline-block;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        padding-left: 1em; }
+        #pageAbout .secTags ul > li a {
+          display: inline-block;
           background-color: #c5c56a;
-          width: 1.0em;
-          height: 1.8em;
-          border-radius: 50% 0 0 50%;
-          left: -1.0em;
+          padding: 0.4em 0.5em 0.4em 0.4em;
+          color: #fff;
+          border-radius: 5px;
+          position: relative;
           transition: 0.3s; }
-        #pageAbout .secTags ul > li a:after {
-          background-color: #fff;
-          width: 0.4em;
-          height: 0.4em;
-          left: -0.6em;
-          border-radius: 50%; }
-        #pageAbout .secTags ul > li a:hover {
-          background-color: #69821b; }
-          #pageAbout .secTags ul > li a:hover:before {
+          #pageAbout .secTags ul > li a:before, #pageAbout .secTags ul > li a:after {
+            content: "";
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0; }
+          #pageAbout .secTags ul > li a:before {
+            background-color: #c5c56a;
+            width: 1.0em;
+            height: 1.8em;
+            border-radius: 50% 0 0 50%;
+            left: -1.0em;
+            transition: 0.3s; }
+          #pageAbout .secTags ul > li a:after {
+            background-color: #fff;
+            width: 0.4em;
+            height: 0.4em;
+            left: -0.6em;
+            border-radius: 50%; }
+          #pageAbout .secTags ul > li a:hover {
             background-color: #69821b; }
-#pageAbout .secArchives {
-  /* 日付 */ }
-  #pageAbout .secArchives ul li {
-    padding: 0.8em 0;
-    line-height: 1.2; }
-    #pageAbout .secArchives ul li:nth-child(1) {
-      padding-top: 0; }
-    #pageAbout .secArchives ul li + li {
-      border-top: 1px dashed #c5c56a; }
-    #pageAbout .secArchives ul li a:hover {
-      text-decoration: underline; }
+            #pageAbout .secTags ul > li a:hover:before {
+              background-color: #69821b; }
+  #pageAbout .secArchives {
+    /* 日付 */ }
+    #pageAbout .secArchives ul li {
+      padding: 0.8em 0;
+      line-height: 1.2; }
+      #pageAbout .secArchives ul li:nth-child(1) {
+        padding-top: 0; }
+      #pageAbout .secArchives ul li + li {
+        border-top: 1px dashed #c5c56a; }
+      #pageAbout .secArchives ul li a:hover {
+        text-decoration: underline; }
 
 /*--------------------------------------
   404ページ
