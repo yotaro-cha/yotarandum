@@ -628,3 +628,6 @@ function the_tags_with_count( $before = '', $sep = '', $after = '') {
     $tag_links = apply_filters( "term_links-$taxonomy", $tag_links );
     echo $before . join( $sep, $tag_links) . $after; 
 }
+
+
+remove_filter('the_content', 'wpautop'); // 記事の自動整形を無効にする
