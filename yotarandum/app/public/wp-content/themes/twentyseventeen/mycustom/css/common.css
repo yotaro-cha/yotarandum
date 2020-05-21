@@ -1720,6 +1720,7 @@ body.single .post-navigation {
       .mySinglePost .tocWrap {
         margin-bottom: 50px; } }
     .mySinglePost .tocWrap #toc_container {
+      display: block !important;
       margin: 0 30px;
       font-family: tegaki, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif" !important;
       font-size: 20px;
