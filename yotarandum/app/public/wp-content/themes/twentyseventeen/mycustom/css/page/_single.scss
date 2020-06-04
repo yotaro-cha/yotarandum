@@ -186,7 +186,7 @@ body.single{
 
 .bassui{
   margin-bottom: 50px;
-  font-family: "黎ミン M";
+  @include mincho;
   @include mq{
     font-size: 16px;
   }
@@ -194,7 +194,7 @@ body.single{
 
 
 .mySinglePost{
-  font-family: "黎ミン M";
+  @include mincho;
   font-size: 18px;
   line-height: 1.8;
   @include mq{
@@ -382,7 +382,7 @@ body.single{
     text-decoration: underline;
   }
   strong{
-    font-family: "リュウミン B-KL";
+    font-weight: 900;
   }
   em{
     font-style: italic;

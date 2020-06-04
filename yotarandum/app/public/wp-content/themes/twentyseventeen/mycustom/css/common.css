@@ -1498,7 +1498,8 @@ blockquote:before {
       margin: 0 -15px 15px; } }
 
 .excerpt {
-  font-family: "黎ミン M"; }
+  font-family: heisei-mincho-std, serif;
+  font-weight: 300; }
 
 /*--------------------------------------
   トップページ
@@ -1694,13 +1695,15 @@ body.single .post-navigation {
 
 .bassui {
   margin-bottom: 50px;
-  font-family: "黎ミン M"; }
+  font-family: heisei-mincho-std, serif;
+  font-weight: 300; }
   @media screen and (max-width: 767px) {
     .bassui {
       font-size: 16px; } }
 
 .mySinglePost {
-  font-family: "黎ミン M";
+  font-family: heisei-mincho-std, serif;
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.8; }
   @media screen and (max-width: 767px) {
@@ -1850,7 +1853,7 @@ body.single .post-navigation {
     color: #c5c56a;
     text-decoration: underline; }
   .mySinglePost strong {
-    font-family: "リュウミン B-KL"; }
+    font-weight: 900; }
   .mySinglePost em {
     font-style: italic; }
   .mySinglePost .ttl2 {
